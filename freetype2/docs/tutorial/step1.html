@@ -72,21 +72,23 @@
               <p>You have to add it to your compilation include
                 path.</p>
 
-              <p>In Unix-like environments you can run the
-                <code>freetype-config</code> script with
-                the <code>--cflags</code> option to retrieve the
-                appropriate compilation flags.  This script can also
-                be used to check the version of the library that is
-                installed on your system, as well as the required
-                librarian and linker flags.</p>
-
-              <p>An alternative solution is <code>pkg-config</code>;
-                say</p>
+              <p>In Unix-like environments you can use the
+                <code>pkg-config</code> program to retrieve the
+                appropriate compilation flags; say.</p>
 
               <pre>
 pkg-config --cflags freetype2</pre>
 
               <p>to get the compilation flags.</p>
+
+              <p>This program can also be used to check the version of
+                the library that is installed on your system, as well
+                as the required librarian and linker flags.</p>
+
+              <p>Another solution is the <code>freetype-config</code>
+                script.  However, its use is deprecated since it can't
+                be used reliably for cross compilation.</p>
+
             </li>
 
             <li class="emph">
