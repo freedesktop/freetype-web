@@ -56,18 +56,18 @@
         <!-- ************************************************** -->
 
         <div>
-          <p>The FreeType project will be part
-              of <a href="https://developers.google.com/open-source/gsoc/">Google
-              Summer of Code 2018</a>!  Here is our ideas list – if
-              you have another one, please write to
-              our <a href="mailto:freetype-devel@nongnu.org">mailing
+          <p>The FreeType project has successfully participated at
+            <a href="https://developers.google.com/open-source/gsoc/">Google
+              Summer of Code</a>.  Here is our ideas list for future
+            years – if you have another one, please write to
+            our <a href="mailto:freetype-devel@nongnu.org">mailing
               list</a> so that we can discuss your suggestions,
-              eventually adding them to this page.</p>
+            eventually adding them to this page.</p>
 
           <p>If you are interested to participate as a student, please
             also contact us via
             the <a href="mailto:freetype-devel@nongnu.org">mailing
-            list</a>.  It's probably best if
+              list</a>.  It's probably best if
             you <a href="https://lists.nongnu.org/mailman/listinfo/freetype-devel">subscribe</a>
             to it.</p>
 
@@ -75,161 +75,15 @@
             get <em>really</em> acquainted with the topic you would
             like to start with – in particular, search
             the <a href="http://lists.nongnu.org/archive/html/freetype-devel/">mailing
-            list archive</a> and/or do some googling!  We don't want
+              list archive</a> and/or do some googling!  We don't want
             to answer questions like &ldquo;I'm interested in your
             project, I want to contribute, please tell me what to
             do!&rdquo; again and again&hellip;</p>
 
           <dl>
-            <dt>Improve fuzzing for FreeType</dt>
-            <dd>
-              <p>There are at least two fuzzers that constantly test
-                FreeType.  One of them
-                is <a href="https://github.com/google/oss-fuzz">OSS-Fuzz</a>,
-                and the tasks for GSoC presented here are targeted to
-                increase the efficiency of this fuzzer bot.</p>
-
-              <dl>
-                <dt>Split the existing fuzz target into many</dt>
-                <dd>
-                  <p>Right now we
-                    have <code>src/tools/ftfuzzer/ftfuzzer.cc</code>
-                    that contains</p>
-
-                  <pre>
-extern "C"
-int LLVMFuzzerTestOneInput(const uint8_t* data,
-                           size_t size_)
-{
-  return ParseWhateverFontFileIGet(data,
-                                   size);
-}</pre>
-
-                  <p>Instead of this monolithic approach we should
-                    split fuzzing into separate files (fuzz targets)
-                    for every font format, for example</p>
-
-                  <pre>
-src/tools/ftfuzzer/cff_fuzz.cc
-src/tools/ftfuzzer/cff2_fuzz.cc
-src/tools/ftfuzzer/cid_fuzz.cc</pre>
-
-                  <p>and every such file will have</p>
-
-                  <pre>
-extern "C"
-int LLVMFuzzerTestOneInput(const uint8_t* data,
-                           size_t size_)
-{
-  return ParseOnlyMyFormatAndRejectAnythingElseQuickly(data,
-                                                       size);
-}</pre>
-
-                  <p>Ideally, the build rule for <code>cff_fuzz</code>
-                    will not <em>link</em> anything that CFF does not
-                    need.</p>
-
-                  <p>Such a split will make fuzzing more efficient for
-                    many reasons.</p>
-
-                  <ul>
-                    <li>Genetic mutations will not spend time crossing
-                      over files of different formats (e.g., trying to
-                      add BDF genes to a Type&nbsp;1 font).</li>
-                    <li>Data-flow guided mutations will not try to
-                      transform, say, a CID font file into a PCF font
-                      file.</li>
-                    <li>Some of the fuzzer's internal algorithms that
-                      are linear by the code size will run faster.</li>
-                    <li>Slow inputs that currently make fuzzing
-                      inefficient will cause only some of the targets
-                      suffer, not all of them.</li>
-                  </ul>
-
-                  <p>The changes will need to be reflected in the
-                    <a href="https://github.com/google/oss-fuzz/tree/master/projects/freetype2">OSS-Fuzz
-                      repository</a>.</p>
-                </dd>
-              </dl>
-
-              <dl>
-                <dt>Prepare a public corpus of inputs</dt>
-                <dd>
-                  <p>The quality of the &lsquo;seed corpus&rsquo; is
-                    the key to fuzzing efficiency.  We should set up a
-                    repository (e.g., in github) that would hold</p>
-
-                  <ul>
-                    <li><em>small</em> but representative sample font
-                      files for every relevant font format (only with
-                      permissive licenses!), and</li>
-                    <li>fuzzed mutations of the above (this part will
-                      need to be periodically updated as fuzzing finds
-                      more inputs).</li>
-                  </ul>
-
-                  <p>This corpus will be used in two ways, namely</p>
-
-                  <ul>
-                    <li>to seed the fuzzing process, and</li>
-                    <li>as a regression suite (see below).</li>
-                  </ul>
-                </dd>
-              </dl>
-
-              <dl>
-                <dt>Extend the FreeType testing process to use the
-                  above corpus</dt>
-                <dd>
-                  <p>The public corpus will allow us to use the fuzz
-                    targets as a regression test suite.  We'll need to
-                    set up a continuous integration testing (not
-                    fuzzing) to run the fuzz targets on the corpus.
-                    One way to achieve it is to have a github mirror
-                    of FreeType and set up Travis (or whatever other
-                    CI integrated with github).</p>
-                </dd>
-              </dl>
-
-              <dl>
-                <dt>Analyze code coverage</dt>
-                <dd>
-                  <p>Once the fuzz targets are split, the public
-                    corpus is prepared, and the OSS-Fuzz integration
-                    is updated, we'll need to analyze
-                    the <a href="https://github.com/google/oss-fuzz/blob/master/docs/clusterfuzz.md#coverage-reports">code
-                    coverage provided by OSS-Fuzz</a> to see what code
-                    is left untested.</p>
-
-                  <p>Then either the fuzz targets or the corpus (or
-                    both) will need to be extended to cover that code.
-                    The ideal end state is to have 100% line coverage
-                    (currently, we have ~67% for the existing fuzz
-                    target).</p>
-                </dd>
-              </dl>
-
-              <dl>
-                <dt>Prepare fuzzing dictionaries for the font formats
-                  where relevant</dt>
-                <dd>
-                  <p>In some cases a simple dictionary (list of tokens
-                    used by the file format) may
-                    have <a href="http://libfuzzer.info/#dictionaries">dramatic
-                      effect on fuzzing</a>.</p>
-                </dd>
-              </dl>
-
-              <p><em>Difficulty: </em>medium.  <em>Requirements:</em>
-                C, C++, Unix build tools, experience with
-                scripting.  <em>Potential mentors:</em> Kostya
-                Serebryany (Google), Werner Lemberg (FreeType).</p>
-            </dd>
-          </dl>
-
-          <dl>
             <dt>Develop a test framework for checking FreeType's
-              rendering output (started as a GSoC 2017 project)</dt>
+              rendering output (started as a GSoC 2017 project,
+              unfinished)</dt>
             <dd>
               <p>Right now, FreeType's rendering results of the
                 current development version are not systematically
@@ -289,71 +143,25 @@ int LLVMFuzzerTestOneInput(const uint8_t* data,
           </dl>
 
           <dl>
-            <dt>Redevelop FreeType's documentation website using markdown</dt>
+            <dt>Replace FreeType's tracing and debugging facilities
+              with an external logging library</dt>
             <dd>
-              <p>Right now, FreeType's global documentation is
-                directly written in HTML; the API documentation uses a
-                selfmade Python script called
-                &lsquo;<a href="http://git.savannah.gnu.org/cgit/freetype/freetype2.git/tree/src/tools/docmaker">docmaker</a>&rsquo;
-                to convert a very limited, markdown-like syntax to
-                HTML.</p>
+              <p>FreeType extensively uses a home-brewed tracing
+                solution that mainly relies on the C&nbsp;preprocessor
+                and the <code>fprintf</code> function printing to
+                stderr.  However, this simplistic approach is not
+                adequate for all platforms, where stderr is not always
+                easily accessible.</p>
 
-              <p>Writing HTML manually is inconvenient and not very
-                flexible.  Today, there are excellent converters
-                available that can be used for conversion from
-                markdown to HTML, for
-                example <a href="https://pandoc.org">pandoc</a>,
-                <a href="https://jekyllrb.com/">Jekyll</a>,
-                or <a href="http://www.mkdocs.org">MkDocs</a>.</p>
-
-              <p>This project would investigate how to convert the
-                complete documentation to markdown (using a one-time
-                automated approach), extending the selfmade Python
-                script to emit markdown also, and setting up a
-                Makefile that statically generates the complete HTML
-                code of the FreeType web pages, also adding automatic
-                generation of navigation bars and search
-                facilities.</p>
+              <p>In the internet you can find many freely available
+                tracing and logging libraries.  It would be necessary
+                to test and check which one meets FreeType's
+                requirements.</p>
 
               <p><em>Difficulty:</em> medium.  <em>Requirements:</em>
-                markdown, python, Unix build tools.  <em>Potential
-                mentor:</em> Werner Lemberg (FreeType).</p>
-            </dd>
-          </dl>
-
-          <dl>
-            <dt>Integrate VFlib's TeX format drivers into
-              FreeType</dt>
-            <dd>
-              <p>The <a href="http://www-masu.ist.osaka-u.ac.jp/~kakugawa/VFlib/">VFLib
-                library</a> contains mature support for TeX's bitmap
-                formats (in particular <code>GF</code>
-                and <code>PK</code> fonts, together
-                with <code>TFM</code> metric files and <code>VF</code>
-                virtual fonts).  It would be helpful if its code could
-                be added to FreeType, providing new modules to handle
-                them.</p>
-
-              <p>The canonic reference of
-                the <code>PK</code>, <code>GF</code>, <code>TFM</code>,
-                and <code>VF</code> font formats is the source code of
-                the TeX
-                tools <a href="https://www.tug.org/svn/texlive/trunk/Master/texmf-dist/doc/generic/knuth/mfware/gftopk.pdf?view=co">gftopk</a>
-                (for
-                <code>PK</code>), <a href="https://www.tug.org/svn/texlive/trunk/Master/texmf-dist/doc/generic/knuth/mfware/gftype.pdf?view=co">gftype</a>
-                (for
-                <code>GF</code>), <a href="https://www.tug.org/svn/texlive/trunk/Master/texmf-dist/doc/generic/knuth/texware/tftopl.pdf?view=co">tftopl</a>
-                (for <code>TFM</code>),
-                and <a href="https://www.tug.org/svn/texlive/trunk/Master/texmf-dist/doc/generic/knuth/etc/vftovp.pdf?view=co">vftovp</a>
-                (for <code>VF</code>).
-                </p>
-
-              <p><em>Difficulty:</em> medium (hard for VF
-                support).  <em>Requirements:</em> C, Unix build tools,
-                knowledge of TeX infrastructure
-                (using <a href="https://www.tug.org/texlive/">TeXLive</a>
-                is recommended).  <em>Potential mentor:</em> Werner
-                Lemberg (FreeType).</p>
+                C, C++, Unix and Windows build tools.  <em>Potential
+                mentors:</em> Werner Lemberg, Alexei Podtelezhnikov,
+                Toshiya Suzuki (FreeType).</p>
             </dd>
           </dl>
 
@@ -366,7 +174,7 @@ int LLVMFuzzerTestOneInput(const uint8_t* data,
         <!-- ************************************************** -->
 
         <div class="updated">
-          <p>Last update: 27-Feb-2018</p>
+          <p>Last update: 18-Aug-2018</p>
         </div>
       </div>
     </div>
