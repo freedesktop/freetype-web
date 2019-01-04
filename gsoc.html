@@ -114,6 +114,45 @@
           </dl>
 
           <dl>
+            <dt>Add support for the &lsquo;<code>SVG </code>&rsquo;
+              OpenType table to render color fonts.</dt>
+            <dd>
+              <p>FreeType currently doesn't have support for fonts
+                that
+                use <a href="https://docs.microsoft.com/en-us/typography/opentype/spec/svg">SVG
+                to render color glyphs</a>.  The task of this project
+                would be as follows.</p>
+
+              <ul>
+                <li>Evaluate the freely available SVG libraries that
+                  would fit the job best.</li>
+
+                <li>Investigate how to integrate this external library
+                  into FreeType.  For example, it should be checked
+                  whether it makes sense to create a new font
+                  rendering module (which would act more or less as a
+                  wrapper to the external SVG library).</li>
+
+                <li>If the module approach doesn't fit, define
+                  FreeType API functions and hooks for transferring
+                  data from the font's &lsquo;<code>SVG </code>&rsquo;
+                  table to the external library.  Ditto for
+                  transferring the resulting (bitmap) output back into
+                  FreeType.</li>
+
+                <li>Add the necessary infrastructure API stuff (for
+                  example, a function to test whether a font has SVG
+                  glyphs).</li>
+              </ul>
+
+              <p><em>Difficulty:</em> medium to
+                high.  <em>Requirements:</em> C, Unix build
+                tools.  <em>Potential mentors:</em> Werner Lemberg,
+                Alexei Podtelezhnikov, Toshiya Suzuki (FreeType).</p>
+            </dd>
+          </dl>
+
+          <dl>
             <dt>Improve the &lsquo;ftinspect&rsquo; demo program</dt>
             <dd>
               <p>Right now, FreeType comes with a suite of small
@@ -174,7 +213,7 @@
         <!-- ************************************************** -->
 
         <div class="updated">
-          <p>Last update: 18-Aug-2018</p>
+          <p>Last update: 4-Jan-2019</p>
         </div>
       </div>
     </div>
