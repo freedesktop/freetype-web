@@ -187,19 +187,46 @@
               <p>FreeType extensively uses a home-brewed tracing
                 solution that mainly relies on the C&nbsp;preprocessor
                 and the <code>fprintf</code> function printing to
-                stderr.  However, this simplistic approach is not
-                adequate for all platforms, where stderr is not always
-                easily accessible.</p>
+                <code>stderr</code>.  However, this simplistic
+                approach is not adequate for all platforms, where
+                <code>stderr</code> is not always easily
+                accessible.</p>
 
-              <p>In the internet you can find many freely available
-                tracing and logging libraries.  It would be necessary
-                to test and check which one meets FreeType's
-                requirements.</p>
+              <p>Many freely available tracing and logging libraries
+                exist.  It would be necessary to test and check which
+                one meets FreeType's requirements.  A few requirements
+                have already been
+                <a href="http://lists.nongnu.org/archive/html/freetype-devel/2019-01/msg00023.html">discussed
+                  in the mailing list</a>.  Note that this discussion
+                is by no means exhaustive.</p>
+
+              <p>As a rough guideline, the project could be structured
+                as follows.</p>
+
+              <ul>
+                <li>Get accustomed to FreeType's current
+                  tracer/logger, all its current features, and how it
+                  is currently being used.  Extract a few
+                  representative samples from FreeType to help with
+                  the next step.</li>
+
+                <li>Evaluate, compare, and discuss freely available
+                  tracing and logging libraries in respect to
+                  FreeType's current tracer/logger.</li>
+
+                <li>Replace the old tracer/logger with the new one
+                  within FreeType.</li>
+
+                <li>Write a brief but precise &lsquo;how-to&rsquo;
+                  article for FreeType's website about using the new
+                  tracer/logger which is aimed at FreeType's
+                  developers.</li>
+              </ul>
 
               <p><em>Difficulty:</em> medium.  <em>Requirements:</em>
                 C, C++, Unix and Windows build tools.  <em>Potential
-                mentors:</em> Werner Lemberg, Alexei Podtelezhnikov,
-                Toshiya Suzuki (FreeType).</p>
+                  mentors:</em> Werner Lemberg, Alexei Podtelezhnikov,
+                Toshiya Suzuki (FreeType), Armin Hasitzka.</p>
             </dd>
           </dl>
 
@@ -212,7 +239,7 @@
         <!-- ************************************************** -->
 
         <div class="updated">
-          <p>Last update: 4-Jan-2019</p>
+          <p>Last update: 6-Feb-2019</p>
         </div>
       </div>
     </div>
