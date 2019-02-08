@@ -60,36 +60,81 @@
 
         <!-- ************************************************** -->
 
+        <div id="macports">
+          <h2>Compilation With MacPorts</h2>
+
+          <p>If you have <a href="https://macports.org">MacPorts</a>
+            and are comfortable with it, you can install ttfautohint
+            (together with libttfautohint) and ttfautohintGUI quite
+            easily.</p>
+
+          <p>To install the ttfautohint command line executable, open
+            Terminal.app and type</p>
+
+          <pre>
+sudo port install ttfautohint</pre>
+
+          <p>Enter your Mac login password, then press the return key
+            again.  This installs the currently released version.</p>
+
+          <p>You can execute the ttfautohint executable on the command
+            line with</p>
+
+          <pre>
+ttfautohint</pre>
+
+          <p>followed by an appropriate set of arguments as detailed
+            in the <a href="doc/ttfautohint.html">usage
+            documentation</a>.</p>
+
+          <p>To install both the ttfautohint command line executable
+            and the GUI version, use</p>
+
+          <pre>
+sudo port install ttfautohint +qt5</pre>
+
+          <p>instead of the above installation command.  Enter your
+            Mac login password, then press the return key again.  This
+            installs the currently released version using
+            the <a href="https://www.qt.io">Qt5</a> framework.  If you
+            want to use the Qt4 framework (for example, if you have a
+            MacOS version that is not supported by Qt5),
+            replace <code>+qt5</code> with <code>+qt4</code> in the
+            above command.</p>
+
+          <p>After installation you can now type</p>
+
+          <pre>
+ttfautohintGUI</pre>
+
+          <p>from the Terminal app to start the GUI.</p>
+        </div>
+
+
         <div id="homebrew">
           <h2>Compilation With Homebrew</h2>
 
-          <p class="warning">[Homebrew dropped active Qt4 support in
-            summer 2016; the new option to activate Qt support for the
-            ttfautohint brew formula is thus no
-            longer <code>--with-qt</code> but <code>--with-qt5</code>,
-            similar to other Homebrew packages that use Qt.]</p>
+          <p class="warning">Warning&nbsp;1: Since autumn 2018,
+            Homebrew tries to avoid package options.  As a
+            consequence, I had the choice between ttfautohint or
+            ttfautohintGUI being part of core Homebrew – I decided to
+            stay with the former.  See below if you need
+            ttfautohintGUI.</p>
 
-          <p>If you have <a href="https://brew.sh">Homebrew</a> and are
-            comfortable with it, you can install ttfautohint and
-            ttfautohintGUI (together with libttfautohint) quite
+          <p class="warning">Warning&nbsp;2: Homebrew only supports
+            recent MacOS versions (i.e., the current one and two older
+            releases).  For older MacOS versions please use
+            MacPorts, <a href="#macports">see above</a>.</p>
+
+          <p>If you have <a href="https://brew.sh">Homebrew</a> and
+            are comfortable with it, you can install ttfautohint
+            (together with libttfautohint) and ttfautohintGUI quite
             easily.</p>
 
-          <p>If you need the GUI version of ttfautohint (includes Qt
-            dependency), use</p>
-
-          <pre>
-brew install ttfautohint --with-qt5</pre>
-
-          <p>to get the currently released version.  For the git HEAD
-            version (i.e., the current development version) use</p>
-
-          <pre>
-brew install --HEAD ttfautohint --with-qt5</pre>
-
-          <p>instead.</p>
+          <h3>ttfautohint only</h3>
 
           <p>If you do not need the GUI version of ttfautohint, you
-            can install the ttfautohint command line executable only
+            can install the ttfautohint command line executable
             with</p>
 
           <pre>
@@ -103,9 +148,6 @@ brew install --HEAD ttfautohint</pre>
 
           <p>instead.</p>
 
-          <p>Note that you need an up-to-date Homebrew version for
-          this simple installation.</p>
-
           <p>To upgrade ttfautohint from an older version, please
             follow the standard instructions given in
             the <a href="https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/FAQ.md#faq">Homebrew
@@ -116,21 +158,9 @@ brew install --HEAD ttfautohint</pre>
           <pre>
 brew reinstall --HEAD ttfautohint</pre>
 
-          <p>or</p>
-
-          <pre>
-brew reinstall --HEAD ttfautohint --with-qt5</pre>
-
           <p>instead of calling <tt>brew upgrade ttfautohint</tt>
             (cf. <a href="https://github.com/Homebrew/homebrew/issues/13197">this
             homebrew tracker issue</a>).</p>
-
-          <p>To start the GUI, you can now type</p>
-
-          <pre>
-ttfautohintGUI</pre>
-
-          <p>from the Terminal app.</p>
 
           <p>You can execute the ttfautohint executable on the command
             line with</p>
@@ -141,6 +171,43 @@ ttfautohint</pre>
           <p>followed by an appropriate set of arguments as detailed
             in the <a href="doc/ttfautohint.html">usage
             documentation</a>.</p>
+
+          <h3>ttfautohint and ttfautohintGUI</h3>
+
+          <p>If you need the GUI version of ttfautohint (which depends
+            on the Qt library), you can't use core Homebrew's version.
+            Instead, please
+            use <a href="mailto:cosimo@anthrotype.com">Cosimo
+            Lupo's</a> Homebrew Tap (i.e., a user's github
+            repository).  Calling</p>
+
+          <pre>
+brew install anthrotype/ttfautohint/ttfautohintGUI</pre>
+
+          <p>will both install ttfautohint and ttfautohintGUI.  For
+            the git HEAD version (i.e., the current development
+            version) use</p>
+
+          <pre>
+brew install --HEAD anthrotype/ttfautohint/ttfautohintGUI</pre>
+
+          <p>instead.</p>
+
+          <p>If you want to switch from core Homebrew to Cosimo's tap,
+            you should start with</p>
+
+          <pre>
+brew uninstall ttfautohint</pre>
+
+          <p>before installing from the tap to avoid
+            interferences.</p>
+
+          <p>After installation you can now type</p>
+
+          <pre>
+ttfautohintGUI</pre>
+
+          <p>from the Terminal app to start the GUI.</p>
         </div>
 
 
@@ -154,12 +221,14 @@ ttfautohint</pre>
             Simpkins's <a href="https://github.com/source-foundry/ttfautohint-build">ttfautohint-build</a>
             script.</p>
 
-          <p>If you don't have <a href="https://brew.sh">Homebrew</a>,
-            you should check it out because it's extremely useful and
-            automates all ttfautohint build dependency installs for
-            you.  But supposing you don't want to use it, you can
-            install the command line executable ttfautohint and the
-            ttfautohint GUI on Mac OS&nbsp;X from scratch.</p>
+          <p>If you don't have <a href="https://brew.sh">Homebrew</a>
+            or <a href="https://macports.org">MacPorts</a>, you should
+            check out one of these two package managers because both
+            are extremely useful and automate all ttfautohint build
+            dependency installs for you.  But supposing you don't want
+            to use them, you can install the command line executable
+            ttfautohint and the ttfautohint GUI on Mac OS&nbsp;X from
+            scratch.</p>
 
           <p>Following the instructions below, everything except XCode
             and Qt gets installed into the
@@ -424,7 +493,7 @@ ttfautohint</pre>
             Simpkins</a>.</p>
         </div>
         <div class="updated">
-          <p>Last update: 24-Jul-2018</p>
+          <p>Last update: 8-Feb-2019</p>
         </div>
       </div>
     </div>
@@ -473,6 +542,9 @@ ttfautohint</pre>
 
     <li class="secondary">
       <a href="osx.html" class="current">ttfautohint on OS&nbsp;X</a>
+    </li>
+    <li class="tertiary">
+      <a href="#macports">Compilation With MacPorts</a>
     </li>
     <li class="tertiary">
       <a href="#homebrew">Compilation With Homebrew</a>
