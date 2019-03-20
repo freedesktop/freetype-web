@@ -118,19 +118,20 @@
             <dd>
               <p>FreeType currently supports WOFF 1.0 fonts,
               which are zlib-compressed SFNT fonts. The support for
-              <a href=https://www.w3.org/TR/WOFF2/>WOFF 2.0</a>
-              with improved Brotli compression is lacking. This project would
-              likely involve the following.
+              WOFF 2.0 with improved Brotli compression is lacking.
+              This project would likely involve the following.
 
               <ul>
-                <li>Study the specification how SFNT fonts are wrapped
-                into WOFF2 files.</li>
+                <li>Study and compare the specifications how SFNT fonts are
+                wrapped into <a href=https://www.w3.org/TR/WOFF/>WOFF 1.0</a>
+                and <a href=https://www.w3.org/TR/WOFF2/>WOFF 2.0</a> files.
+                Determine if they can be merged.</li>
 
                 <li>Explore if it is possible to borrow
-                <a href=https://github.com/google/woff2>some code</a>
+                <a href=https://github.com/google/woff2>Brotli decoder</a>
                 donated by Google.</li>
 
-                <li>Integrate seemless WOFF2 support into FreeType so that
+                <li>Integrate seamless WOFF2 support into FreeType so that
                 these fonts can be recognized, decompressed, and opened as
                 any other SFNT font, without any changes to API.
               </ul>
