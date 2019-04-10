@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC
   "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+  "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
 
 <head>
   <meta http-equiv="Content-Type"
@@ -13,7 +13,7 @@
   <meta name="author"
         content="Werner Lemberg" />
   <meta name="version"
-        content="1.8.2" />
+        content="1.8.3" />
 
   <title>ttfautohint</title>
 
@@ -283,11 +283,11 @@
 <div id="header">
 <h1 class="title">ttfautohint</h1>
 <h2 class="author">Werner Lemberg</h2>
-<h3 class="date">Version 1.8.2</h3>
+<h3 class="date">Version 1.8.3</h3>
 </div>
 
 <!--
-  Copyright (C) 2011-2018 by Werner Lemberg.
+  Copyright (C) 2011-2019 by Werner Lemberg.
 
   This file is part of the ttfautohint library, and may only be used,
   modified, and distributed under the terms given in `COPYING'.  By
@@ -302,7 +302,7 @@
 <p>The library has a central API function, <code>TTF_autohint</code>, which is described <a href="#the-ttfautohint-api">below</a>.</p>
 <p>Bundled with the library there are two front-end programs, <a href="#ttfautohint-and-ttfautohintgui"><code>ttfautohint</code> and <code>ttfautohintGUI</code></a>, being a command line program and an application with a Graphics User Interface (GUI), respectively.</p>
 <h2 id="what-exactly-are-hints">What exactly are hints?</h2>
-<p>To cite <a href="http://en.wikipedia.org/wiki/Font_hinting">Wikipedia</a>:</p>
+<p>To cite <a href="https://en.wikipedia.org/wiki/Font_hinting">Wikipedia</a>:</p>
 <blockquote>
 <p><strong>Font hinting</strong> (also known as <strong>instructing</strong>) is the use of mathematical instructions to adjust the display of an outline font so that it lines up with a rasterized grid. At low screen resolutions, hinting is critical for producing a clear, legible text. It can be accompanied by antialiasing and (on liquid crystal displays) subpixel rendering for further clarity.</p>
 </blockquote>
@@ -348,10 +348,10 @@
 <h2 id="smooth-hinting">‘Smooth’ hinting</h2>
 <p>Fundamentally, there are two approaches to hinting. The older approach, let’s call it ‘sharp’, popular when text was rendered in pure black-and-white, was to make all stems round to full pixels so that in a text line, all stems would be either one pixel or (at a larger point size) two pixels. When grayscale antialiasing came about, this approach actually started harming the rendering rather than helping it, because the horizontal and vertical stems would render very dark but round or diagonal stems would render very light.</p>
 <p>So a new approach was developed, let’s call it ‘fuzzy’, where all stems and other elements are equalized so that in grayscale (or ClearType) rendering, they all are of roughly equal color. This means that stems are not rounded to full pixels but in fact to fractions of a pixel. However, with black-and-white renderers, this approach yields poor results because in black-and-white you cannot render a fraction of a pixel, so some stems become one pixel and some become two.</p>
-<p>The TrueType auto-hinters in <a href="http://fontforge.sf.net">FontForge</a> and <a href="http://www.fontlab.com/font-editor/fontlab-studio">FontLab Studio</a>, to name two well-known font editors, take the ‘sharp’ approach, while the TrueType auto-hinter in ttfautohint takes the ‘fuzzy’ approach.</p>
+<p>The TrueType auto-hinters in <a href="https://fontforge.sf.net">FontForge</a> and <a href="https://www.fontlab.com/font-editor/fontlab-studio">FontLab Studio</a>, to name two well-known font editors, take the ‘sharp’ approach, while the TrueType auto-hinter in ttfautohint takes the ‘fuzzy’ approach.</p>
 <p>In theory, a hybrid approach is possible, using TrueType conditional hints: If the rasterizer is black-and-white, ‘sharp’ rendering could happen, while if the rasterizer is ClearType, the ‘fuzzy’ rendering could be used. It is not intended to add black-and-white auto-hinting to ttfautohint. However, it is planned to develop an interface so that ttfautohint can cooperate with font editors, providing this hybrid hinting.</p>
 <h1 id="ttfautohint-and-ttfautohintgui"><code>ttfautohint</code> and <code>ttfautohintGUI</code></h1>
-<p>On all supported platforms (GNU/Linux, Windows, and Mac OS X), the GUI looks quite similar; the used toolkit is <a href="http://qt.io">Qt</a>, which in turn uses the platform’s native widgets.</p>
+<p>On all supported platforms (GNU/Linux, Windows, and Mac OS X), the GUI looks quite similar; the used toolkit is <a href="https://qt.io">Qt</a>, which in turn uses the platform’s native widgets.</p>
 <div class="figure">
 <img src="img/ttfautohintGUI.png" alt="ttfautohintGUI on GNU/Linux running KDE" />
 <p class="caption"><code>ttfautohintGUI</code> on GNU/Linux running KDE</p>
@@ -625,7 +625,7 @@
 </dd>
 </dl>
 <h1 id="background-and-technical-details">Background and Technical Details</h1>
-<p><a href="http://www.tug.org/TUGboat/tb24-3/lemberg.pdf">Real-Time Grid Fitting of Typographic Outlines</a> is a scholarly paper that describes FreeType’s auto-hinter in some detail. Regarding the described data structures it is slightly out of date, but the algorithm itself hasn’t changed in general.</p>
+<p><a href="https://www.tug.org/TUGboat/tb24-3/lemberg.pdf">Real-Time Grid Fitting of Typographic Outlines</a> is a scholarly paper that describes FreeType’s auto-hinter in some detail. Regarding the described data structures it is slightly out of date, but the algorithm itself hasn’t changed in general.</p>
 <p>The next few subsections are mainly based on this article, introducing some important concepts. Note that ttfautohint only does hinting along the vertical direction (modifying y coordinates only).</p>
 <h2 id="segments-and-edges">Segments and Edges</h2>
 <p>A glyph consists of one or more <em>contours</em> (this is, closed curves). For example, glyph ‘O’ consists of two contours, while glyph ‘I’ has only one.</p>
@@ -934,6 +934,14 @@
 <tr class="even">
 <td align="left"></td>
 <td align="left">‘റ’, U+0D31, MALAYALAM LETTER RRA</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>mong</code></td>
+<td align="left">‘ᡂ’, U+1842, MONGOLIAN LETTER CHI</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left">‘ᠪ’, U+182A, MONGOLIAN LETTER BA</td>
 </tr>
 <tr class="odd">
 <td align="left"><code>mymr</code></td>
@@ -2252,6 +2260,28 @@
 </tbody>
 </table>
 <table>
+<caption><code>mong</code> (Mongolian) blue zones</caption>
+<thead>
+<tr class="header">
+<th align="left">ID</th>
+<th align="left">Blue zone</th>
+<th align="left">Characters</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">top of base stem</td>
+<td align="left">ᠳ ᠴ ᠶ ᠽ ᡂ ᡊ ‍ᡡ‍ ‍ᡳ‍</td>
+</tr>
+<tr class="even">
+<td align="left">2</td>
+<td align="left">bottom of base stem</td>
+<td align="left">ᡃ</td>
+</tr>
+</tbody>
+</table>
+<table>
 <caption><code>mymr</code> (Myanmar) blue zones</caption>
 <thead>
 <tr class="header">
@@ -2711,7 +2741,7 @@
 <li><p>Handle remaining ‘strong’ points. Such points are not part of an edge but are still important for defining the shape. This roughly corresponds to the <code>IP</code> TrueType instruction.</p></li>
 <li><p>Everything else (the ‘weak’ points) is handled with an ‘IUP’ instruction.</p></li>
 </ul>
-<p>The following images illustrate the hinting process, using glyph ‘a’ from the freely available font ‘<a href="http://font.ubuntu.com">Ubuntu Book</a>’. The manual hints were added by <a href="https://daltonmaag.com">Dalton Maag Ltd</a>, the used application to create the hinting debug snapshots was <a href="http://fontforge.sf.net">FontForge</a>.</p>
+<p>The following images illustrate the hinting process, using glyph ‘a’ from the freely available font ‘<a href="https://design.ubuntu.com/font/">Ubuntu Book</a>’. The manual hints were added by <a href="https://daltonmaag.com">Dalton Maag Ltd</a>, the used application to create the hinting debug snapshots was <a href="https://fontforge.sf.net">FontForge</a>.</p>
 <div class="figure">
 <img src="img/a-before-hinting.png" alt="Before hinting." />
 <p class="caption">Before hinting.</p>
@@ -2813,7 +2843,7 @@
 <p>The user can also select whether uncovered glyphs are either hinted (which is the default) or scaled only with the fallback script’s scaling parameters. This can be controlled with option <a href="#fallback-script"><code>--fallback-scaling</code></a>. Note that fallback scaling only makes sense if the fallback script has x height blue zones, e.g., <code>cyrl</code> or <code>latn</code>.</p>
 <p>As a special case, specifying <code>none</code> as a fallback script and switching on fallback scaling (‘<code>-f none -S</code>’), no hinting is applied at all to uncovered glyphs – using <code>none</code> always implies a scaling factor of 1.</p>
 <h2 id="opentype-features">OpenType Features</h2>
-<p>(Please read the <a href="http://www.microsoft.com/typography/otspec">OpenType specification</a> for details on <em>features</em>, <code>GSUB</code>, and <code>GPOS</code> tables, and how they relate to scripts.)</p>
+<p>(Please read the <a href="https://www.microsoft.com/typography/otspec">OpenType specification</a> for details on <em>features</em>, <code>GSUB</code>, and <code>GPOS</code> tables, and how they relate to scripts.)</p>
 <p>For modern OpenType fonts, character ranges are not sufficient to handle scripts.</p>
 <ul>
 <li><p>Due to glyph substitution in the font (as specified in a font’s <code>GSUB</code> table), which handles ligatures and similar typographic features, there is no longer a one-to-one mapping from an input Unicode character to a glyph index. Some ligatures, like ‘fi’, actually do have Unicode values for historical reasons, but most of them don’t. While it is possible to map ligature glyphs into Unicode’s Private Use Area (PUA), code values from this area are arbitrary by definition and thus unusable for ttfautohint.</p></li>
@@ -2889,8 +2919,8 @@
 </ul>
 <h2 id="problems">Problems</h2>
 <h3 id="interaction-with-freetype">Interaction With FreeType</h3>
-<p>Some versions of FreeType have an experimental extension for handling subpixel hinting; it is off by default and can be activated by setting the macro <code>TT_CONFIG_OPTION_SUBPIXEL_HINTING</code> to value 2 or 3 at compile time. This code has been contributed mainly by <a href="http://infinality.net">Infinality</a>, being a subset of his original patch. Many GNU/Linux distributions activate this code, or provide packages to activate it. [Note that starting with FreeType version 2.7 the Infinality extension is still available but superseded by a less aggressive subpixel hinting mode, to which the explanations in this section don’t apply.]</p>
-<p>This extension changes the behaviour of many bytecode instructions to get better rendering results. However, not all changes are global; some of them are specific to certain fonts. For example, it contains font-specific improvements for the ‘<a href="http://dejavu-fonts.org">DejaVu</a> Sans’ font family. The list of affected fonts is hard-coded; it can be found in FreeType’s source code file <code>ttsubpix.c</code>.</p>
+<p>Some versions of FreeType have an experimental extension for handling subpixel hinting; it is off by default and can be activated by setting the macro <code>TT_CONFIG_OPTION_SUBPIXEL_HINTING</code> to value 2 or 3 at compile time. This code has been contributed mainly by <a href="https://web.archive.org/web/20150710073951/http://www.infinality.net:80/blog/">Infinality</a>, being a subset of his original patch. Many GNU/Linux distributions activate this code, or provide packages to activate it. [Note that starting with FreeType version 2.7 the Infinality extension is still available but superseded by a less aggressive subpixel hinting mode, to which the explanations in this section don’t apply.]</p>
+<p>This extension changes the behaviour of many bytecode instructions to get better rendering results. However, not all changes are global; some of them are specific to certain fonts. For example, it contains font-specific improvements for the ‘<a href="https://dejavu-fonts.github.io/">DejaVu</a> Sans’ font family. The list of affected fonts is hard-coded; it can be found in FreeType’s source code file <code>ttsubpix.c</code>.</p>
 <p>If you are going to process such specially-handled fonts with ttfautohint, serious rendering problems might show up. Since ttfautohint (intentionally) doesn’t change the font name in the <code>name</code> table, the Infinality extension has no chance to recognize that the hints are different. All such problems vanish if the font gets renamed in its <code>name</code> table (the name of the font file itself doesn’t matter), for example, by using option <a href="#family-suffix"><code>--family-suffix</code></a>.</p>
 <h3 id="incorrect-unicode-character-map">Incorrect Unicode Character Map</h3>
 <p>Fonts with an incorrect Unicode <code>cmap</code> table will not be properly hinted by ttfautohint. Especially older fonts do cheat; for example, there exist Hebrew fonts that map its glyphs to character codes ‘A’, ‘B’, etc., to make them work with non-localized versions of Windows 98, say.</p>
@@ -2903,8 +2933,8 @@
 <h2 id="extending-ttfautohint-with-new-scripts">Extending ttfautohint with new scripts</h2>
 <p>Right now, adding new scripts to ttfautohint only works on the source code level, this is, you have to patch the C source code.</p>
 <p>The process itself isn’t very complicated; it is demonstrated best by example. The following commits in ttfautohint add Ethiopian and Armenian, respectively.</p>
-<div style="white-space: pre-line;"><a href="http://repo.or.cz/ttfautohint.git/commitdiff/d14c7c07" class="uri">http://repo.or.cz/ttfautohint.git/commitdiff/d14c7c07</a>
-<a href="http://repo.or.cz/ttfautohint.git/commitdiff/b5022cd9" class="uri">http://repo.or.cz/ttfautohint.git/commitdiff/b5022cd9</a></div>
+<div style="white-space: pre-line;"><a href="https://repo.or.cz/ttfautohint.git/commitdiff/d14c7c07" class="uri">https://repo.or.cz/ttfautohint.git/commitdiff/d14c7c07</a>
+<a href="https://repo.or.cz/ttfautohint.git/commitdiff/b5022cd9" class="uri">https://repo.or.cz/ttfautohint.git/commitdiff/b5022cd9</a></div>
 <p>It shows that you have to do the following steps.</p>
 <ul>
 <li><p>Add blue zone character data to the file <code>lib/tablue.dat</code>.</p></li>
@@ -2953,7 +2983,7 @@
 
 </blockquote>
 <p>The mutually exclusive parameters <code>left</code> and <code>right</code> (which can be abbreviated as ‘<code>l</code>’ and ‘<code>r</code>’, respectively) indicate that the following points have left or right ‘out’ direction, respectively, overriding ttfautohint’s algorithm for setting point directions. The ‘out direction’ of a point is the direction of the outline <em>leaving</em> the point (or passing the control point). If the specified direction is identical to what ttfautohint computes, nothing special happens. Otherwise, a one-point segment with the specified direction gets created, see <a href="#segments-and-edges">above</a>. By default, its length is zero. Setting <em>left‑offset</em> and <em>right‑offset</em>, you can change the segment’s horizontal start and end position relative to the point position. <em>left‑offset</em> and <em>right‑offset</em> are integers measured in font units.</p>
-<p>The following five images, displaying glyphs ‘O’ and ‘Q’ from the font <a href="http://www.google.com/fonts/specimen/Halant">Halant-Regular</a>, demonstrate how to use direction changes.</p>
+<p>The following five images, displaying glyphs ‘O’ and ‘Q’ from the font <a href="https://fonts.google.com/specimen/Halant">Halant-Regular</a>, demonstrate how to use direction changes.</p>
 <div class="figure">
 <img src="img/Halant-Regular-O-Q.png" alt="The outlines of glyphs O and Q, as displayed in FontForge. They are sufficiently similar to expect that ttfautohint hints them equally. However, this is not the case." />
 <p class="caption">The outlines of glyphs ‘O’ and ‘Q’, as displayed in FontForge. They are sufficiently similar to expect that ttfautohint hints them equally. However, this is not the case.</p>
@@ -2986,7 +3016,7 @@
 <em>[</em> font‑idx <em>]</em>  glyph‑id  <em><code>t</code>[<code>ouch</code>]|<code>p</code>[<code>oint</code>]</em>  points  <em>[</em> <em><code>x</code>[<code>shift</code>]</em> x‑shift <em>]</em>  <em>[</em> <em><code>y</code>[<code>shift</code>]</em> y‑shift <em>]</em>  <em><code>@</code></em>  ppems<br />
 
 </blockquote>
-<p>The mutually exclusive parameters <code>touch</code> and <code>point</code> (which can be abbreviated as ‘<code>t</code>’ and ‘<code>p</code>’, respectively) make ttfautohint apply delta exceptions for the given points, shifting them by the given values. Delta exceptions entered with <code>touch</code> are applied before the final ‘IUP’ (<em>interpolate untouched points</em>) instructions in a glyph’s bytecode, exceptions entered with <code>point</code> after ‘IUP’ (please consult Greg Hitchcock’s <a href="http://www.microsoft.com/typography/cleartype/truetypecleartype.aspx">ClearType Whitepaper</a> for more on pre-IUP and post-IUP delta hints). Additionally, the <code>touch</code> parameter makes the bytecode <em>touch</em> the affected points; such points are no longer affected by ‘IUP’ at all. Note that in ClearType mode all deltas along the x axis are discarded, and deltas along the y axis are only executed for touched points. As a consequence, vertical delta exceptions entered with <code>point</code> should not be used in ClearType mode.<a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a></p>
+<p>The mutually exclusive parameters <code>touch</code> and <code>point</code> (which can be abbreviated as ‘<code>t</code>’ and ‘<code>p</code>’, respectively) make ttfautohint apply delta exceptions for the given points, shifting them by the given values. Delta exceptions entered with <code>touch</code> are applied before the final ‘IUP’ (<em>interpolate untouched points</em>) instructions in a glyph’s bytecode, exceptions entered with <code>point</code> after ‘IUP’ (please consult Greg Hitchcock’s <a href="https://www.microsoft.com/typography/cleartype/truetypecleartype.aspx">ClearType Whitepaper</a> for more on pre-IUP and post-IUP delta hints). Additionally, the <code>touch</code> parameter makes the bytecode <em>touch</em> the affected points; such points are no longer affected by ‘IUP’ at all. Note that in ClearType mode all deltas along the x axis are discarded, and deltas along the y axis are only executed for touched points. As a consequence, vertical delta exceptions entered with <code>point</code> should not be used in ClearType mode.<a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a></p>
 <p><em>ppems</em>, similar to <em>points</em>, are number ranges, see ‘<a href="#x-height-snapping-exceptions">x Height Snapping Exceptions</a>’ for the syntax.</p>
 <p><em>x‑shift</em> and <em>y‑shift</em> represent real numbers that get rounded to multiples of 1/8 pixels. The entries for <code>xshift</code> (‘<code>x</code>’) and <code>yshift</code> (‘<code>y</code>’) are optional; if missing, the corresponding value is set to zero. If both values are zero, the delta exception entry is ignored as a whole.</p>
 <p>Values for <em>x‑shift</em> and <em>y‑shift</em> must be in the range [−1.0;1.0]. Values for <em>ppems</em> must be in the range [6;53]. Values for <em>points</em> are limited by the number of points in the glyph.</p>
@@ -3047,7 +3077,7 @@
                  <span class="dt">void</span>* error_data);</code></pre></div>
 <h2 id="callback-ta_info_func">Callback: <code>TA_Info_Func</code></h2>
 <p>A callback function to access or modify strings in the <code>name</code> table; it is called in a loop that iterates over all <code>name</code> table entries. If defined, <a href="#callback-ta_info_post_func"><code>TA_Info_Post_Func</code></a> gets executed after this loop so that the collected data can be written back to the <code>name</code> table.</p>
-<p><em>platform_id</em>, <em>encoding_id</em>, <em>language_id</em>, and <em>name_id</em> are the identifiers of a <code>name</code> table entry pointed to by <em>str</em> with a length pointed to by <em>str_len</em> (in bytes; the string has no trailing NULL byte). Please refer to the <a href="http://www.microsoft.com/typography/otspec/name.htm">OpenType specification of the <code>name</code> table</a> for a detailed description of the various parameters, in particular which encoding is used for a given platform and encoding ID.</p>
+<p><em>platform_id</em>, <em>encoding_id</em>, <em>language_id</em>, and <em>name_id</em> are the identifiers of a <code>name</code> table entry pointed to by <em>str</em> with a length pointed to by <em>str_len</em> (in bytes; the string has no trailing NULL byte). Please refer to the <a href="https://www.microsoft.com/typography/otspec/name.htm">OpenType specification of the <code>name</code> table</a> for a detailed description of the various parameters, in particular which encoding is used for a given platform and encoding ID.</p>
 <p>The string <em>str</em> is allocated with the function specified by the <code>alloc-func</code> field of <a href="#function-ttf_autohint"><code>TTF_autohint</code></a>; the application should reallocate the data if necessary, ensuring that the string length doesn’t exceed 0xFFFF.</p>
 <p><em>info_data</em> is a void pointer to user-supplied data.</p>
 <p>If an error occurs, return a non-zero value and don’t modify <em>str</em> and <em>str_len</em> (such errors are handled as non-fatal).</p>
@@ -3264,13 +3294,13 @@ TTF_autohint(<span class="dt">const</span> <span class="dt">char</span>* options
 <p>These three macros give the major, minor, and revision number of the library, respectively. See function <a href="#function-ttf_autohint_version"><code>TTF_autohint_version</code></a> for more details.</p>
 <div class="sourceCode"><pre class="sourceCode c"><code class="sourceCode c"><span class="pp">#define TTFAUTOHINT_MAJOR 1</span>
 <span class="pp">#define TTFAUTOHINT_MINOR 8</span>
-<span class="pp">#define TTFAUTOHINT_REVISION 2</span></code></pre></div>
+<span class="pp">#define TTFAUTOHINT_REVISION 3</span></code></pre></div>
 <h2 id="macro-ttfautohint_version">Macro: <code>TTFAUTOHINT_VERSION</code></h2>
 <p>This macro holds the ttfautohint version string.</p>
 <p>For tarball releases it has the form <em>X</em>.<em>Y</em>[.<em>Z</em>], with <em>X</em>, <em>Y</em>, and <em>Z</em> the major, minor, and revision numbers, respectively. If the revision number is zero, it is omitted. Examples: <code>2.7</code>, <code>2.7.1</code>.</p>
 <p>If compiling directly from the git repository, ttfautohint’s bootstrap script derives the version number from the <code>git describe</code> output, appending the number of commits after a tag together with a shortened commit ID. Example: <code>2.7.1.23-379b</code>.</p>
 <p>See function <a href="#function-ttf_autohint_version"><code>TTF_autohint_version</code></a> for more details.</p>
-<div class="sourceCode"><pre class="sourceCode c"><code class="sourceCode c"><span class="pp">#define TTFAUTOHINT_VERSION &quot;1.8.2&quot;</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode c"><code class="sourceCode c"><span class="pp">#define TTFAUTOHINT_VERSION &quot;1.8.3&quot;</span></code></pre></div>
 <h2 id="function-ttf_autohint_version">Function: <code>TTF_autohint_version</code></h2>
 <p>Return the ttfautohint version triplet. This function is useful when dynamically linking to the library, since the macros <code>TTFAUTOHINT_MAJOR</code>, <code>TTFAUTOHINT_MINOR</code>, and <code>TTFAUTOHINT_PATCH</code> cannot be used in that case.</p>
 <p>The returned integer triplet is <em>not</em> the same as the shared library’s version triplet (which the dynamic linker uses to resolve runtime dependencies). For example, hypothetical ttfautohint versions 2.27 and 2.27.1 might both correspond to shared library version 1.0.38 in case there are only, say, documentation or packaging differences that don’t affect the library code.</p>
@@ -3286,20 +3316,20 @@ TTF_autohint_version(<span class="dt">int</span> *major,
 <div class="sourceCode"><pre class="sourceCode c"><code class="sourceCode c">TA_LIB_EXPORT <span class="dt">const</span> <span class="dt">char</span>*
 TTF_autohint_version_string(<span class="dt">void</span>);</code></pre></div>
 <h1 id="compilation-and-installation">Compilation and Installation</h1>
-<p>Please read the files <a href="http://git.savannah.gnu.org/gitweb/?p=gnulib.git;a=blob_plain;f=doc/INSTALL;hb=HEAD"><code>INSTALL</code></a> and <a href="http://repo.or.cz/w/ttfautohint.git/blob_plain/HEAD:/INSTALL.git"><code>INSTALL.git</code></a> (both part of the source code bundle) for instructions how to compile the ttfautohint library together with its front-ends using a POSIX compatible shell and compiler.</p>
+<p>Please read the files <a href="https://git.savannah.gnu.org/gitweb/?p=gnulib.git;a=blob_plain;f=doc/INSTALL;hb=HEAD"><code>INSTALL</code></a> and <a href="https://repo.or.cz/w/ttfautohint.git/blob_plain/HEAD:/INSTALL.git"><code>INSTALL.git</code></a> (both part of the source code bundle) for instructions how to compile the ttfautohint library together with its front-ends using a POSIX compatible shell and compiler.</p>
 <h2 id="unix-like-platforms">Unix-like Platforms</h2>
-<p>The generic instructions should work just fine. Since ttfautohint depends on <a href="http://qt.io">Qt</a> version 4 or newer, <a href="http://freetype.org">FreeType</a> version 2.4.5 or newer, and <a href="http://harfbuzz.org">HarfBuzz</a> version 1.3.0 or newer, you should install packages for these libraries (called ‘libqt4’ or similar, ‘libfreetype6’<a href="#fn4" class="footnoteRef" id="fnref4"><sup>4</sup></a>, and ‘libharfbuzz0’ or similar) together with its development bundles (called ‘libqt4-devel’, ‘freetype2-devel’, and ‘harfbuzz-devel’ or similar) before running ttfautohint’s <code>configure</code> script.</p>
+<p>The generic instructions should work just fine. Since ttfautohint depends on <a href="https://qt.io">Qt</a> version 4 or newer, <a href="https://freetype.org">FreeType</a> version 2.4.5 or newer, and <a href="http://harfbuzz.org">HarfBuzz</a> version 1.3.0 or newer, you should install packages for these libraries (called ‘libqt4’ or similar, ‘libfreetype6’<a href="#fn4" class="footnoteRef" id="fnref4"><sup>4</sup></a>, and ‘libharfbuzz0’ or similar) together with its development bundles (called ‘libqt4-devel’, ‘freetype2-devel’, and ‘harfbuzz-devel’ or similar) before running ttfautohint’s <code>configure</code> script.</p>
 <h2 id="ms-windows">MS Windows</h2>
-<p>Precompiled binaries <code>ttfautohint.exe</code> and <code>ttfautohintGUI.exe</code> are available, being statically linked to <a href="http://qt.io">Qt</a>, <a href="http://freetype.org">FreeType</a>, and <a href="http://harfbuzz.org">HarfBuzz</a>. This means that the two programs are not dependent on any other program-specific DLL, and you can move them to any place you like.</p>
+<p>Precompiled binaries <code>ttfautohint.exe</code> and <code>ttfautohintGUI.exe</code> are available, being statically linked to <a href="https://qt.io">Qt</a>, <a href="https://freetype.org">FreeType</a>, and <a href="http://harfbuzz.org">HarfBuzz</a>. This means that the two programs are not dependent on any other program-specific DLL, and you can move them to any place you like.</p>
 <p>Hints for compilation with the <a href="http://mingw.org">MinGW</a> environment are given in <code>INSTALL.git</code>.</p>
 <h2 id="mac-os-x">Mac OS X</h2>
-<p>Right now, only a precompiled binary <code>ttfautohint</code> is offered; a ready-to-run app bundle for the GUI version is not yet available; however, ttfautohint is part of <a href="http://brew.sh">Homebrew</a>, making compilation and installation very simple.</p>
-<p>Detailed instructions to compile both <code>ttfautohint</code> and <code>ttfautohintGUI</code> can be found on <a href="http://freetype.org/ttfautohint/osx.html">ttfautohint’s homepage</a>.</p>
+<p>Right now, only a precompiled binary <code>ttfautohint</code> is offered; a ready-to-run app bundle for the GUI version is not yet available; however, ttfautohint is part of <a href="https://brew.sh">Homebrew</a>, making compilation and installation very simple.</p>
+<p>Detailed instructions to compile both <code>ttfautohint</code> and <code>ttfautohintGUI</code> can be found on <a href="https://freetype.org/ttfautohint/osx.html">ttfautohint’s homepage</a>.</p>
 <h1 id="authors">Authors</h1>
-<p>Copyright © 2011-2018 by <a href="mailto:wl@gnu.org">Werner Lemberg</a>.<br />
+<p>Copyright © 2011-2019 by <a href="mailto:wl@gnu.org">Werner Lemberg</a>.<br />
 Portions Copyright © 2011-2017 by <a href="mailto:dave@understandingfonts.com">Dave Crossland</a>.<br />
 Portions Copyright © 2014 by <a href="mailto:adam@twardoch.com">Adam Twardoch</a>.</p>
-<p>This file is part of the ttfautohint library, and may only be used, modified, and distributed under the terms given in <a href="http://repo.or.cz/w/ttfautohint.git/blob_plain/HEAD:/COPYING"><code>COPYING</code></a>. By continuing to use, modify, or distribute this file you indicate that you have read <code>COPYING</code> and understand and accept it fully.</p>
+<p>This file is part of the ttfautohint library, and may only be used, modified, and distributed under the terms given in <a href="https://repo.or.cz/w/ttfautohint.git/blob_plain/HEAD:/COPYING"><code>COPYING</code></a>. By continuing to use, modify, or distribute this file you indicate that you have read <code>COPYING</code> and understand and accept it fully.</p>
 <p>The file <code>COPYING</code> mentioned in the previous paragraph is distributed with the ttfautohint library.</p>
 <h1 id="character-ranges">Character Ranges</h1>
 <p>For the FreeType auto-hinter (and thus ttfautohint), a ‘non-base character’ is something that should not be affected by blue zones, regardless of whether this is a spacing or no-spacing glyph.</p>
@@ -4648,6 +4678,41 @@ Portions Copyright © 2014 by <a href="mailto:adam@twardoch.com">Adam Twardoch</
 </tbody>
 </table>
 <table>
+<caption><code>mong</code> base characters</caption>
+<thead>
+<tr class="header">
+<th align="center">Character range</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><code>0x1800</code> - <code>0x18AF</code></td>
+<td align="left">Mongolian</td>
+</tr>
+<tr class="even">
+<td align="center"><code>0x11660</code> - <code>0x1167F</code></td>
+<td align="left">Mongolian Supplement</td>
+</tr>
+</tbody>
+</table>
+<table>
+<caption><code>mong</code> non-base characters</caption>
+<thead>
+<tr class="header">
+<th align="center">Character range</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><code>0x1885</code> - <code>0x1886</code></td>
+</tr>
+<tr class="even">
+<td align="center"><code>0x18A9</code> - <code>0x18A9</code></td>
+</tr>
+</tbody>
+</table>
+<table>
 <caption><code>mymr</code> base characters</caption>
 <thead>
 <tr class="header">
@@ -5098,6 +5163,11 @@ Portions Copyright © 2014 by <a href="mailto:adam@twardoch.com">Adam Twardoch</
 </tbody>
 </table>
 <h1 id="history">History</h1>
+<h2 id="version-1.8.3-2019-apr-09">Version 1.8.3 (2019-Apr-09)</h2>
+<ul>
+<li><p>Support for Mongolian. The de-facto standard is to render the glyphs horizontally (left-to-right) line by line, then rotating each line clockwise by 90 degrees. This allows the usage of ttfautohint.</p></li>
+<li><p>Bug fix: Glyphs with complicated shapes or a large number of outlines could be distorted if displayed with FreeType (or stay unhinted if viewed on Windows).</p></li>
+</ul>
 <h2 id="version-1.8.2-2018-jul-24">Version 1.8.2 (2018-Jul-24)</h2>
 <ul>
 <li><p>Support for Georgian Mtavruli.</p></li>
@@ -5424,6 +5494,7 @@ Portions Copyright © 2014 by <a href="mailto:adam@twardoch.com">Adam Twardoch</
 <li><a href="#authors">Authors</a></li>
 <li><a href="#character-ranges">Character Ranges</a></li>
 <li><a href="#history">History</a><ul>
+<li><a href="#version-1.8.3-2019-apr-09">Version 1.8.3 (2019-Apr-09)</a></li>
 <li><a href="#version-1.8.2-2018-jul-24">Version 1.8.2 (2018-Jul-24)</a></li>
 <li><a href="#version-1.8.1-2018-jan-01">Version 1.8.1 (2018-Jan-01)</a></li>
 <li><a href="#version-1.8-2017-dec-31">Version 1.8 (2017-Dec-31)</a></li>
