@@ -82,14 +82,14 @@
 
           <dl>
             <dt>Develop a test framework for checking FreeType's
-              rendering output (started as a GSoC 2017 project,
-              unfinished)</dt>
+              rendering output</dt>
             <dd>
               <p>Right now, FreeType's rendering results of the
                 current development version are not systematically
-                compared to a baseline version.  This is problematic,
-                since rendering regressions can be very easily missed
-                due to subtle differences.</p>
+                compared to a baseline version, using continuous
+                integration (CI) or something similar.  This is
+                problematic, since rendering regressions can be very
+                easily missed due to subtle differences.</p>
 
               <p>The idea is to select a representative set of
                 reference fonts from font corpora (which already exist
@@ -114,75 +114,63 @@
           </dl>
 
           <dl>
-            <dt>Add support for the <code>WOFF2</code> fonts
+            <dt>Update FreeType's build systems</dt>
+
             <dd>
-              <p>FreeType currently supports WOFF 1.0 fonts,
-              which are zlib-compressed SFNT fonts. The support for
-              WOFF 2.0 with improved Brotli compression is lacking.
-              This project would likely involve the following.
+              <p>Due to historical reasons, FreeType's build systems
+                are strange to newcomers.  The default one is based
+                on <a href="https://www.gnu.org/software/make/"><code>GNU
+                make</code></a>, also
+                integrating <a href="https://www.gnu.org/software/autoconf/"><code>autoconf</code></a>
+                support.  Alternatives are generic build files
+                for <a href="https://cmake.org/"><code>cmake</code></a>
+                and <a href="https://www.freetype.org/jam/"><code>ftjam</code></a>,
+                together with special support files
+                for <a href="https://visualstudio.microsoft.com">MS
+                Visual
+                Studio</a>, <a href="https://en.wikipedia.org/wiki/OpenVMS">OpenVMS</a>,
+                and some even more exotic, old platforms.</p>
+
+              <p>This project is intended to update the build systems.
+                Here is a preliminary list of tasks.</p>
 
               <ul>
-                <li>Study and compare the specifications how SFNT fonts are
-                wrapped into <a href=https://www.w3.org/TR/WOFF/>WOFF 1.0</a>
-                and <a href=https://www.w3.org/TR/WOFF2/>WOFF 2.0</a> files.
-                Determine if they can be merged.</li>
+                <li>Investigate which build systems should be
+                  retained, modified, added, removed, etc.,
+                  approaching the project with a conservative point of
+                  view.  This needs intensive contact with the mailing
+                  list(s) to identify the needs of users and the
+                  preferences of developers.</li>
 
-                <li>Explore if it is possible to borrow
-                <a href=https://github.com/google/woff2>Brotli decoder</a>
-                donated by Google.</li>
+                <li>Check software distributions for different
+                  platforms and analyze how FreeType's build systems
+                  are modified for integration.  This might give
+                  further hints on necessary changes or
+                  adaptations.</li>
 
-                <li>Integrate seamless WOFF2 support into FreeType so that
-                these fonts can be recognized, decompressed, and opened as
-                any other SFNT font, without any changes to API.
+                <li>Especially for <code>cmake</code> support, there
+                  are a bunch of issues
+                  in <a href="https://savannah.nongnu.org/bugs/?group=freetype">Freetype's
+                  bug tracker</a> that should be taken care of.</li>
+
+                <li>Modernize and update the build system based on the
+                  outcome of the previous items.  This might also
+                  include changes in the directory structure of the
+                  source files if necessary and useful.</li>
               </ul>
 
-              <p><em>Difficulty:</em> medium to
-                high.  <em>Requirements:</em> C, Unix build
-                tools.  <em>Potential mentors:</em> Werner Lemberg,
-                Alexei Podtelezhnikov, Toshiya Suzuki (FreeType).</p>
+              <p><em>Difficulty:</em> medium.  <em>Requirements:</em>
+                Various Unix and Windows build tools, in
+                particular <code>GNU make</code>
+                and <code>cmake</code>.  <em>Potential mentors:</em>
+                Werner Lemberg, Alexei Podtelezhnikov, Toshiya Suzuki
+                (FreeType).</p>
             </dd>
           </dl>
 
           <dl>
-            <dt>Add support for the &lsquo;<code>SVG </code>&rsquo;
-              OpenType table to render color fonts</dt>
-            <dd>
-              <p>FreeType currently doesn't have support for fonts
-                that <a href="https://docs.microsoft.com/en-us/typography/opentype/spec/svg">use
-                  SVG to render color glyphs</a>.  The task of this
-                project would be as follows.</p>
-
-              <ul>
-                <li>Evaluate the freely available SVG libraries that
-                  would fit the job best.</li>
-
-                <li>Investigate how to integrate this external library
-                  into FreeType.  For example, it should be checked
-                  whether it makes sense to create a new font
-                  rendering module (which would act more or less as a
-                  wrapper to the external SVG library).</li>
-
-                <li>If the module approach doesn't fit, define
-                  FreeType API functions and hooks for transferring
-                  data from the font's &lsquo;<code>SVG </code>&rsquo;
-                  table to the external library.  Ditto for
-                  transferring the resulting (bitmap) output back into
-                  FreeType.</li>
-
-                <li>Add the necessary infrastructure API stuff (for
-                  example, a function to test whether a font has SVG
-                  glyphs).</li>
-              </ul>
-
-              <p><em>Difficulty:</em> medium to
-                high.  <em>Requirements:</em> C, Unix build
-                tools.  <em>Potential mentors:</em> Werner Lemberg,
-                Alexei Podtelezhnikov, Toshiya Suzuki (FreeType).</p>
-            </dd>
-          </dl>
-
-          <dl>
-            <dt>Improve the &lsquo;ftinspect&rsquo; demo program</dt>
+            <dt>Improve the &lsquo;ftinspect&rsquo; demo program
+            (started as a GSoC 2019 project, unfinished)</dt>
             <dd>
               <p>Right now, FreeType comes with a suite of small
                 graphic tools to test the library, most notably
@@ -269,7 +257,7 @@
         <!-- ************************************************** -->
 
         <div class="updated">
-          <p>Last update: 6-Feb-2019</p>
+          <p>Last update: 16-Feb-2020</p>
         </div>
       </div>
     </div>
