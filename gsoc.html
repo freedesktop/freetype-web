@@ -205,9 +205,11 @@
               <p>FreeType extensively uses a home-brewed tracing
                 solution that mainly relies on the C&nbsp;preprocessor
                 and the <code>fprintf</code> function printing to
-                <code>stderr</code>.  However, this simplistic
-                approach is not adequate for all platforms, where
-                <code>stderr</code> is not always easily
+                <code>stderr</code> (see
+                file <a href="https://git.savannah.gnu.org/cgit/freetype/freetype2.git/tree/docs/DEBUG"><code>docs/DEBUG</code></a>
+                for documentation).  However, this simplistic approach
+                is not adequate for all platforms,
+                where <code>stderr</code> is not always easily
                 accessible.</p>
 
               <p>Many freely available tracing and logging libraries
@@ -257,7 +259,7 @@
         <!-- ************************************************** -->
 
         <div class="updated">
-          <p>Last update: 16-Feb-2020</p>
+          <p>Last update: 25-Feb-2020</p>
         </div>
       </div>
     </div>
