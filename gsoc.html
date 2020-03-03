@@ -169,6 +169,39 @@
           </dl>
 
           <dl>
+            <dt>Port the <code>font-rs</code> rendering engine to
+              FreeType</dt>
+
+            <dd>
+              <p>Raph Levien has
+                developed <a href="https://github.com/raphlinus/font-rs"><code>font-rs</code></a>,
+                an experimental font renderer written in
+                the <a href="https://www.rust-lang.org/">Rust
+                programming language</a>.
+                A <a href="https://medium.com/@raphlinus/inside-the-fastest-font-renderer-in-the-world-75ae5270c445">blogpost</a>
+                describes some of its features in more detail; of
+                particular interest is that it is much faster than
+                FreeType's anti-aliasing rendering module.</p>
+
+              <p>The gist of this project would be to port the Rust
+                code to&nbsp;C and to integrate it into FreeType,
+                providing it as an alternative rendering engine that
+                eventually might replace the old one.  It would be
+                necessary to investigate how this can be done, and
+                whether it is feasible at all.  In case a port doesn't
+                make sense (for whatever reasons) it should be
+                investigated whether the ideas of the code can be used
+                to re-implement the rasterizer in&nbsp;C.</p>
+
+              <p><em>Difficulty:</em> medium (if porting) to high (if
+                reimplementing).  <em>Requirements:</em> Rust, C, Unix
+                build tools.  <em>Potential mentors:</em> Werner
+                Lemberg, Alexei Podtelezhnikov, Toshiya Suzuki
+                (FreeType).</p>
+            </dd>
+          </dl>
+
+          <dl>
             <dt>Improve the &lsquo;ftinspect&rsquo; demo program
             (started as a GSoC 2019 project, unfinished)</dt>
             <dd>
@@ -259,7 +292,7 @@
         <!-- ************************************************** -->
 
         <div class="updated">
-          <p>Last update: 25-Feb-2020</p>
+          <p>Last update: 3-Mar-2020</p>
         </div>
       </div>
     </div>
