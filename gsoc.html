@@ -169,8 +169,8 @@
           </dl>
 
           <dl>
-            <dt>Port the <code>font-rs</code> rendering engine to
-              FreeType</dt>
+            <dt>Port the <code>font-rs</code>/<code>fontdue</code>
+              rendering engine to FreeType</dt>
 
             <dd>
               <p>Raph Levien has
@@ -182,6 +182,12 @@
                 describes some of its features in more detail; of
                 particular interest is that it is much faster than
                 FreeType's anti-aliasing rendering module.</p>
+
+              <p>Note that
+                the <a href="https://crates.io/crates/fontdue"><code>fontdue</code></a>
+                Rust package is another rendering engine based
+                on <code>font-rs</code>, and it claims to be even
+                faster.
 
               <p>The gist of this project would be to port the Rust
                 code to&nbsp;C and to integrate it into FreeType,
@@ -197,7 +203,7 @@
                 reimplementing).  <em>Requirements:</em> Rust, C, Unix
                 build tools.  <em>Potential mentors:</em> Werner
                 Lemberg, Alexei Podtelezhnikov, Toshiya Suzuki
-                (FreeType).</p>
+                (FreeType), Raph Levien (Google).</p>
             </dd>
           </dl>
 
@@ -292,7 +298,7 @@
         <!-- ************************************************** -->
 
         <div class="updated">
-          <p>Last update: 3-Mar-2020</p>
+          <p>Last update: 18-Mar-2020</p>
         </div>
       </div>
     </div>
