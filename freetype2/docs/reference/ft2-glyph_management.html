@@ -10,7 +10,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
-        <meta name="description" content="API Reference Documentation for FreeType-2.10.1">
+        <meta name="description" content="API Reference Documentation for FreeType-2.10.2">
       
       
       
@@ -36,17 +36,17 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="images/favico.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.0.2">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
     
     
       
-        <title>Glyph Management - FreeType-2.10.1 API Reference</title>
+        <title>Glyph Management - FreeType-2.10.2 API Reference</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/application.982221ab.css">
+      <link rel="stylesheet" href="assets/stylesheets/application.adb8469c.css">
       
-        <link rel="stylesheet" href="assets/stylesheets/application-palette.224b79ff.css">
+        <link rel="stylesheet" href="assets/stylesheets/application-palette.a8b3c06d.css">
       
       
         
@@ -55,12 +55,12 @@
       
     
     
-      <script src="assets/javascripts/modernizr.1f0bcf2b.js"></script>
+      <script src="assets/javascripts/modernizr.86422ebf.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif:300,400,400i,700|Roboto+Mono">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Noto Serif","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -89,7 +89,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#glyph-management" tabindex="1" class="md-skip">
+      <a href="#glyph-management" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -98,9 +98,9 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="index.html" title="FreeType-2.10.1 API Reference" class="md-header-nav__button md-logo">
+        <a href="." title="FreeType-2.10.2 API Reference" aria-label="FreeType-2.10.2 API Reference" class="md-header-nav__button md-logo">
           
-            <img src="images/favico.ico" width="24" height="24">
+            <img alt="logo" src="images/favico.ico" width="24" height="24">
           
         </a>
       </div>
@@ -111,10 +111,12 @@
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             <span class="md-header-nav__topic">
-              FreeType-2.10.1 API Reference
+              FreeType-2.10.2 API Reference
             </span>
             <span class="md-header-nav__topic">
-              Glyph Management
+              
+                Glyph Management
+              
             </span>
           
         </div>
@@ -127,7 +129,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
       <label class="md-icon md-search__icon" for="__search"></label>
       <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
         &#xE5CD;
@@ -157,7 +159,7 @@
         
       
       
-      <main class="md-main">
+      <main class="md-main" role="main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
             
@@ -166,12 +168,12 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="index.html" title="FreeType-2.10.1 API Reference" class="md-nav__button md-logo">
+    <a href="." title="FreeType-2.10.2 API Reference" class="md-nav__button md-logo">
       
-        <img src="images/favico.ico" width="48" height="48">
+        <img alt="logo" src="images/favico.ico" width="48" height="48">
       
     </a>
-    FreeType-2.10.1 API Reference
+    FreeType-2.10.2 API Reference
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -374,105 +376,105 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#synopsis" title="Synopsis" class="md-nav__link">
+  <a href="#synopsis" class="md-nav__link">
     Synopsis
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_glyph" title="FT_Glyph" class="md-nav__link">
+  <a href="#ft_glyph" class="md-nav__link">
     FT_Glyph
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_glyphrec" title="FT_GlyphRec" class="md-nav__link">
+  <a href="#ft_glyphrec" class="md-nav__link">
     FT_GlyphRec
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_bitmapglyph" title="FT_BitmapGlyph" class="md-nav__link">
+  <a href="#ft_bitmapglyph" class="md-nav__link">
     FT_BitmapGlyph
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_bitmapglyphrec" title="FT_BitmapGlyphRec" class="md-nav__link">
+  <a href="#ft_bitmapglyphrec" class="md-nav__link">
     FT_BitmapGlyphRec
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_outlineglyph" title="FT_OutlineGlyph" class="md-nav__link">
+  <a href="#ft_outlineglyph" class="md-nav__link">
     FT_OutlineGlyph
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_outlineglyphrec" title="FT_OutlineGlyphRec" class="md-nav__link">
+  <a href="#ft_outlineglyphrec" class="md-nav__link">
     FT_OutlineGlyphRec
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_new_glyph" title="FT_New_Glyph" class="md-nav__link">
+  <a href="#ft_new_glyph" class="md-nav__link">
     FT_New_Glyph
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_get_glyph" title="FT_Get_Glyph" class="md-nav__link">
+  <a href="#ft_get_glyph" class="md-nav__link">
     FT_Get_Glyph
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_glyph_copy" title="FT_Glyph_Copy" class="md-nav__link">
+  <a href="#ft_glyph_copy" class="md-nav__link">
     FT_Glyph_Copy
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_glyph_transform" title="FT_Glyph_Transform" class="md-nav__link">
+  <a href="#ft_glyph_transform" class="md-nav__link">
     FT_Glyph_Transform
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_glyph_bbox_mode" title="FT_Glyph_BBox_Mode" class="md-nav__link">
+  <a href="#ft_glyph_bbox_mode" class="md-nav__link">
     FT_Glyph_BBox_Mode
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_glyph_get_cbox" title="FT_Glyph_Get_CBox" class="md-nav__link">
+  <a href="#ft_glyph_get_cbox" class="md-nav__link">
     FT_Glyph_Get_CBox
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_glyph_to_bitmap" title="FT_Glyph_To_Bitmap" class="md-nav__link">
+  <a href="#ft_glyph_to_bitmap" class="md-nav__link">
     FT_Glyph_To_Bitmap
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_done_glyph" title="FT_Done_Glyph" class="md-nav__link">
+  <a href="#ft_done_glyph" class="md-nav__link">
     FT_Done_Glyph
   </a>
   
@@ -1071,8 +1073,8 @@
 
 
   <li class="md-nav__item">
-    <a href="ft2-ot_validation.html" title="OpenType Validation" class="md-nav__link">
-      OpenType Validation
+    <a href="ft2-gx_validation.html" title="TrueTypeGX/AAT Validation" class="md-nav__link">
+      TrueTypeGX/AAT Validation
     </a>
   </li>
 
@@ -1107,8 +1109,8 @@
 
 
   <li class="md-nav__item">
-    <a href="ft2-gx_validation.html" title="TrueTypeGX/AAT Validation" class="md-nav__link">
-      TrueTypeGX/AAT Validation
+    <a href="ft2-ot_validation.html" title="OpenType Validation" class="md-nav__link">
+      OpenType Validation
     </a>
   </li>
 
@@ -1139,105 +1141,105 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#synopsis" title="Synopsis" class="md-nav__link">
+  <a href="#synopsis" class="md-nav__link">
     Synopsis
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_glyph" title="FT_Glyph" class="md-nav__link">
+  <a href="#ft_glyph" class="md-nav__link">
     FT_Glyph
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_glyphrec" title="FT_GlyphRec" class="md-nav__link">
+  <a href="#ft_glyphrec" class="md-nav__link">
     FT_GlyphRec
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_bitmapglyph" title="FT_BitmapGlyph" class="md-nav__link">
+  <a href="#ft_bitmapglyph" class="md-nav__link">
     FT_BitmapGlyph
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_bitmapglyphrec" title="FT_BitmapGlyphRec" class="md-nav__link">
+  <a href="#ft_bitmapglyphrec" class="md-nav__link">
     FT_BitmapGlyphRec
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_outlineglyph" title="FT_OutlineGlyph" class="md-nav__link">
+  <a href="#ft_outlineglyph" class="md-nav__link">
     FT_OutlineGlyph
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_outlineglyphrec" title="FT_OutlineGlyphRec" class="md-nav__link">
+  <a href="#ft_outlineglyphrec" class="md-nav__link">
     FT_OutlineGlyphRec
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_new_glyph" title="FT_New_Glyph" class="md-nav__link">
+  <a href="#ft_new_glyph" class="md-nav__link">
     FT_New_Glyph
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_get_glyph" title="FT_Get_Glyph" class="md-nav__link">
+  <a href="#ft_get_glyph" class="md-nav__link">
     FT_Get_Glyph
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_glyph_copy" title="FT_Glyph_Copy" class="md-nav__link">
+  <a href="#ft_glyph_copy" class="md-nav__link">
     FT_Glyph_Copy
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_glyph_transform" title="FT_Glyph_Transform" class="md-nav__link">
+  <a href="#ft_glyph_transform" class="md-nav__link">
     FT_Glyph_Transform
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_glyph_bbox_mode" title="FT_Glyph_BBox_Mode" class="md-nav__link">
+  <a href="#ft_glyph_bbox_mode" class="md-nav__link">
     FT_Glyph_BBox_Mode
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_glyph_get_cbox" title="FT_Glyph_Get_CBox" class="md-nav__link">
+  <a href="#ft_glyph_get_cbox" class="md-nav__link">
     FT_Glyph_Get_CBox
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_glyph_to_bitmap" title="FT_Glyph_To_Bitmap" class="md-nav__link">
+  <a href="#ft_glyph_to_bitmap" class="md-nav__link">
     FT_Glyph_To_Bitmap
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_done_glyph" title="FT_Done_Glyph" class="md-nav__link">
+  <a href="#ft_done_glyph" class="md-nav__link">
     FT_Done_Glyph
   </a>
   
@@ -1267,11 +1269,8 @@
 <p>This section contains definitions used to manage glyph data through generic <code><a href="ft2-glyph_management.html#ft_glyph">FT_Glyph</a></code> objects. Each of them can contain a bitmap, a vector outline, or even images in other formats. These objects are detached from <code><a href="ft2-base_interface.html#ft_face">FT_Face</a></code>, contrary to <code><a href="ft2-base_interface.html#ft_glyphslot">FT_GlyphSlot</a></code>.</p>
 <h2 id="ft_glyph">FT_Glyph<a class="headerlink" href="#ft_glyph" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_GLYPH_H (freetype/ftglyph.h).</p>
-<div class = "codehilite">
-<pre>
-  <span class="keyword">typedef</span> <span class="keyword">struct</span> FT_GlyphRec_*  <b>FT_Glyph</b>;
-</pre>
-</div>
+<div class = "codehilite"><pre><code>  <span class="keyword">typedef</span> <span class="keyword">struct</span> FT_GlyphRec_*  <b>FT_Glyph</b>;
+</code></pre></div>
 
 <p>Handle to an object used to model generic glyph images. It is a pointer to the <code><a href="ft2-glyph_management.html#ft_glyphrec">FT_GlyphRec</a></code> structure and can contain a glyph bitmap or pointer.</p>
 <h4>note</h4>
@@ -1281,9 +1280,7 @@
 
 <h2 id="ft_glyphrec">FT_GlyphRec<a class="headerlink" href="#ft_glyphrec" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_GLYPH_H (freetype/ftglyph.h).</p>
-<div class = "codehilite">
-<pre>
-  <span class="keyword">typedef</span> <span class="keyword">struct</span>  FT_GlyphRec_
+<div class = "codehilite"><pre><code>  <span class="keyword">typedef</span> <span class="keyword">struct</span>  FT_GlyphRec_
   {
     <a href="ft2-base_interface.html#ft_library">FT_Library</a>             library;
     <span class="keyword">const</span> FT_Glyph_Class*  clazz;
@@ -1291,8 +1288,7 @@
     <a href="ft2-basic_types.html#ft_vector">FT_Vector</a>              advance;
 
   } <b>FT_GlyphRec</b>;
-</pre>
-</div>
+</code></pre></div>
 
 <p>The root glyph structure contains a given glyph image plus its advance width in 16.16 fixed-point format.</p>
 <h4>fields</h4>
@@ -1316,20 +1312,15 @@
 
 <h2 id="ft_bitmapglyph">FT_BitmapGlyph<a class="headerlink" href="#ft_bitmapglyph" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_GLYPH_H (freetype/ftglyph.h).</p>
-<div class = "codehilite">
-<pre>
-  <span class="keyword">typedef</span> <span class="keyword">struct</span> FT_BitmapGlyphRec_*  <b>FT_BitmapGlyph</b>;
-</pre>
-</div>
+<div class = "codehilite"><pre><code>  <span class="keyword">typedef</span> <span class="keyword">struct</span> FT_BitmapGlyphRec_*  <b>FT_BitmapGlyph</b>;
+</code></pre></div>
 
 <p>A handle to an object used to model a bitmap glyph image. This is a sub-class of <code><a href="ft2-glyph_management.html#ft_glyph">FT_Glyph</a></code>, and a pointer to <code><a href="ft2-glyph_management.html#ft_bitmapglyphrec">FT_BitmapGlyphRec</a></code>.</p>
 <hr>
 
 <h2 id="ft_bitmapglyphrec">FT_BitmapGlyphRec<a class="headerlink" href="#ft_bitmapglyphrec" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_GLYPH_H (freetype/ftglyph.h).</p>
-<div class = "codehilite">
-<pre>
-  <span class="keyword">typedef</span> <span class="keyword">struct</span>  FT_BitmapGlyphRec_
+<div class = "codehilite"><pre><code>  <span class="keyword">typedef</span> <span class="keyword">struct</span>  FT_BitmapGlyphRec_
   {
     <a href="ft2-glyph_management.html#ft_glyphrec">FT_GlyphRec</a>  root;
     <a href="ft2-basic_types.html#ft_int">FT_Int</a>       left;
@@ -1337,8 +1328,7 @@
     <a href="ft2-basic_types.html#ft_bitmap">FT_Bitmap</a>    bitmap;
 
   } <b>FT_BitmapGlyphRec</b>;
-</pre>
-</div>
+</code></pre></div>
 
 <p>A structure used for bitmap glyph images. This really is a &lsquo;sub-class&rsquo; of <code><a href="ft2-glyph_management.html#ft_glyphrec">FT_GlyphRec</a></code>.</p>
 <h4>fields</h4>
@@ -1366,27 +1356,21 @@
 
 <h2 id="ft_outlineglyph">FT_OutlineGlyph<a class="headerlink" href="#ft_outlineglyph" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_GLYPH_H (freetype/ftglyph.h).</p>
-<div class = "codehilite">
-<pre>
-  <span class="keyword">typedef</span> <span class="keyword">struct</span> FT_OutlineGlyphRec_*  <b>FT_OutlineGlyph</b>;
-</pre>
-</div>
+<div class = "codehilite"><pre><code>  <span class="keyword">typedef</span> <span class="keyword">struct</span> FT_OutlineGlyphRec_*  <b>FT_OutlineGlyph</b>;
+</code></pre></div>
 
 <p>A handle to an object used to model an outline glyph image. This is a sub-class of <code><a href="ft2-glyph_management.html#ft_glyph">FT_Glyph</a></code>, and a pointer to <code><a href="ft2-glyph_management.html#ft_outlineglyphrec">FT_OutlineGlyphRec</a></code>.</p>
 <hr>
 
 <h2 id="ft_outlineglyphrec">FT_OutlineGlyphRec<a class="headerlink" href="#ft_outlineglyphrec" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_GLYPH_H (freetype/ftglyph.h).</p>
-<div class = "codehilite">
-<pre>
-  <span class="keyword">typedef</span> <span class="keyword">struct</span>  FT_OutlineGlyphRec_
+<div class = "codehilite"><pre><code>  <span class="keyword">typedef</span> <span class="keyword">struct</span>  FT_OutlineGlyphRec_
   {
     <a href="ft2-glyph_management.html#ft_glyphrec">FT_GlyphRec</a>  root;
     <a href="ft2-outline_processing.html#ft_outline">FT_Outline</a>   outline;
 
   } <b>FT_OutlineGlyphRec</b>;
-</pre>
-</div>
+</code></pre></div>
 
 <p>A structure used for outline (vectorial) glyph images. This really is a &lsquo;sub-class&rsquo; of <code><a href="ft2-glyph_management.html#ft_glyphrec">FT_GlyphRec</a></code>.</p>
 <h4>fields</h4>
@@ -1409,14 +1393,11 @@
 
 <h2 id="ft_new_glyph">FT_New_Glyph<a class="headerlink" href="#ft_new_glyph" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_GLYPH_H (freetype/ftglyph.h).</p>
-<div class = "codehilite">
-<pre>
-  FT_EXPORT( <a href="ft2-basic_types.html#ft_error">FT_Error</a> )
+<div class = "codehilite"><pre><code>  FT_EXPORT( <a href="ft2-basic_types.html#ft_error">FT_Error</a> )
   <b>FT_New_Glyph</b>( <a href="ft2-base_interface.html#ft_library">FT_Library</a>       library,
                 <a href="ft2-basic_types.html#ft_glyph_format">FT_Glyph_Format</a>  format,
                 <a href="ft2-glyph_management.html#ft_glyph">FT_Glyph</a>         *aglyph );
-</pre>
-</div>
+</code></pre></div>
 
 <p>A function used to create a new empty glyph image. Note that the created <code><a href="ft2-glyph_management.html#ft_glyph">FT_Glyph</a></code> object must be released with <code><a href="ft2-glyph_management.html#ft_done_glyph">FT_Done_Glyph</a></code>.</p>
 <h4>input</h4>
@@ -1448,13 +1429,10 @@
 
 <h2 id="ft_get_glyph">FT_Get_Glyph<a class="headerlink" href="#ft_get_glyph" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_GLYPH_H (freetype/ftglyph.h).</p>
-<div class = "codehilite">
-<pre>
-  FT_EXPORT( <a href="ft2-basic_types.html#ft_error">FT_Error</a> )
+<div class = "codehilite"><pre><code>  FT_EXPORT( <a href="ft2-basic_types.html#ft_error">FT_Error</a> )
   <b>FT_Get_Glyph</b>( <a href="ft2-base_interface.html#ft_glyphslot">FT_GlyphSlot</a>  slot,
                 <a href="ft2-glyph_management.html#ft_glyph">FT_Glyph</a>     *aglyph );
-</pre>
-</div>
+</code></pre></div>
 
 <p>A function used to extract a glyph image from a slot. Note that the created <code><a href="ft2-glyph_management.html#ft_glyph">FT_Glyph</a></code> object must be released with <code><a href="ft2-glyph_management.html#ft_done_glyph">FT_Done_Glyph</a></code>.</p>
 <h4>input</h4>
@@ -1483,13 +1461,10 @@
 
 <h2 id="ft_glyph_copy">FT_Glyph_Copy<a class="headerlink" href="#ft_glyph_copy" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_GLYPH_H (freetype/ftglyph.h).</p>
-<div class = "codehilite">
-<pre>
-  FT_EXPORT( <a href="ft2-basic_types.html#ft_error">FT_Error</a> )
+<div class = "codehilite"><pre><code>  FT_EXPORT( <a href="ft2-basic_types.html#ft_error">FT_Error</a> )
   <b>FT_Glyph_Copy</b>( <a href="ft2-glyph_management.html#ft_glyph">FT_Glyph</a>   source,
                  <a href="ft2-glyph_management.html#ft_glyph">FT_Glyph</a>  *target );
-</pre>
-</div>
+</code></pre></div>
 
 <p>A function used to copy a glyph image. Note that the created <code><a href="ft2-glyph_management.html#ft_glyph">FT_Glyph</a></code> object must be released with <code><a href="ft2-glyph_management.html#ft_done_glyph">FT_Done_Glyph</a></code>.</p>
 <h4>input</h4>
@@ -1515,14 +1490,11 @@
 
 <h2 id="ft_glyph_transform">FT_Glyph_Transform<a class="headerlink" href="#ft_glyph_transform" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_GLYPH_H (freetype/ftglyph.h).</p>
-<div class = "codehilite">
-<pre>
-  FT_EXPORT( <a href="ft2-basic_types.html#ft_error">FT_Error</a> )
+<div class = "codehilite"><pre><code>  FT_EXPORT( <a href="ft2-basic_types.html#ft_error">FT_Error</a> )
   <b>FT_Glyph_Transform</b>( <a href="ft2-glyph_management.html#ft_glyph">FT_Glyph</a>    glyph,
                       <a href="ft2-basic_types.html#ft_matrix">FT_Matrix</a>*  matrix,
                       <a href="ft2-basic_types.html#ft_vector">FT_Vector</a>*  delta );
-</pre>
-</div>
+</code></pre></div>
 
 <p>Transform a glyph image if its format is scalable.</p>
 <h4>inout</h4>
@@ -1554,9 +1526,7 @@
 
 <h2 id="ft_glyph_bbox_mode">FT_Glyph_BBox_Mode<a class="headerlink" href="#ft_glyph_bbox_mode" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_GLYPH_H (freetype/ftglyph.h).</p>
-<div class = "codehilite">
-<pre>
-  <span class="keyword">typedef</span> <span class="keyword">enum</span>  FT_Glyph_BBox_Mode_
+<div class = "codehilite"><pre><code>  <span class="keyword">typedef</span> <span class="keyword">enum</span>  FT_Glyph_BBox_Mode_
   {
     <a href="ft2-glyph_management.html#ft_glyph_bbox_unscaled">FT_GLYPH_BBOX_UNSCALED</a>  = 0,
     <a href="ft2-glyph_management.html#ft_glyph_bbox_subpixels">FT_GLYPH_BBOX_SUBPIXELS</a> = 0,
@@ -1574,8 +1544,7 @@
 #<span class="keyword">define</span> ft_glyph_bbox_gridfit    <a href="ft2-glyph_management.html#ft_glyph_bbox_gridfit">FT_GLYPH_BBOX_GRIDFIT</a>
 #<span class="keyword">define</span> ft_glyph_bbox_truncate   <a href="ft2-glyph_management.html#ft_glyph_bbox_truncate">FT_GLYPH_BBOX_TRUNCATE</a>
 #<span class="keyword">define</span> ft_glyph_bbox_pixels     <a href="ft2-glyph_management.html#ft_glyph_bbox_pixels">FT_GLYPH_BBOX_PIXELS</a>
-</pre>
-</div>
+</code></pre></div>
 
 <p>The mode how the values of <code><a href="ft2-glyph_management.html#ft_glyph_get_cbox">FT_Glyph_Get_CBox</a></code> are returned.</p>
 <h4>values</h4>
@@ -1602,14 +1571,11 @@
 
 <h2 id="ft_glyph_get_cbox">FT_Glyph_Get_CBox<a class="headerlink" href="#ft_glyph_get_cbox" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_GLYPH_H (freetype/ftglyph.h).</p>
-<div class = "codehilite">
-<pre>
-  FT_EXPORT( <span class="keyword">void</span> )
+<div class = "codehilite"><pre><code>  FT_EXPORT( <span class="keyword">void</span> )
   <b>FT_Glyph_Get_CBox</b>( <a href="ft2-glyph_management.html#ft_glyph">FT_Glyph</a>  glyph,
                      <a href="ft2-basic_types.html#ft_uint">FT_UInt</a>   bbox_mode,
                      <a href="ft2-basic_types.html#ft_bbox">FT_BBox</a>  *acbox );
-</pre>
-</div>
+</code></pre></div>
 
 <p>Return a glyph's &lsquo;control box&rsquo;. The control box encloses all the outline's points, including Bezier control points. Though it coincides with the exact bounding box for most glyphs, it can be slightly larger in some situations (like when rotating an outline that contains Bezier outside arcs).</p>
 <p>Computing the control box is very fast, while getting the bounding box can take much more time as it needs to walk over all segments and arcs in the outline. To get the latter, you can use the &lsquo;ftbbox&rsquo; component, which is dedicated to this single task.</p>
@@ -1638,30 +1604,27 @@
 <p>If the glyph has been loaded with <code><a href="ft2-base_interface.html#ft_load_xxx">FT_LOAD_NO_SCALE</a></code>, <code>bbox_mode</code> must be set to <code><a href="ft2-glyph_management.html#ft_glyph_bbox_mode">FT_GLYPH_BBOX_UNSCALED</a></code> to get unscaled font units in 26.6 pixel format. The value <code><a href="ft2-glyph_management.html#ft_glyph_bbox_mode">FT_GLYPH_BBOX_SUBPIXELS</a></code> is another name for this constant.</p>
 <p>If the font is tricky and the glyph has been loaded with <code><a href="ft2-base_interface.html#ft_load_xxx">FT_LOAD_NO_SCALE</a></code>, the resulting CBox is meaningless. To get reasonable values for the CBox it is necessary to load the glyph at a large ppem value (so that the hinting instructions can properly shift and scale the subglyphs), then extracting the CBox, which can be eventually converted back to font units.</p>
 <p>Note that the maximum coordinates are exclusive, which means that one can compute the width and height of the glyph image (be it in integer or 26.6 pixels) as:
-<div class="codehilite"><pre><span></span>  width  = bbox.xMax - bbox.xMin;
+<div class="highlight"><pre><span></span><code>  width  = bbox.xMax - bbox.xMin;
   height = bbox.yMax - bbox.yMin;
-</pre></div></p>
+</code></pre></div></p>
 <p>Note also that for 26.6 coordinates, if <code>bbox_mode</code> is set to <code><a href="ft2-glyph_management.html#ft_glyph_bbox_mode">FT_GLYPH_BBOX_GRIDFIT</a></code>, the coordinates will also be grid-fitted, which corresponds to:
-<div class="codehilite"><pre><span></span>  bbox.xMin = FLOOR(bbox.xMin);
+<div class="highlight"><pre><span></span><code>  bbox.xMin = FLOOR(bbox.xMin);
   bbox.yMin = FLOOR(bbox.yMin);
   bbox.xMax = CEILING(bbox.xMax);
   bbox.yMax = CEILING(bbox.yMax);
-</pre></div></p>
+</code></pre></div></p>
 <p>To get the bbox in pixel coordinates, set <code>bbox_mode</code> to <code><a href="ft2-glyph_management.html#ft_glyph_bbox_mode">FT_GLYPH_BBOX_TRUNCATE</a></code>.</p>
 <p>To get the bbox in grid-fitted pixel coordinates, set <code>bbox_mode</code> to <code><a href="ft2-glyph_management.html#ft_glyph_bbox_mode">FT_GLYPH_BBOX_PIXELS</a></code>.</p>
 <hr>
 
 <h2 id="ft_glyph_to_bitmap">FT_Glyph_To_Bitmap<a class="headerlink" href="#ft_glyph_to_bitmap" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_GLYPH_H (freetype/ftglyph.h).</p>
-<div class = "codehilite">
-<pre>
-  FT_EXPORT( <a href="ft2-basic_types.html#ft_error">FT_Error</a> )
+<div class = "codehilite"><pre><code>  FT_EXPORT( <a href="ft2-basic_types.html#ft_error">FT_Error</a> )
   <b>FT_Glyph_To_Bitmap</b>( <a href="ft2-glyph_management.html#ft_glyph">FT_Glyph</a>*       the_glyph,
                       <a href="ft2-base_interface.html#ft_render_mode">FT_Render_Mode</a>  render_mode,
                       <a href="ft2-basic_types.html#ft_vector">FT_Vector</a>*      origin,
                       <a href="ft2-basic_types.html#ft_bool">FT_Bool</a>         destroy );
-</pre>
-</div>
+</code></pre></div>
 
 <p>Convert a given glyph object to a bitmap glyph object.</p>
 <h4>inout</h4>
@@ -1694,7 +1657,7 @@
 <p>This function does nothing if the glyph format isn't scalable.</p>
 <p>The glyph image is translated with the <code>origin</code> vector before rendering.</p>
 <p>The first parameter is a pointer to an <code><a href="ft2-glyph_management.html#ft_glyph">FT_Glyph</a></code> handle, that will be <em>replaced</em> by this function (with newly allocated data). Typically, you would use (omitting error handling):
-<div class="codehilite"><pre><span></span>  FT_Glyph        glyph;
+<div class="highlight"><pre><span></span><code>  FT_Glyph        glyph;
   FT_BitmapGlyph  glyph_bitmap;
 
 
@@ -1721,9 +1684,9 @@
 
   // discard glyph image (bitmap or not)
   FT_Done_Glyph( glyph );
-</pre></div></p>
+</code></pre></div></p>
 <p>Here is another example, again without error handling:
-<div class="codehilite"><pre><span></span>  FT_Glyph  glyphs[MAX_GLYPHS]
+<div class="highlight"><pre><span></span><code>  FT_Glyph  glyphs[MAX_GLYPHS]
 
 
   ...
@@ -1754,17 +1717,14 @@
 
   for ( idx = 0; i &lt; MAX_GLYPHS; i++ )
     FT_Done_Glyph( glyphs[idx] );
-</pre></div></p>
+</code></pre></div></p>
 <hr>
 
 <h2 id="ft_done_glyph">FT_Done_Glyph<a class="headerlink" href="#ft_done_glyph" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_GLYPH_H (freetype/ftglyph.h).</p>
-<div class = "codehilite">
-<pre>
-  FT_EXPORT( <span class="keyword">void</span> )
+<div class = "codehilite"><pre><code>  FT_EXPORT( <span class="keyword">void</span> )
   <b>FT_Done_Glyph</b>( <a href="ft2-glyph_management.html#ft_glyph">FT_Glyph</a>  glyph );
-</pre>
-</div>
+</code></pre></div>
 
 <p>Destroy a given glyph.</p>
 <h4>input</h4>
@@ -1778,6 +1738,7 @@
 <hr>
                 
                   
+                
                 
               
               
@@ -1833,13 +1794,13 @@
       <div class="md-footer-copyright">
         
           <div class="md-footer-copyright__highlight">
-            Copyright 2019 <a href = "https://www.freetype.org/license.html">The FreeType Project</a>.
+            Copyright 2020 <a href = "https://www.freetype.org/license.html">The FreeType Project</a>.
           </div>
         
         powered by
-        <a href="https://www.mkdocs.org">MkDocs</a>
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
         and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
           Material for MkDocs</a>
       </div>
       
@@ -1849,9 +1810,9 @@
       
     </div>
     
-      <script src="assets/javascripts/application.d9aa80ab.js"></script>
+      <script src="assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:"."}})</script>
+      <script>app.initialize({version:"1.1",url:{base:"."}})</script>
       
         <script src="javascripts/extra.js"></script>
       

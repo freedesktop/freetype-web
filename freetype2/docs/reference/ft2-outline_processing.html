@@ -10,7 +10,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
-        <meta name="description" content="API Reference Documentation for FreeType-2.10.1">
+        <meta name="description" content="API Reference Documentation for FreeType-2.10.2">
       
       
       
@@ -36,17 +36,17 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="images/favico.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.0.2">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
     
     
       
-        <title>Outline Processing - FreeType-2.10.1 API Reference</title>
+        <title>Outline Processing - FreeType-2.10.2 API Reference</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/application.982221ab.css">
+      <link rel="stylesheet" href="assets/stylesheets/application.adb8469c.css">
       
-        <link rel="stylesheet" href="assets/stylesheets/application-palette.224b79ff.css">
+        <link rel="stylesheet" href="assets/stylesheets/application-palette.a8b3c06d.css">
       
       
         
@@ -55,12 +55,12 @@
       
     
     
-      <script src="assets/javascripts/modernizr.1f0bcf2b.js"></script>
+      <script src="assets/javascripts/modernizr.86422ebf.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif:300,400,400i,700|Roboto+Mono">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Noto Serif","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -89,7 +89,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#outline-processing" tabindex="1" class="md-skip">
+      <a href="#outline-processing" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -98,9 +98,9 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="index.html" title="FreeType-2.10.1 API Reference" class="md-header-nav__button md-logo">
+        <a href="." title="FreeType-2.10.2 API Reference" aria-label="FreeType-2.10.2 API Reference" class="md-header-nav__button md-logo">
           
-            <img src="images/favico.ico" width="24" height="24">
+            <img alt="logo" src="images/favico.ico" width="24" height="24">
           
         </a>
       </div>
@@ -111,10 +111,12 @@
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             <span class="md-header-nav__topic">
-              FreeType-2.10.1 API Reference
+              FreeType-2.10.2 API Reference
             </span>
             <span class="md-header-nav__topic">
-              Outline Processing
+              
+                Outline Processing
+              
             </span>
           
         </div>
@@ -127,7 +129,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
       <label class="md-icon md-search__icon" for="__search"></label>
       <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
         &#xE5CD;
@@ -157,7 +159,7 @@
         
       
       
-      <main class="md-main">
+      <main class="md-main" role="main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
             
@@ -166,12 +168,12 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="index.html" title="FreeType-2.10.1 API Reference" class="md-nav__button md-logo">
+    <a href="." title="FreeType-2.10.2 API Reference" class="md-nav__button md-logo">
       
-        <img src="images/favico.ico" width="48" height="48">
+        <img alt="logo" src="images/favico.ico" width="48" height="48">
       
     </a>
-    FreeType-2.10.1 API Reference
+    FreeType-2.10.2 API Reference
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -770,168 +772,168 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#synopsis" title="Synopsis" class="md-nav__link">
+  <a href="#synopsis" class="md-nav__link">
     Synopsis
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_outline" title="FT_Outline" class="md-nav__link">
+  <a href="#ft_outline" class="md-nav__link">
     FT_Outline
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_outline_new" title="FT_Outline_New" class="md-nav__link">
+  <a href="#ft_outline_new" class="md-nav__link">
     FT_Outline_New
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_outline_done" title="FT_Outline_Done" class="md-nav__link">
+  <a href="#ft_outline_done" class="md-nav__link">
     FT_Outline_Done
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_outline_copy" title="FT_Outline_Copy" class="md-nav__link">
+  <a href="#ft_outline_copy" class="md-nav__link">
     FT_Outline_Copy
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_outline_translate" title="FT_Outline_Translate" class="md-nav__link">
+  <a href="#ft_outline_translate" class="md-nav__link">
     FT_Outline_Translate
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_outline_transform" title="FT_Outline_Transform" class="md-nav__link">
+  <a href="#ft_outline_transform" class="md-nav__link">
     FT_Outline_Transform
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_outline_embolden" title="FT_Outline_Embolden" class="md-nav__link">
+  <a href="#ft_outline_embolden" class="md-nav__link">
     FT_Outline_Embolden
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_outline_emboldenxy" title="FT_Outline_EmboldenXY" class="md-nav__link">
+  <a href="#ft_outline_emboldenxy" class="md-nav__link">
     FT_Outline_EmboldenXY
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_outline_reverse" title="FT_Outline_Reverse" class="md-nav__link">
+  <a href="#ft_outline_reverse" class="md-nav__link">
     FT_Outline_Reverse
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_outline_check" title="FT_Outline_Check" class="md-nav__link">
+  <a href="#ft_outline_check" class="md-nav__link">
     FT_Outline_Check
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_outline_get_cbox" title="FT_Outline_Get_CBox" class="md-nav__link">
+  <a href="#ft_outline_get_cbox" class="md-nav__link">
     FT_Outline_Get_CBox
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_outline_get_bbox" title="FT_Outline_Get_BBox" class="md-nav__link">
+  <a href="#ft_outline_get_bbox" class="md-nav__link">
     FT_Outline_Get_BBox
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_outline_get_bitmap" title="FT_Outline_Get_Bitmap" class="md-nav__link">
+  <a href="#ft_outline_get_bitmap" class="md-nav__link">
     FT_Outline_Get_Bitmap
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_outline_render" title="FT_Outline_Render" class="md-nav__link">
+  <a href="#ft_outline_render" class="md-nav__link">
     FT_Outline_Render
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_outline_decompose" title="FT_Outline_Decompose" class="md-nav__link">
+  <a href="#ft_outline_decompose" class="md-nav__link">
     FT_Outline_Decompose
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_outline_funcs" title="FT_Outline_Funcs" class="md-nav__link">
+  <a href="#ft_outline_funcs" class="md-nav__link">
     FT_Outline_Funcs
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_outline_movetofunc" title="FT_Outline_MoveToFunc" class="md-nav__link">
+  <a href="#ft_outline_movetofunc" class="md-nav__link">
     FT_Outline_MoveToFunc
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_outline_linetofunc" title="FT_Outline_LineToFunc" class="md-nav__link">
+  <a href="#ft_outline_linetofunc" class="md-nav__link">
     FT_Outline_LineToFunc
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_outline_conictofunc" title="FT_Outline_ConicToFunc" class="md-nav__link">
+  <a href="#ft_outline_conictofunc" class="md-nav__link">
     FT_Outline_ConicToFunc
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_outline_cubictofunc" title="FT_Outline_CubicToFunc" class="md-nav__link">
+  <a href="#ft_outline_cubictofunc" class="md-nav__link">
     FT_Outline_CubicToFunc
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_orientation" title="FT_Orientation" class="md-nav__link">
+  <a href="#ft_orientation" class="md-nav__link">
     FT_Orientation
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_outline_get_orientation" title="FT_Outline_Get_Orientation" class="md-nav__link">
+  <a href="#ft_outline_get_orientation" class="md-nav__link">
     FT_Outline_Get_Orientation
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_outline_xxx" title="FT_OUTLINE_XXX" class="md-nav__link">
+  <a href="#ft_outline_xxx" class="md-nav__link">
     FT_OUTLINE_XXX
   </a>
   
@@ -1134,8 +1136,8 @@
 
 
   <li class="md-nav__item">
-    <a href="ft2-ot_validation.html" title="OpenType Validation" class="md-nav__link">
-      OpenType Validation
+    <a href="ft2-gx_validation.html" title="TrueTypeGX/AAT Validation" class="md-nav__link">
+      TrueTypeGX/AAT Validation
     </a>
   </li>
 
@@ -1170,8 +1172,8 @@
 
 
   <li class="md-nav__item">
-    <a href="ft2-gx_validation.html" title="TrueTypeGX/AAT Validation" class="md-nav__link">
-      TrueTypeGX/AAT Validation
+    <a href="ft2-ot_validation.html" title="OpenType Validation" class="md-nav__link">
+      OpenType Validation
     </a>
   </li>
 
@@ -1202,168 +1204,168 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#synopsis" title="Synopsis" class="md-nav__link">
+  <a href="#synopsis" class="md-nav__link">
     Synopsis
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_outline" title="FT_Outline" class="md-nav__link">
+  <a href="#ft_outline" class="md-nav__link">
     FT_Outline
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_outline_new" title="FT_Outline_New" class="md-nav__link">
+  <a href="#ft_outline_new" class="md-nav__link">
     FT_Outline_New
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_outline_done" title="FT_Outline_Done" class="md-nav__link">
+  <a href="#ft_outline_done" class="md-nav__link">
     FT_Outline_Done
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_outline_copy" title="FT_Outline_Copy" class="md-nav__link">
+  <a href="#ft_outline_copy" class="md-nav__link">
     FT_Outline_Copy
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_outline_translate" title="FT_Outline_Translate" class="md-nav__link">
+  <a href="#ft_outline_translate" class="md-nav__link">
     FT_Outline_Translate
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_outline_transform" title="FT_Outline_Transform" class="md-nav__link">
+  <a href="#ft_outline_transform" class="md-nav__link">
     FT_Outline_Transform
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_outline_embolden" title="FT_Outline_Embolden" class="md-nav__link">
+  <a href="#ft_outline_embolden" class="md-nav__link">
     FT_Outline_Embolden
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_outline_emboldenxy" title="FT_Outline_EmboldenXY" class="md-nav__link">
+  <a href="#ft_outline_emboldenxy" class="md-nav__link">
     FT_Outline_EmboldenXY
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_outline_reverse" title="FT_Outline_Reverse" class="md-nav__link">
+  <a href="#ft_outline_reverse" class="md-nav__link">
     FT_Outline_Reverse
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_outline_check" title="FT_Outline_Check" class="md-nav__link">
+  <a href="#ft_outline_check" class="md-nav__link">
     FT_Outline_Check
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_outline_get_cbox" title="FT_Outline_Get_CBox" class="md-nav__link">
+  <a href="#ft_outline_get_cbox" class="md-nav__link">
     FT_Outline_Get_CBox
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_outline_get_bbox" title="FT_Outline_Get_BBox" class="md-nav__link">
+  <a href="#ft_outline_get_bbox" class="md-nav__link">
     FT_Outline_Get_BBox
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_outline_get_bitmap" title="FT_Outline_Get_Bitmap" class="md-nav__link">
+  <a href="#ft_outline_get_bitmap" class="md-nav__link">
     FT_Outline_Get_Bitmap
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_outline_render" title="FT_Outline_Render" class="md-nav__link">
+  <a href="#ft_outline_render" class="md-nav__link">
     FT_Outline_Render
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_outline_decompose" title="FT_Outline_Decompose" class="md-nav__link">
+  <a href="#ft_outline_decompose" class="md-nav__link">
     FT_Outline_Decompose
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_outline_funcs" title="FT_Outline_Funcs" class="md-nav__link">
+  <a href="#ft_outline_funcs" class="md-nav__link">
     FT_Outline_Funcs
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_outline_movetofunc" title="FT_Outline_MoveToFunc" class="md-nav__link">
+  <a href="#ft_outline_movetofunc" class="md-nav__link">
     FT_Outline_MoveToFunc
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_outline_linetofunc" title="FT_Outline_LineToFunc" class="md-nav__link">
+  <a href="#ft_outline_linetofunc" class="md-nav__link">
     FT_Outline_LineToFunc
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_outline_conictofunc" title="FT_Outline_ConicToFunc" class="md-nav__link">
+  <a href="#ft_outline_conictofunc" class="md-nav__link">
     FT_Outline_ConicToFunc
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_outline_cubictofunc" title="FT_Outline_CubicToFunc" class="md-nav__link">
+  <a href="#ft_outline_cubictofunc" class="md-nav__link">
     FT_Outline_CubicToFunc
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_orientation" title="FT_Orientation" class="md-nav__link">
+  <a href="#ft_orientation" class="md-nav__link">
     FT_Orientation
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_outline_get_orientation" title="FT_Outline_Get_Orientation" class="md-nav__link">
+  <a href="#ft_outline_get_orientation" class="md-nav__link">
     FT_Outline_Get_Orientation
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_outline_xxx" title="FT_OUTLINE_XXX" class="md-nav__link">
+  <a href="#ft_outline_xxx" class="md-nav__link">
     FT_OUTLINE_XXX
   </a>
   
@@ -1393,9 +1395,7 @@
 <p>This section contains routines used to create and destroy scalable glyph images known as &lsquo;outlines&rsquo;. These can also be measured, transformed, and converted into bitmaps and pixmaps.</p>
 <h2 id="ft_outline">FT_Outline<a class="headerlink" href="#ft_outline" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_IMAGE_H (freetype/ftimage.h).</p>
-<div class = "codehilite">
-<pre>
-  <span class="keyword">typedef</span> <span class="keyword">struct</span>  FT_Outline_
+<div class = "codehilite"><pre><code>  <span class="keyword">typedef</span> <span class="keyword">struct</span>  FT_Outline_
   {
     <span class="keyword">short</span>       n_contours;      /* number of contours in glyph        */
     <span class="keyword">short</span>       n_points;        /* number of points in the glyph      */
@@ -1407,8 +1407,7 @@
     <span class="keyword">int</span>         flags;           /* outline masks                      */
 
   } <b>FT_Outline</b>;
-</pre>
-</div>
+</code></pre></div>
 
 <p>This structure is used to describe an outline to the scan-line converter.</p>
 <h4>fields</h4>
@@ -1445,15 +1444,12 @@
 
 <h2 id="ft_outline_new">FT_Outline_New<a class="headerlink" href="#ft_outline_new" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_OUTLINE_H (freetype/ftoutln.h).</p>
-<div class = "codehilite">
-<pre>
-  FT_EXPORT( <a href="ft2-basic_types.html#ft_error">FT_Error</a> )
+<div class = "codehilite"><pre><code>  FT_EXPORT( <a href="ft2-basic_types.html#ft_error">FT_Error</a> )
   <b>FT_Outline_New</b>( <a href="ft2-base_interface.html#ft_library">FT_Library</a>   library,
                   <a href="ft2-basic_types.html#ft_uint">FT_UInt</a>      numPoints,
                   <a href="ft2-basic_types.html#ft_int">FT_Int</a>       numContours,
                   <a href="ft2-outline_processing.html#ft_outline">FT_Outline</a>  *anoutline );
-</pre>
-</div>
+</code></pre></div>
 
 <p>Create a new outline of a given size.</p>
 <h4>input</h4>
@@ -1488,13 +1484,10 @@
 
 <h2 id="ft_outline_done">FT_Outline_Done<a class="headerlink" href="#ft_outline_done" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_OUTLINE_H (freetype/ftoutln.h).</p>
-<div class = "codehilite">
-<pre>
-  FT_EXPORT( <a href="ft2-basic_types.html#ft_error">FT_Error</a> )
+<div class = "codehilite"><pre><code>  FT_EXPORT( <a href="ft2-basic_types.html#ft_error">FT_Error</a> )
   <b>FT_Outline_Done</b>( <a href="ft2-base_interface.html#ft_library">FT_Library</a>   library,
                    <a href="ft2-outline_processing.html#ft_outline">FT_Outline</a>*  outline );
-</pre>
-</div>
+</code></pre></div>
 
 <p>Destroy an outline created with <code><a href="ft2-outline_processing.html#ft_outline_new">FT_Outline_New</a></code>.</p>
 <h4>input</h4>
@@ -1518,13 +1511,10 @@
 
 <h2 id="ft_outline_copy">FT_Outline_Copy<a class="headerlink" href="#ft_outline_copy" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_OUTLINE_H (freetype/ftoutln.h).</p>
-<div class = "codehilite">
-<pre>
-  FT_EXPORT( <a href="ft2-basic_types.html#ft_error">FT_Error</a> )
+<div class = "codehilite"><pre><code>  FT_EXPORT( <a href="ft2-basic_types.html#ft_error">FT_Error</a> )
   <b>FT_Outline_Copy</b>( <span class="keyword">const</span> <a href="ft2-outline_processing.html#ft_outline">FT_Outline</a>*  source,
                    <a href="ft2-outline_processing.html#ft_outline">FT_Outline</a>        *target );
-</pre>
-</div>
+</code></pre></div>
 
 <p>Copy an outline into another one. Both objects must have the same sizes (number of points &amp; number of contours) when this function is called.</p>
 <h4>input</h4>
@@ -1550,14 +1540,11 @@
 
 <h2 id="ft_outline_translate">FT_Outline_Translate<a class="headerlink" href="#ft_outline_translate" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_OUTLINE_H (freetype/ftoutln.h).</p>
-<div class = "codehilite">
-<pre>
-  FT_EXPORT( <span class="keyword">void</span> )
+<div class = "codehilite"><pre><code>  FT_EXPORT( <span class="keyword">void</span> )
   <b>FT_Outline_Translate</b>( <span class="keyword">const</span> <a href="ft2-outline_processing.html#ft_outline">FT_Outline</a>*  outline,
                         <a href="ft2-basic_types.html#ft_pos">FT_Pos</a>             xOffset,
                         <a href="ft2-basic_types.html#ft_pos">FT_Pos</a>             yOffset );
-</pre>
-</div>
+</code></pre></div>
 
 <p>Apply a simple translation to the points of an outline.</p>
 <h4>inout</h4>
@@ -1583,13 +1570,10 @@
 
 <h2 id="ft_outline_transform">FT_Outline_Transform<a class="headerlink" href="#ft_outline_transform" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_OUTLINE_H (freetype/ftoutln.h).</p>
-<div class = "codehilite">
-<pre>
-  FT_EXPORT( <span class="keyword">void</span> )
+<div class = "codehilite"><pre><code>  FT_EXPORT( <span class="keyword">void</span> )
   <b>FT_Outline_Transform</b>( <span class="keyword">const</span> <a href="ft2-outline_processing.html#ft_outline">FT_Outline</a>*  outline,
                         <span class="keyword">const</span> <a href="ft2-basic_types.html#ft_matrix">FT_Matrix</a>*   matrix );
-</pre>
-</div>
+</code></pre></div>
 
 <p>Apply a simple 2x2 matrix to all of an outline's points. Useful for applying rotations, slanting, flipping, etc.</p>
 <h4>inout</h4>
@@ -1615,13 +1599,10 @@
 
 <h2 id="ft_outline_embolden">FT_Outline_Embolden<a class="headerlink" href="#ft_outline_embolden" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_OUTLINE_H (freetype/ftoutln.h).</p>
-<div class = "codehilite">
-<pre>
-  FT_EXPORT( <a href="ft2-basic_types.html#ft_error">FT_Error</a> )
+<div class = "codehilite"><pre><code>  FT_EXPORT( <a href="ft2-basic_types.html#ft_error">FT_Error</a> )
   <b>FT_Outline_Embolden</b>( <a href="ft2-outline_processing.html#ft_outline">FT_Outline</a>*  outline,
                        <a href="ft2-basic_types.html#ft_pos">FT_Pos</a>       strength );
-</pre>
-</div>
+</code></pre></div>
 
 <p>Embolden an outline. The new outline will be at most 4&nbsp;times <code>strength</code> pixels wider and higher. You may think of the left and bottom borders as unchanged.</p>
 <p>Negative <code>strength</code> values to reduce the outline thickness are possible also.</p>
@@ -1651,24 +1632,21 @@
 <p>To get meaningful results, font scaling values must be set with functions like <code><a href="ft2-base_interface.html#ft_set_char_size">FT_Set_Char_Size</a></code> before calling FT_Render_Glyph.</p>
 <h4>example</h4>
 
-<div class="codehilite"><pre><span></span>  FT_Load_Glyph( face, index, FT_LOAD_DEFAULT );
+<div class="highlight"><pre><span></span><code>  FT_Load_Glyph( face, index, FT_LOAD_DEFAULT );
 
   if ( face-&gt;glyph-&gt;format == FT_GLYPH_FORMAT_OUTLINE )
     FT_Outline_Embolden( &amp;face-&gt;glyph-&gt;outline, strength );
-</pre></div>
+</code></pre></div>
 
 <hr>
 
 <h2 id="ft_outline_emboldenxy">FT_Outline_EmboldenXY<a class="headerlink" href="#ft_outline_emboldenxy" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_OUTLINE_H (freetype/ftoutln.h).</p>
-<div class = "codehilite">
-<pre>
-  FT_EXPORT( <a href="ft2-basic_types.html#ft_error">FT_Error</a> )
+<div class = "codehilite"><pre><code>  FT_EXPORT( <a href="ft2-basic_types.html#ft_error">FT_Error</a> )
   <b>FT_Outline_EmboldenXY</b>( <a href="ft2-outline_processing.html#ft_outline">FT_Outline</a>*  outline,
                          <a href="ft2-basic_types.html#ft_pos">FT_Pos</a>       xstrength,
                          <a href="ft2-basic_types.html#ft_pos">FT_Pos</a>       ystrength );
-</pre>
-</div>
+</code></pre></div>
 
 <p>Embolden an outline. The new outline will be <code>xstrength</code> pixels wider and <code>ystrength</code> pixels higher. Otherwise, it is similar to <code><a href="ft2-outline_processing.html#ft_outline_embolden">FT_Outline_Embolden</a></code>, which uses the same strength in both directions.</p>
 <h4>since</h4>
@@ -1678,12 +1656,9 @@
 
 <h2 id="ft_outline_reverse">FT_Outline_Reverse<a class="headerlink" href="#ft_outline_reverse" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_OUTLINE_H (freetype/ftoutln.h).</p>
-<div class = "codehilite">
-<pre>
-  FT_EXPORT( <span class="keyword">void</span> )
+<div class = "codehilite"><pre><code>  FT_EXPORT( <span class="keyword">void</span> )
   <b>FT_Outline_Reverse</b>( <a href="ft2-outline_processing.html#ft_outline">FT_Outline</a>*  outline );
-</pre>
-</div>
+</code></pre></div>
 
 <p>Reverse the drawing direction of an outline. This is used to ensure consistent fill conventions for mirrored glyphs.</p>
 <h4>inout</h4>
@@ -1702,12 +1677,9 @@
 
 <h2 id="ft_outline_check">FT_Outline_Check<a class="headerlink" href="#ft_outline_check" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_OUTLINE_H (freetype/ftoutln.h).</p>
-<div class = "codehilite">
-<pre>
-  FT_EXPORT( <a href="ft2-basic_types.html#ft_error">FT_Error</a> )
+<div class = "codehilite"><pre><code>  FT_EXPORT( <a href="ft2-basic_types.html#ft_error">FT_Error</a> )
   <b>FT_Outline_Check</b>( <a href="ft2-outline_processing.html#ft_outline">FT_Outline</a>*  outline );
-</pre>
-</div>
+</code></pre></div>
 
 <p>Check the contents of an outline descriptor.</p>
 <h4>input</h4>
@@ -1728,13 +1700,10 @@
 
 <h2 id="ft_outline_get_cbox">FT_Outline_Get_CBox<a class="headerlink" href="#ft_outline_get_cbox" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_OUTLINE_H (freetype/ftoutln.h).</p>
-<div class = "codehilite">
-<pre>
-  FT_EXPORT( <span class="keyword">void</span> )
+<div class = "codehilite"><pre><code>  FT_EXPORT( <span class="keyword">void</span> )
   <b>FT_Outline_Get_CBox</b>( <span class="keyword">const</span> <a href="ft2-outline_processing.html#ft_outline">FT_Outline</a>*  outline,
                        <a href="ft2-basic_types.html#ft_bbox">FT_BBox</a>           *acbox );
-</pre>
-</div>
+</code></pre></div>
 
 <p>Return an outline's &lsquo;control box&rsquo;. The control box encloses all the outline's points, including Bezier control points. Though it coincides with the exact bounding box for most glyphs, it can be slightly larger in some situations (like when rotating an outline that contains Bezier outside arcs).</p>
 <p>Computing the control box is very fast, while getting the bounding box can take much more time as it needs to walk over all segments and arcs in the outline. To get the latter, you can use the &lsquo;ftbbox&rsquo; component, which is dedicated to this single task.</p>
@@ -1761,13 +1730,10 @@
 
 <h2 id="ft_outline_get_bbox">FT_Outline_Get_BBox<a class="headerlink" href="#ft_outline_get_bbox" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_BBOX_H (freetype/ftbbox.h).</p>
-<div class = "codehilite">
-<pre>
-  FT_EXPORT( <a href="ft2-basic_types.html#ft_error">FT_Error</a> )
+<div class = "codehilite"><pre><code>  FT_EXPORT( <a href="ft2-basic_types.html#ft_error">FT_Error</a> )
   <b>FT_Outline_Get_BBox</b>( <a href="ft2-outline_processing.html#ft_outline">FT_Outline</a>*  outline,
                        <a href="ft2-basic_types.html#ft_bbox">FT_BBox</a>     *abbox );
-</pre>
-</div>
+</code></pre></div>
 
 <p>Compute the exact bounding box of an outline. This is slower than computing the control box. However, it uses an advanced algorithm that returns <em>very</em> quickly when the two boxes coincide. Otherwise, the outline Bezier arcs are traversed to extract their extrema.</p>
 <h4>input</h4>
@@ -1796,14 +1762,11 @@
 
 <h2 id="ft_outline_get_bitmap">FT_Outline_Get_Bitmap<a class="headerlink" href="#ft_outline_get_bitmap" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_OUTLINE_H (freetype/ftoutln.h).</p>
-<div class = "codehilite">
-<pre>
-  FT_EXPORT( <a href="ft2-basic_types.html#ft_error">FT_Error</a> )
+<div class = "codehilite"><pre><code>  FT_EXPORT( <a href="ft2-basic_types.html#ft_error">FT_Error</a> )
   <b>FT_Outline_Get_Bitmap</b>( <a href="ft2-base_interface.html#ft_library">FT_Library</a>        library,
                          <a href="ft2-outline_processing.html#ft_outline">FT_Outline</a>*       outline,
                          <span class="keyword">const</span> <a href="ft2-basic_types.html#ft_bitmap">FT_Bitmap</a>  *abitmap );
-</pre>
-</div>
+</code></pre></div>
 
 <p>Render an outline within a bitmap. The outline's image is simply OR-ed to the target bitmap.</p>
 <h4>input</h4>
@@ -1837,14 +1800,11 @@
 
 <h2 id="ft_outline_render">FT_Outline_Render<a class="headerlink" href="#ft_outline_render" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_OUTLINE_H (freetype/ftoutln.h).</p>
-<div class = "codehilite">
-<pre>
-  FT_EXPORT( <a href="ft2-basic_types.html#ft_error">FT_Error</a> )
+<div class = "codehilite"><pre><code>  FT_EXPORT( <a href="ft2-basic_types.html#ft_error">FT_Error</a> )
   <b>FT_Outline_Render</b>( <a href="ft2-base_interface.html#ft_library">FT_Library</a>         library,
                      <a href="ft2-outline_processing.html#ft_outline">FT_Outline</a>*        outline,
                      <a href="ft2-raster.html#ft_raster_params">FT_Raster_Params</a>*  params );
-</pre>
-</div>
+</code></pre></div>
 
 <p>Render an outline within a bitmap using the current scan-convert.</p>
 <h4>input</h4>
@@ -1878,14 +1838,11 @@
 
 <h2 id="ft_outline_decompose">FT_Outline_Decompose<a class="headerlink" href="#ft_outline_decompose" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_OUTLINE_H (freetype/ftoutln.h).</p>
-<div class = "codehilite">
-<pre>
-  FT_EXPORT( <a href="ft2-basic_types.html#ft_error">FT_Error</a> )
+<div class = "codehilite"><pre><code>  FT_EXPORT( <a href="ft2-basic_types.html#ft_error">FT_Error</a> )
   <b>FT_Outline_Decompose</b>( <a href="ft2-outline_processing.html#ft_outline">FT_Outline</a>*              outline,
                         <span class="keyword">const</span> <a href="ft2-outline_processing.html#ft_outline_funcs">FT_Outline_Funcs</a>*  func_interface,
                         <span class="keyword">void</span>*                    user );
-</pre>
-</div>
+</code></pre></div>
 
 <p>Walk over an outline's structure to decompose it into individual segments and Bezier arcs. This function also emits &lsquo;move to&rsquo; operations to indicate the start of new contours in the outline.</p>
 <h4>input</h4>
@@ -1918,9 +1875,7 @@
 
 <h2 id="ft_outline_funcs">FT_Outline_Funcs<a class="headerlink" href="#ft_outline_funcs" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_IMAGE_H (freetype/ftimage.h).</p>
-<div class = "codehilite">
-<pre>
-  <span class="keyword">typedef</span> <span class="keyword">struct</span>  FT_Outline_Funcs_
+<div class = "codehilite"><pre><code>  <span class="keyword">typedef</span> <span class="keyword">struct</span>  FT_Outline_Funcs_
   {
     <a href="ft2-outline_processing.html#ft_outline_movetofunc">FT_Outline_MoveToFunc</a>   move_to;
     <a href="ft2-outline_processing.html#ft_outline_linetofunc">FT_Outline_LineToFunc</a>   line_to;
@@ -1931,8 +1886,7 @@
     <a href="ft2-basic_types.html#ft_pos">FT_Pos</a>                  delta;
 
   } <b>FT_Outline_Funcs</b>;
-</pre>
-</div>
+</code></pre></div>
 
 <p>A structure to hold various function pointers used during outline decomposition in order to emit segments, conic, and cubic Beziers.</p>
 <h4>fields</h4>
@@ -1961,23 +1915,20 @@
 <h4>note</h4>
 
 <p>The point coordinates sent to the emitters are the transformed version of the original coordinates (this is important for high accuracy during scan-conversion). The transformation is simple:
-<div class="codehilite"><pre><span></span>  x&#39; = (x &lt;&lt; shift) - delta
+<div class="highlight"><pre><span></span><code>  x&#39; = (x &lt;&lt; shift) - delta
   y&#39; = (y &lt;&lt; shift) - delta
-</pre></div></p>
+</code></pre></div></p>
 <p>Set the values of <code>shift</code> and <code>delta</code> to&nbsp;0 to get the original point coordinates.</p>
 <hr>
 
 <h2 id="ft_outline_movetofunc">FT_Outline_MoveToFunc<a class="headerlink" href="#ft_outline_movetofunc" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_IMAGE_H (freetype/ftimage.h).</p>
-<div class = "codehilite">
-<pre>
-  <span class="keyword">typedef</span> <span class="keyword">int</span>
+<div class = "codehilite"><pre><code>  <span class="keyword">typedef</span> <span class="keyword">int</span>
   (*<b>FT_Outline_MoveToFunc</b>)( <span class="keyword">const</span> <a href="ft2-basic_types.html#ft_vector">FT_Vector</a>*  to,
                             <span class="keyword">void</span>*             user );
 
 #<span class="keyword">define</span> FT_Outline_MoveTo_Func  <b>FT_Outline_MoveToFunc</b>
-</pre>
-</div>
+</code></pre></div>
 
 <p>A function pointer type used to describe the signature of a &lsquo;move to&rsquo; function during outline walking/decomposition.</p>
 <p>A &lsquo;move to&rsquo; is emitted to start a new contour in an outline.</p>
@@ -1999,15 +1950,12 @@
 
 <h2 id="ft_outline_linetofunc">FT_Outline_LineToFunc<a class="headerlink" href="#ft_outline_linetofunc" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_IMAGE_H (freetype/ftimage.h).</p>
-<div class = "codehilite">
-<pre>
-  <span class="keyword">typedef</span> <span class="keyword">int</span>
+<div class = "codehilite"><pre><code>  <span class="keyword">typedef</span> <span class="keyword">int</span>
   (*<b>FT_Outline_LineToFunc</b>)( <span class="keyword">const</span> <a href="ft2-basic_types.html#ft_vector">FT_Vector</a>*  to,
                             <span class="keyword">void</span>*             user );
 
 #<span class="keyword">define</span> FT_Outline_LineTo_Func  <b>FT_Outline_LineToFunc</b>
-</pre>
-</div>
+</code></pre></div>
 
 <p>A function pointer type used to describe the signature of a &lsquo;line to&rsquo; function during outline walking/decomposition.</p>
 <p>A &lsquo;line to&rsquo; is emitted to indicate a segment in the outline.</p>
@@ -2029,16 +1977,13 @@
 
 <h2 id="ft_outline_conictofunc">FT_Outline_ConicToFunc<a class="headerlink" href="#ft_outline_conictofunc" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_IMAGE_H (freetype/ftimage.h).</p>
-<div class = "codehilite">
-<pre>
-  <span class="keyword">typedef</span> <span class="keyword">int</span>
+<div class = "codehilite"><pre><code>  <span class="keyword">typedef</span> <span class="keyword">int</span>
   (*<b>FT_Outline_ConicToFunc</b>)( <span class="keyword">const</span> <a href="ft2-basic_types.html#ft_vector">FT_Vector</a>*  control,
                              <span class="keyword">const</span> <a href="ft2-basic_types.html#ft_vector">FT_Vector</a>*  to,
                              <span class="keyword">void</span>*             user );
 
 #<span class="keyword">define</span> FT_Outline_ConicTo_Func  <b>FT_Outline_ConicToFunc</b>
-</pre>
-</div>
+</code></pre></div>
 
 <p>A function pointer type used to describe the signature of a &lsquo;conic to&rsquo; function during outline walking or decomposition.</p>
 <p>A &lsquo;conic to&rsquo; is emitted to indicate a second-order Bezier arc in the outline.</p>
@@ -2063,17 +2008,14 @@
 
 <h2 id="ft_outline_cubictofunc">FT_Outline_CubicToFunc<a class="headerlink" href="#ft_outline_cubictofunc" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_IMAGE_H (freetype/ftimage.h).</p>
-<div class = "codehilite">
-<pre>
-  <span class="keyword">typedef</span> <span class="keyword">int</span>
+<div class = "codehilite"><pre><code>  <span class="keyword">typedef</span> <span class="keyword">int</span>
   (*<b>FT_Outline_CubicToFunc</b>)( <span class="keyword">const</span> <a href="ft2-basic_types.html#ft_vector">FT_Vector</a>*  control1,
                              <span class="keyword">const</span> <a href="ft2-basic_types.html#ft_vector">FT_Vector</a>*  control2,
                              <span class="keyword">const</span> <a href="ft2-basic_types.html#ft_vector">FT_Vector</a>*  to,
                              <span class="keyword">void</span>*             user );
 
 #<span class="keyword">define</span> FT_Outline_CubicTo_Func  <b>FT_Outline_CubicToFunc</b>
-</pre>
-</div>
+</code></pre></div>
 
 <p>A function pointer type used to describe the signature of a &lsquo;cubic to&rsquo; function during outline walking or decomposition.</p>
 <p>A &lsquo;cubic to&rsquo; is emitted to indicate a third-order Bezier arc.</p>
@@ -2101,9 +2043,7 @@
 
 <h2 id="ft_orientation">FT_Orientation<a class="headerlink" href="#ft_orientation" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_OUTLINE_H (freetype/ftoutln.h).</p>
-<div class = "codehilite">
-<pre>
-  <span class="keyword">typedef</span> <span class="keyword">enum</span>  FT_Orientation_
+<div class = "codehilite"><pre><code>  <span class="keyword">typedef</span> <span class="keyword">enum</span>  FT_Orientation_
   {
     <a href="ft2-outline_processing.html#ft_orientation_truetype">FT_ORIENTATION_TRUETYPE</a>   = 0,
     <a href="ft2-outline_processing.html#ft_orientation_postscript">FT_ORIENTATION_POSTSCRIPT</a> = 1,
@@ -2112,8 +2052,7 @@
     <a href="ft2-outline_processing.html#ft_orientation_none">FT_ORIENTATION_NONE</a>
 
   } <b>FT_Orientation</b>;
-</pre>
-</div>
+</code></pre></div>
 
 <p>A list of values used to describe an outline's contour orientation.</p>
 <p>The TrueType and PostScript specifications use different conventions to determine whether outline contours should be filled or unfilled.</p>
@@ -2141,12 +2080,9 @@
 
 <h2 id="ft_outline_get_orientation">FT_Outline_Get_Orientation<a class="headerlink" href="#ft_outline_get_orientation" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_OUTLINE_H (freetype/ftoutln.h).</p>
-<div class = "codehilite">
-<pre>
-  FT_EXPORT( <a href="ft2-outline_processing.html#ft_orientation">FT_Orientation</a> )
+<div class = "codehilite"><pre><code>  FT_EXPORT( <a href="ft2-outline_processing.html#ft_orientation">FT_Orientation</a> )
   <b>FT_Outline_Get_Orientation</b>( <a href="ft2-outline_processing.html#ft_outline">FT_Outline</a>*  outline );
-</pre>
-</div>
+</code></pre></div>
 
 <p>This function analyzes a glyph outline and tries to compute its fill orientation (see <code><a href="ft2-outline_processing.html#ft_orientation">FT_Orientation</a></code>). This is done by integrating the total area covered by the outline. The positive integral corresponds to the clockwise orientation and <code><a href="ft2-outline_processing.html#ft_orientation">FT_ORIENTATION_POSTSCRIPT</a></code> is returned. The negative integral corresponds to the counter-clockwise orientation and <code><a href="ft2-outline_processing.html#ft_orientation">FT_ORIENTATION_TRUETYPE</a></code> is returned.</p>
 <p>Note that this will return <code><a href="ft2-outline_processing.html#ft_orientation">FT_ORIENTATION_TRUETYPE</a></code> for empty outlines.</p>
@@ -2165,9 +2101,7 @@
 
 <h2 id="ft_outline_xxx">FT_OUTLINE_XXX<a class="headerlink" href="#ft_outline_xxx" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_IMAGE_H (freetype/ftimage.h).</p>
-<div class = "codehilite">
-<pre>
-#<span class="keyword">define</span> <a href="ft2-outline_processing.html#ft_outline_none">FT_OUTLINE_NONE</a>             0x0
+<div class = "codehilite"><pre><code>#<span class="keyword">define</span> <a href="ft2-outline_processing.html#ft_outline_none">FT_OUTLINE_NONE</a>             0x0
 #<span class="keyword">define</span> <a href="ft2-outline_processing.html#ft_outline_owner">FT_OUTLINE_OWNER</a>            0x1
 #<span class="keyword">define</span> <a href="ft2-outline_processing.html#ft_outline_even_odd_fill">FT_OUTLINE_EVEN_ODD_FILL</a>    0x2
 #<span class="keyword">define</span> <a href="ft2-outline_processing.html#ft_outline_reverse_fill">FT_OUTLINE_REVERSE_FILL</a>     0x4
@@ -2188,8 +2122,7 @@
 #<span class="keyword">define</span> ft_outline_ignore_dropouts  <a href="ft2-outline_processing.html#ft_outline_ignore_dropouts">FT_OUTLINE_IGNORE_DROPOUTS</a>
 #<span class="keyword">define</span> ft_outline_high_precision   <a href="ft2-outline_processing.html#ft_outline_high_precision">FT_OUTLINE_HIGH_PRECISION</a>
 #<span class="keyword">define</span> ft_outline_single_pass      <a href="ft2-outline_processing.html#ft_outline_single_pass">FT_OUTLINE_SINGLE_PASS</a>
-</pre>
-</div>
+</code></pre></div>
 
 <p>A list of bit-field constants used for the flags in an outline's <code>flags</code> field.</p>
 <h4>values</h4>
@@ -2232,6 +2165,7 @@
 <hr>
                 
                   
+                
                 
               
               
@@ -2287,13 +2221,13 @@
       <div class="md-footer-copyright">
         
           <div class="md-footer-copyright__highlight">
-            Copyright 2019 <a href = "https://www.freetype.org/license.html">The FreeType Project</a>.
+            Copyright 2020 <a href = "https://www.freetype.org/license.html">The FreeType Project</a>.
           </div>
         
         powered by
-        <a href="https://www.mkdocs.org">MkDocs</a>
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
         and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
           Material for MkDocs</a>
       </div>
       
@@ -2303,9 +2237,9 @@
       
     </div>
     
-      <script src="assets/javascripts/application.d9aa80ab.js"></script>
+      <script src="assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:"."}})</script>
+      <script>app.initialize({version:"1.1",url:{base:"."}})</script>
       
         <script src="javascripts/extra.js"></script>
       

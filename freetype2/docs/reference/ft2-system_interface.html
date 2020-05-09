@@ -10,7 +10,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
-        <meta name="description" content="API Reference Documentation for FreeType-2.10.1">
+        <meta name="description" content="API Reference Documentation for FreeType-2.10.2">
       
       
       
@@ -36,17 +36,17 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="images/favico.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.0.2">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
     
     
       
-        <title>System Interface - FreeType-2.10.1 API Reference</title>
+        <title>System Interface - FreeType-2.10.2 API Reference</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/application.982221ab.css">
+      <link rel="stylesheet" href="assets/stylesheets/application.adb8469c.css">
       
-        <link rel="stylesheet" href="assets/stylesheets/application-palette.224b79ff.css">
+        <link rel="stylesheet" href="assets/stylesheets/application-palette.a8b3c06d.css">
       
       
         
@@ -55,12 +55,12 @@
       
     
     
-      <script src="assets/javascripts/modernizr.1f0bcf2b.js"></script>
+      <script src="assets/javascripts/modernizr.86422ebf.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif:300,400,400i,700|Roboto+Mono">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Noto Serif","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -89,7 +89,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#system-interface" tabindex="1" class="md-skip">
+      <a href="#system-interface" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -98,9 +98,9 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="index.html" title="FreeType-2.10.1 API Reference" class="md-header-nav__button md-logo">
+        <a href="." title="FreeType-2.10.2 API Reference" aria-label="FreeType-2.10.2 API Reference" class="md-header-nav__button md-logo">
           
-            <img src="images/favico.ico" width="24" height="24">
+            <img alt="logo" src="images/favico.ico" width="24" height="24">
           
         </a>
       </div>
@@ -111,10 +111,12 @@
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             <span class="md-header-nav__topic">
-              FreeType-2.10.1 API Reference
+              FreeType-2.10.2 API Reference
             </span>
             <span class="md-header-nav__topic">
-              System Interface
+              
+                System Interface
+              
             </span>
           
         </div>
@@ -127,7 +129,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
       <label class="md-icon md-search__icon" for="__search"></label>
       <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
         &#xE5CD;
@@ -157,7 +159,7 @@
         
       
       
-      <main class="md-main">
+      <main class="md-main" role="main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
             
@@ -166,12 +168,12 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="index.html" title="FreeType-2.10.1 API Reference" class="md-nav__button md-logo">
+    <a href="." title="FreeType-2.10.2 API Reference" class="md-nav__button md-logo">
       
-        <img src="images/favico.ico" width="48" height="48">
+        <img alt="logo" src="images/favico.ico" width="48" height="48">
       
     </a>
-    FreeType-2.10.1 API Reference
+    FreeType-2.10.2 API Reference
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -830,77 +832,77 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#synopsis" title="Synopsis" class="md-nav__link">
+  <a href="#synopsis" class="md-nav__link">
     Synopsis
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_memory" title="FT_Memory" class="md-nav__link">
+  <a href="#ft_memory" class="md-nav__link">
     FT_Memory
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_alloc_func" title="FT_Alloc_Func" class="md-nav__link">
+  <a href="#ft_alloc_func" class="md-nav__link">
     FT_Alloc_Func
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_free_func" title="FT_Free_Func" class="md-nav__link">
+  <a href="#ft_free_func" class="md-nav__link">
     FT_Free_Func
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_realloc_func" title="FT_Realloc_Func" class="md-nav__link">
+  <a href="#ft_realloc_func" class="md-nav__link">
     FT_Realloc_Func
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_memoryrec" title="FT_MemoryRec" class="md-nav__link">
+  <a href="#ft_memoryrec" class="md-nav__link">
     FT_MemoryRec
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_stream" title="FT_Stream" class="md-nav__link">
+  <a href="#ft_stream" class="md-nav__link">
     FT_Stream
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_streamdesc" title="FT_StreamDesc" class="md-nav__link">
+  <a href="#ft_streamdesc" class="md-nav__link">
     FT_StreamDesc
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_stream_iofunc" title="FT_Stream_IoFunc" class="md-nav__link">
+  <a href="#ft_stream_iofunc" class="md-nav__link">
     FT_Stream_IoFunc
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_stream_closefunc" title="FT_Stream_CloseFunc" class="md-nav__link">
+  <a href="#ft_stream_closefunc" class="md-nav__link">
     FT_Stream_CloseFunc
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_streamrec" title="FT_StreamRec" class="md-nav__link">
+  <a href="#ft_streamrec" class="md-nav__link">
     FT_StreamRec
   </a>
   
@@ -1043,8 +1045,8 @@
 
 
   <li class="md-nav__item">
-    <a href="ft2-ot_validation.html" title="OpenType Validation" class="md-nav__link">
-      OpenType Validation
+    <a href="ft2-gx_validation.html" title="TrueTypeGX/AAT Validation" class="md-nav__link">
+      TrueTypeGX/AAT Validation
     </a>
   </li>
 
@@ -1079,8 +1081,8 @@
 
 
   <li class="md-nav__item">
-    <a href="ft2-gx_validation.html" title="TrueTypeGX/AAT Validation" class="md-nav__link">
-      TrueTypeGX/AAT Validation
+    <a href="ft2-ot_validation.html" title="OpenType Validation" class="md-nav__link">
+      OpenType Validation
     </a>
   </li>
 
@@ -1111,77 +1113,77 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#synopsis" title="Synopsis" class="md-nav__link">
+  <a href="#synopsis" class="md-nav__link">
     Synopsis
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_memory" title="FT_Memory" class="md-nav__link">
+  <a href="#ft_memory" class="md-nav__link">
     FT_Memory
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_alloc_func" title="FT_Alloc_Func" class="md-nav__link">
+  <a href="#ft_alloc_func" class="md-nav__link">
     FT_Alloc_Func
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_free_func" title="FT_Free_Func" class="md-nav__link">
+  <a href="#ft_free_func" class="md-nav__link">
     FT_Free_Func
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_realloc_func" title="FT_Realloc_Func" class="md-nav__link">
+  <a href="#ft_realloc_func" class="md-nav__link">
     FT_Realloc_Func
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_memoryrec" title="FT_MemoryRec" class="md-nav__link">
+  <a href="#ft_memoryrec" class="md-nav__link">
     FT_MemoryRec
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_stream" title="FT_Stream" class="md-nav__link">
+  <a href="#ft_stream" class="md-nav__link">
     FT_Stream
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_streamdesc" title="FT_StreamDesc" class="md-nav__link">
+  <a href="#ft_streamdesc" class="md-nav__link">
     FT_StreamDesc
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_stream_iofunc" title="FT_Stream_IoFunc" class="md-nav__link">
+  <a href="#ft_stream_iofunc" class="md-nav__link">
     FT_Stream_IoFunc
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_stream_closefunc" title="FT_Stream_CloseFunc" class="md-nav__link">
+  <a href="#ft_stream_closefunc" class="md-nav__link">
     FT_Stream_CloseFunc
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_streamrec" title="FT_StreamRec" class="md-nav__link">
+  <a href="#ft_streamrec" class="md-nav__link">
     FT_StreamRec
   </a>
   
@@ -1211,24 +1213,18 @@
 <p>This section contains various definitions related to memory management and i/o access. You need to understand this information if you want to use a custom memory manager or you own i/o streams.</p>
 <h2 id="ft_memory">FT_Memory<a class="headerlink" href="#ft_memory" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_SYSTEM_H (freetype/ftsystem.h).</p>
-<div class = "codehilite">
-<pre>
-  <span class="keyword">typedef</span> <span class="keyword">struct</span> FT_MemoryRec_*  <b>FT_Memory</b>;
-</pre>
-</div>
+<div class = "codehilite"><pre><code>  <span class="keyword">typedef</span> <span class="keyword">struct</span> FT_MemoryRec_*  <b>FT_Memory</b>;
+</code></pre></div>
 
 <p>A handle to a given memory manager object, defined with an <code><a href="ft2-system_interface.html#ft_memoryrec">FT_MemoryRec</a></code> structure.</p>
 <hr>
 
 <h2 id="ft_alloc_func">FT_Alloc_Func<a class="headerlink" href="#ft_alloc_func" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_SYSTEM_H (freetype/ftsystem.h).</p>
-<div class = "codehilite">
-<pre>
-  <span class="keyword">typedef</span> <span class="keyword">void</span>*
+<div class = "codehilite"><pre><code>  <span class="keyword">typedef</span> <span class="keyword">void</span>*
   (*<b>FT_Alloc_Func</b>)( <a href="ft2-system_interface.html#ft_memory">FT_Memory</a>  memory,
                     <span class="keyword">long</span>       size );
-</pre>
-</div>
+</code></pre></div>
 
 <p>A function used to allocate <code>size</code> bytes from <code>memory</code>.</p>
 <h4>input</h4>
@@ -1249,13 +1245,10 @@
 
 <h2 id="ft_free_func">FT_Free_Func<a class="headerlink" href="#ft_free_func" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_SYSTEM_H (freetype/ftsystem.h).</p>
-<div class = "codehilite">
-<pre>
-  <span class="keyword">typedef</span> <span class="keyword">void</span>
+<div class = "codehilite"><pre><code>  <span class="keyword">typedef</span> <span class="keyword">void</span>
   (*<b>FT_Free_Func</b>)( <a href="ft2-system_interface.html#ft_memory">FT_Memory</a>  memory,
                    <span class="keyword">void</span>*      block );
-</pre>
-</div>
+</code></pre></div>
 
 <p>A function used to release a given block of memory.</p>
 <h4>input</h4>
@@ -1273,15 +1266,12 @@
 
 <h2 id="ft_realloc_func">FT_Realloc_Func<a class="headerlink" href="#ft_realloc_func" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_SYSTEM_H (freetype/ftsystem.h).</p>
-<div class = "codehilite">
-<pre>
-  <span class="keyword">typedef</span> <span class="keyword">void</span>*
+<div class = "codehilite"><pre><code>  <span class="keyword">typedef</span> <span class="keyword">void</span>*
   (*<b>FT_Realloc_Func</b>)( <a href="ft2-system_interface.html#ft_memory">FT_Memory</a>  memory,
                       <span class="keyword">long</span>       cur_size,
                       <span class="keyword">long</span>       new_size,
                       <span class="keyword">void</span>*      block );
-</pre>
-</div>
+</code></pre></div>
 
 <p>A function used to re-allocate a given block of memory.</p>
 <h4>input</h4>
@@ -1311,17 +1301,14 @@
 
 <h2 id="ft_memoryrec">FT_MemoryRec<a class="headerlink" href="#ft_memoryrec" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_SYSTEM_H (freetype/ftsystem.h).</p>
-<div class = "codehilite">
-<pre>
-  <span class="keyword">struct</span>  FT_MemoryRec_
+<div class = "codehilite"><pre><code>  <span class="keyword">struct</span>  FT_MemoryRec_
   {
     <span class="keyword">void</span>*            user;
     <a href="ft2-system_interface.html#ft_alloc_func">FT_Alloc_Func</a>    alloc;
     <a href="ft2-system_interface.html#ft_free_func">FT_Free_Func</a>     free;
     <a href="ft2-system_interface.html#ft_realloc_func">FT_Realloc_Func</a>  realloc;
   };
-</pre>
-</div>
+</code></pre></div>
 
 <p>A structure used to describe a given memory manager to FreeType&nbsp;2.</p>
 <h4>fields</h4>
@@ -1345,11 +1332,8 @@
 
 <h2 id="ft_stream">FT_Stream<a class="headerlink" href="#ft_stream" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_SYSTEM_H (freetype/ftsystem.h).</p>
-<div class = "codehilite">
-<pre>
-  <span class="keyword">typedef</span> <span class="keyword">struct</span> FT_StreamRec_*  <b>FT_Stream</b>;
-</pre>
-</div>
+<div class = "codehilite"><pre><code>  <span class="keyword">typedef</span> <span class="keyword">struct</span> FT_StreamRec_*  <b>FT_Stream</b>;
+</code></pre></div>
 
 <p>A handle to an input stream.</p>
 <h4>also</h4>
@@ -1359,31 +1343,25 @@
 
 <h2 id="ft_streamdesc">FT_StreamDesc<a class="headerlink" href="#ft_streamdesc" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_SYSTEM_H (freetype/ftsystem.h).</p>
-<div class = "codehilite">
-<pre>
-  <span class="keyword">typedef</span> <span class="keyword">union</span>  FT_StreamDesc_
+<div class = "codehilite"><pre><code>  <span class="keyword">typedef</span> <span class="keyword">union</span>  FT_StreamDesc_
   {
     <span class="keyword">long</span>   value;
     <span class="keyword">void</span>*  pointer;
 
   } <b>FT_StreamDesc</b>;
-</pre>
-</div>
+</code></pre></div>
 
 <p>A union type used to store either a long or a pointer. This is used to store a file descriptor or a <code>FILE*</code> in an input stream.</p>
 <hr>
 
 <h2 id="ft_stream_iofunc">FT_Stream_IoFunc<a class="headerlink" href="#ft_stream_iofunc" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_SYSTEM_H (freetype/ftsystem.h).</p>
-<div class = "codehilite">
-<pre>
-  <span class="keyword">typedef</span> <span class="keyword">unsigned</span> <span class="keyword">long</span>
+<div class = "codehilite"><pre><code>  <span class="keyword">typedef</span> <span class="keyword">unsigned</span> <span class="keyword">long</span>
   (*<b>FT_Stream_IoFunc</b>)( <a href="ft2-system_interface.html#ft_stream">FT_Stream</a>       stream,
                        <span class="keyword">unsigned</span> <span class="keyword">long</span>   offset,
                        <span class="keyword">unsigned</span> <span class="keyword">char</span>*  buffer,
                        <span class="keyword">unsigned</span> <span class="keyword">long</span>   count );
-</pre>
-</div>
+</code></pre></div>
 
 <p>A function used to seek and read data from a given input stream.</p>
 <h4>input</h4>
@@ -1413,12 +1391,9 @@
 
 <h2 id="ft_stream_closefunc">FT_Stream_CloseFunc<a class="headerlink" href="#ft_stream_closefunc" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_SYSTEM_H (freetype/ftsystem.h).</p>
-<div class = "codehilite">
-<pre>
-  <span class="keyword">typedef</span> <span class="keyword">void</span>
+<div class = "codehilite"><pre><code>  <span class="keyword">typedef</span> <span class="keyword">void</span>
   (*<b>FT_Stream_CloseFunc</b>)( <a href="ft2-system_interface.html#ft_stream">FT_Stream</a>  stream );
-</pre>
-</div>
+</code></pre></div>
 
 <p>A function used to close a given input stream.</p>
 <h4>input</h4>
@@ -1433,9 +1408,7 @@
 
 <h2 id="ft_streamrec">FT_StreamRec<a class="headerlink" href="#ft_streamrec" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_SYSTEM_H (freetype/ftsystem.h).</p>
-<div class = "codehilite">
-<pre>
-  <span class="keyword">typedef</span> <span class="keyword">struct</span>  FT_StreamRec_
+<div class = "codehilite"><pre><code>  <span class="keyword">typedef</span> <span class="keyword">struct</span>  FT_StreamRec_
   {
     <span class="keyword">unsigned</span> <span class="keyword">char</span>*       base;
     <span class="keyword">unsigned</span> <span class="keyword">long</span>        size;
@@ -1451,8 +1424,7 @@
     <span class="keyword">unsigned</span> <span class="keyword">char</span>*       limit;
 
   } <b>FT_StreamRec</b>;
-</pre>
-</div>
+</code></pre></div>
 
 <p>A structure used to describe an input stream.</p>
 <h4>input</h4>
@@ -1494,6 +1466,7 @@
 <hr>
                 
                   
+                
                 
               
               
@@ -1549,13 +1522,13 @@
       <div class="md-footer-copyright">
         
           <div class="md-footer-copyright__highlight">
-            Copyright 2019 <a href = "https://www.freetype.org/license.html">The FreeType Project</a>.
+            Copyright 2020 <a href = "https://www.freetype.org/license.html">The FreeType Project</a>.
           </div>
         
         powered by
-        <a href="https://www.mkdocs.org">MkDocs</a>
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
         and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
           Material for MkDocs</a>
       </div>
       
@@ -1565,9 +1538,9 @@
       
     </div>
     
-      <script src="assets/javascripts/application.d9aa80ab.js"></script>
+      <script src="assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:"."}})</script>
+      <script>app.initialize({version:"1.1",url:{base:"."}})</script>
       
         <script src="javascripts/extra.js"></script>
       

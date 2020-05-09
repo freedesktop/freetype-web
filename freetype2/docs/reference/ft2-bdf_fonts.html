@@ -10,7 +10,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
-        <meta name="description" content="API Reference Documentation for FreeType-2.10.1">
+        <meta name="description" content="API Reference Documentation for FreeType-2.10.2">
       
       
       
@@ -36,17 +36,17 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="images/favico.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.0.2">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
     
     
       
-        <title>BDF and PCF Files - FreeType-2.10.1 API Reference</title>
+        <title>BDF and PCF Files - FreeType-2.10.2 API Reference</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/application.982221ab.css">
+      <link rel="stylesheet" href="assets/stylesheets/application.adb8469c.css">
       
-        <link rel="stylesheet" href="assets/stylesheets/application-palette.224b79ff.css">
+        <link rel="stylesheet" href="assets/stylesheets/application-palette.a8b3c06d.css">
       
       
         
@@ -55,12 +55,12 @@
       
     
     
-      <script src="assets/javascripts/modernizr.1f0bcf2b.js"></script>
+      <script src="assets/javascripts/modernizr.86422ebf.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif:300,400,400i,700|Roboto+Mono">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Noto Serif","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -89,7 +89,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#bdf-and-pcf-files" tabindex="1" class="md-skip">
+      <a href="#bdf-and-pcf-files" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -98,9 +98,9 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="index.html" title="FreeType-2.10.1 API Reference" class="md-header-nav__button md-logo">
+        <a href="." title="FreeType-2.10.2 API Reference" aria-label="FreeType-2.10.2 API Reference" class="md-header-nav__button md-logo">
           
-            <img src="images/favico.ico" width="24" height="24">
+            <img alt="logo" src="images/favico.ico" width="24" height="24">
           
         </a>
       </div>
@@ -111,10 +111,12 @@
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             <span class="md-header-nav__topic">
-              FreeType-2.10.1 API Reference
+              FreeType-2.10.2 API Reference
             </span>
             <span class="md-header-nav__topic">
-              BDF and PCF Files
+              
+                BDF and PCF Files
+              
             </span>
           
         </div>
@@ -127,7 +129,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
       <label class="md-icon md-search__icon" for="__search"></label>
       <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
         &#xE5CD;
@@ -157,7 +159,7 @@
         
       
       
-      <main class="md-main">
+      <main class="md-main" role="main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
             
@@ -166,12 +168,12 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="index.html" title="FreeType-2.10.1 API Reference" class="md-nav__button md-logo">
+    <a href="." title="FreeType-2.10.2 API Reference" class="md-nav__button md-logo">
       
-        <img src="images/favico.ico" width="48" height="48">
+        <img alt="logo" src="images/favico.ico" width="48" height="48">
       
     </a>
-    FreeType-2.10.1 API Reference
+    FreeType-2.10.2 API Reference
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -494,42 +496,42 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#synopsis" title="Synopsis" class="md-nav__link">
+  <a href="#synopsis" class="md-nav__link">
     Synopsis
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#bdf_propertytype" title="BDF_PropertyType" class="md-nav__link">
+  <a href="#bdf_propertytype" class="md-nav__link">
     BDF_PropertyType
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#bdf_property" title="BDF_Property" class="md-nav__link">
+  <a href="#bdf_property" class="md-nav__link">
     BDF_Property
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#bdf_propertyrec" title="BDF_PropertyRec" class="md-nav__link">
+  <a href="#bdf_propertyrec" class="md-nav__link">
     BDF_PropertyRec
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_get_bdf_charset_id" title="FT_Get_BDF_Charset_ID" class="md-nav__link">
+  <a href="#ft_get_bdf_charset_id" class="md-nav__link">
     FT_Get_BDF_Charset_ID
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_get_bdf_property" title="FT_Get_BDF_Property" class="md-nav__link">
+  <a href="#ft_get_bdf_property" class="md-nav__link">
     FT_Get_BDF_Property
   </a>
   
@@ -1008,8 +1010,8 @@
 
 
   <li class="md-nav__item">
-    <a href="ft2-ot_validation.html" title="OpenType Validation" class="md-nav__link">
-      OpenType Validation
+    <a href="ft2-gx_validation.html" title="TrueTypeGX/AAT Validation" class="md-nav__link">
+      TrueTypeGX/AAT Validation
     </a>
   </li>
 
@@ -1044,8 +1046,8 @@
 
 
   <li class="md-nav__item">
-    <a href="ft2-gx_validation.html" title="TrueTypeGX/AAT Validation" class="md-nav__link">
-      TrueTypeGX/AAT Validation
+    <a href="ft2-ot_validation.html" title="OpenType Validation" class="md-nav__link">
+      OpenType Validation
     </a>
   </li>
 
@@ -1076,42 +1078,42 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#synopsis" title="Synopsis" class="md-nav__link">
+  <a href="#synopsis" class="md-nav__link">
     Synopsis
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#bdf_propertytype" title="BDF_PropertyType" class="md-nav__link">
+  <a href="#bdf_propertytype" class="md-nav__link">
     BDF_PropertyType
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#bdf_property" title="BDF_Property" class="md-nav__link">
+  <a href="#bdf_property" class="md-nav__link">
     BDF_Property
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#bdf_propertyrec" title="BDF_PropertyRec" class="md-nav__link">
+  <a href="#bdf_propertyrec" class="md-nav__link">
     BDF_PropertyRec
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_get_bdf_charset_id" title="FT_Get_BDF_Charset_ID" class="md-nav__link">
+  <a href="#ft_get_bdf_charset_id" class="md-nav__link">
     FT_Get_BDF_Charset_ID
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_get_bdf_property" title="FT_Get_BDF_Property" class="md-nav__link">
+  <a href="#ft_get_bdf_property" class="md-nav__link">
     FT_Get_BDF_Property
   </a>
   
@@ -1141,9 +1143,7 @@
 <p>This section contains the declaration of functions specific to BDF and PCF fonts.</p>
 <h2 id="bdf_propertytype">BDF_PropertyType<a class="headerlink" href="#bdf_propertytype" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_BDF_H (freetype/ftbdf.h).</p>
-<div class = "codehilite">
-<pre>
-  <span class="keyword">typedef</span> <span class="keyword">enum</span>  BDF_PropertyType_
+<div class = "codehilite"><pre><code>  <span class="keyword">typedef</span> <span class="keyword">enum</span>  BDF_PropertyType_
   {
     <a href="ft2-bdf_fonts.html#bdf_property_type_none">BDF_PROPERTY_TYPE_NONE</a>     = 0,
     <a href="ft2-bdf_fonts.html#bdf_property_type_atom">BDF_PROPERTY_TYPE_ATOM</a>     = 1,
@@ -1151,8 +1151,7 @@
     <a href="ft2-bdf_fonts.html#bdf_property_type_cardinal">BDF_PROPERTY_TYPE_CARDINAL</a> = 3
 
   } <b>BDF_PropertyType</b>;
-</pre>
-</div>
+</code></pre></div>
 
 <p>A list of BDF property types.</p>
 <h4>values</h4>
@@ -1176,20 +1175,15 @@
 
 <h2 id="bdf_property">BDF_Property<a class="headerlink" href="#bdf_property" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_BDF_H (freetype/ftbdf.h).</p>
-<div class = "codehilite">
-<pre>
-  <span class="keyword">typedef</span> <span class="keyword">struct</span> BDF_PropertyRec_*  <b>BDF_Property</b>;
-</pre>
-</div>
+<div class = "codehilite"><pre><code>  <span class="keyword">typedef</span> <span class="keyword">struct</span> BDF_PropertyRec_*  <b>BDF_Property</b>;
+</code></pre></div>
 
 <p>A handle to a <code><a href="ft2-bdf_fonts.html#bdf_propertyrec">BDF_PropertyRec</a></code> structure to model a given BDF/PCF property.</p>
 <hr>
 
 <h2 id="bdf_propertyrec">BDF_PropertyRec<a class="headerlink" href="#bdf_propertyrec" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_BDF_H (freetype/ftbdf.h).</p>
-<div class = "codehilite">
-<pre>
-  <span class="keyword">typedef</span> <span class="keyword">struct</span>  BDF_PropertyRec_
+<div class = "codehilite"><pre><code>  <span class="keyword">typedef</span> <span class="keyword">struct</span>  BDF_PropertyRec_
   {
     <a href="ft2-bdf_fonts.html#bdf_propertytype">BDF_PropertyType</a>  type;
     <span class="keyword">union</span> {
@@ -1200,8 +1194,7 @@
     } u;
 
   } <b>BDF_PropertyRec</b>;
-</pre>
-</div>
+</code></pre></div>
 
 <p>This structure models a given BDF/PCF property.</p>
 <h4>fields</h4>
@@ -1225,14 +1218,11 @@
 
 <h2 id="ft_get_bdf_charset_id">FT_Get_BDF_Charset_ID<a class="headerlink" href="#ft_get_bdf_charset_id" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_BDF_H (freetype/ftbdf.h).</p>
-<div class = "codehilite">
-<pre>
-  FT_EXPORT( <a href="ft2-basic_types.html#ft_error">FT_Error</a> )
+<div class = "codehilite"><pre><code>  FT_EXPORT( <a href="ft2-basic_types.html#ft_error">FT_Error</a> )
   <b>FT_Get_BDF_Charset_ID</b>( <a href="ft2-base_interface.html#ft_face">FT_Face</a>       face,
                          <span class="keyword">const</span> <span class="keyword">char</span>*  *acharset_encoding,
                          <span class="keyword">const</span> <span class="keyword">char</span>*  *acharset_registry );
-</pre>
-</div>
+</code></pre></div>
 
 <p>Retrieve a BDF font character set identity, according to the BDF specification.</p>
 <h4>input</h4>
@@ -1264,14 +1254,11 @@
 
 <h2 id="ft_get_bdf_property">FT_Get_BDF_Property<a class="headerlink" href="#ft_get_bdf_property" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_BDF_H (freetype/ftbdf.h).</p>
-<div class = "codehilite">
-<pre>
-  FT_EXPORT( <a href="ft2-basic_types.html#ft_error">FT_Error</a> )
+<div class = "codehilite"><pre><code>  FT_EXPORT( <a href="ft2-basic_types.html#ft_error">FT_Error</a> )
   <b>FT_Get_BDF_Property</b>( <a href="ft2-base_interface.html#ft_face">FT_Face</a>           face,
                        <span class="keyword">const</span> <span class="keyword">char</span>*       prop_name,
                        <a href="ft2-bdf_fonts.html#bdf_propertyrec">BDF_PropertyRec</a>  *aproperty );
-</pre>
-</div>
+</code></pre></div>
 
 <p>Retrieve a BDF property from a BDF or PCF font file.</p>
 <h4>input</h4>
@@ -1305,6 +1292,7 @@
 <hr>
                 
                   
+                
                 
               
               
@@ -1360,13 +1348,13 @@
       <div class="md-footer-copyright">
         
           <div class="md-footer-copyright__highlight">
-            Copyright 2019 <a href = "https://www.freetype.org/license.html">The FreeType Project</a>.
+            Copyright 2020 <a href = "https://www.freetype.org/license.html">The FreeType Project</a>.
           </div>
         
         powered by
-        <a href="https://www.mkdocs.org">MkDocs</a>
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
         and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
           Material for MkDocs</a>
       </div>
       
@@ -1376,9 +1364,9 @@
       
     </div>
     
-      <script src="assets/javascripts/application.d9aa80ab.js"></script>
+      <script src="assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:"."}})</script>
+      <script>app.initialize({version:"1.1",url:{base:"."}})</script>
       
         <script src="javascripts/extra.js"></script>
       

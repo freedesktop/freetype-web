@@ -10,7 +10,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
-        <meta name="description" content="API Reference Documentation for FreeType-2.10.1">
+        <meta name="description" content="API Reference Documentation for FreeType-2.10.2">
       
       
       
@@ -36,17 +36,17 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="images/favico.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.0.2">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
     
     
       
-        <title>List Processing - FreeType-2.10.1 API Reference</title>
+        <title>List Processing - FreeType-2.10.2 API Reference</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/application.982221ab.css">
+      <link rel="stylesheet" href="assets/stylesheets/application.adb8469c.css">
       
-        <link rel="stylesheet" href="assets/stylesheets/application-palette.224b79ff.css">
+        <link rel="stylesheet" href="assets/stylesheets/application-palette.a8b3c06d.css">
       
       
         
@@ -55,12 +55,12 @@
       
     
     
-      <script src="assets/javascripts/modernizr.1f0bcf2b.js"></script>
+      <script src="assets/javascripts/modernizr.86422ebf.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif:300,400,400i,700|Roboto+Mono">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Noto Serif","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -89,7 +89,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#list-processing" tabindex="1" class="md-skip">
+      <a href="#list-processing" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -98,9 +98,9 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="index.html" title="FreeType-2.10.1 API Reference" class="md-header-nav__button md-logo">
+        <a href="." title="FreeType-2.10.2 API Reference" aria-label="FreeType-2.10.2 API Reference" class="md-header-nav__button md-logo">
           
-            <img src="images/favico.ico" width="24" height="24">
+            <img alt="logo" src="images/favico.ico" width="24" height="24">
           
         </a>
       </div>
@@ -111,10 +111,12 @@
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             <span class="md-header-nav__topic">
-              FreeType-2.10.1 API Reference
+              FreeType-2.10.2 API Reference
             </span>
             <span class="md-header-nav__topic">
-              List Processing
+              
+                List Processing
+              
             </span>
           
         </div>
@@ -127,7 +129,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
       <label class="md-icon md-search__icon" for="__search"></label>
       <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
         &#xE5CD;
@@ -157,7 +159,7 @@
         
       
       
-      <main class="md-main">
+      <main class="md-main" role="main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
             
@@ -166,12 +168,12 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="index.html" title="FreeType-2.10.1 API Reference" class="md-nav__button md-logo">
+    <a href="." title="FreeType-2.10.2 API Reference" class="md-nav__button md-logo">
       
-        <img src="images/favico.ico" width="48" height="48">
+        <img alt="logo" src="images/favico.ico" width="48" height="48">
       
     </a>
-    FreeType-2.10.1 API Reference
+    FreeType-2.10.2 API Reference
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -758,98 +760,98 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#synopsis" title="Synopsis" class="md-nav__link">
+  <a href="#synopsis" class="md-nav__link">
     Synopsis
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_list" title="FT_List" class="md-nav__link">
+  <a href="#ft_list" class="md-nav__link">
     FT_List
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_listnode" title="FT_ListNode" class="md-nav__link">
+  <a href="#ft_listnode" class="md-nav__link">
     FT_ListNode
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_listrec" title="FT_ListRec" class="md-nav__link">
+  <a href="#ft_listrec" class="md-nav__link">
     FT_ListRec
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_listnoderec" title="FT_ListNodeRec" class="md-nav__link">
+  <a href="#ft_listnoderec" class="md-nav__link">
     FT_ListNodeRec
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_list_add" title="FT_List_Add" class="md-nav__link">
+  <a href="#ft_list_add" class="md-nav__link">
     FT_List_Add
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_list_insert" title="FT_List_Insert" class="md-nav__link">
+  <a href="#ft_list_insert" class="md-nav__link">
     FT_List_Insert
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_list_find" title="FT_List_Find" class="md-nav__link">
+  <a href="#ft_list_find" class="md-nav__link">
     FT_List_Find
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_list_remove" title="FT_List_Remove" class="md-nav__link">
+  <a href="#ft_list_remove" class="md-nav__link">
     FT_List_Remove
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_list_up" title="FT_List_Up" class="md-nav__link">
+  <a href="#ft_list_up" class="md-nav__link">
     FT_List_Up
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_list_iterate" title="FT_List_Iterate" class="md-nav__link">
+  <a href="#ft_list_iterate" class="md-nav__link">
     FT_List_Iterate
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_list_iterator" title="FT_List_Iterator" class="md-nav__link">
+  <a href="#ft_list_iterator" class="md-nav__link">
     FT_List_Iterator
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_list_finalize" title="FT_List_Finalize" class="md-nav__link">
+  <a href="#ft_list_finalize" class="md-nav__link">
     FT_List_Finalize
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_list_destructor" title="FT_List_Destructor" class="md-nav__link">
+  <a href="#ft_list_destructor" class="md-nav__link">
     FT_List_Destructor
   </a>
   
@@ -1064,8 +1066,8 @@
 
 
   <li class="md-nav__item">
-    <a href="ft2-ot_validation.html" title="OpenType Validation" class="md-nav__link">
-      OpenType Validation
+    <a href="ft2-gx_validation.html" title="TrueTypeGX/AAT Validation" class="md-nav__link">
+      TrueTypeGX/AAT Validation
     </a>
   </li>
 
@@ -1100,8 +1102,8 @@
 
 
   <li class="md-nav__item">
-    <a href="ft2-gx_validation.html" title="TrueTypeGX/AAT Validation" class="md-nav__link">
-      TrueTypeGX/AAT Validation
+    <a href="ft2-ot_validation.html" title="OpenType Validation" class="md-nav__link">
+      OpenType Validation
     </a>
   </li>
 
@@ -1132,98 +1134,98 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#synopsis" title="Synopsis" class="md-nav__link">
+  <a href="#synopsis" class="md-nav__link">
     Synopsis
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_list" title="FT_List" class="md-nav__link">
+  <a href="#ft_list" class="md-nav__link">
     FT_List
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_listnode" title="FT_ListNode" class="md-nav__link">
+  <a href="#ft_listnode" class="md-nav__link">
     FT_ListNode
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_listrec" title="FT_ListRec" class="md-nav__link">
+  <a href="#ft_listrec" class="md-nav__link">
     FT_ListRec
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_listnoderec" title="FT_ListNodeRec" class="md-nav__link">
+  <a href="#ft_listnoderec" class="md-nav__link">
     FT_ListNodeRec
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_list_add" title="FT_List_Add" class="md-nav__link">
+  <a href="#ft_list_add" class="md-nav__link">
     FT_List_Add
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_list_insert" title="FT_List_Insert" class="md-nav__link">
+  <a href="#ft_list_insert" class="md-nav__link">
     FT_List_Insert
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_list_find" title="FT_List_Find" class="md-nav__link">
+  <a href="#ft_list_find" class="md-nav__link">
     FT_List_Find
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_list_remove" title="FT_List_Remove" class="md-nav__link">
+  <a href="#ft_list_remove" class="md-nav__link">
     FT_List_Remove
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_list_up" title="FT_List_Up" class="md-nav__link">
+  <a href="#ft_list_up" class="md-nav__link">
     FT_List_Up
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_list_iterate" title="FT_List_Iterate" class="md-nav__link">
+  <a href="#ft_list_iterate" class="md-nav__link">
     FT_List_Iterate
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_list_iterator" title="FT_List_Iterator" class="md-nav__link">
+  <a href="#ft_list_iterator" class="md-nav__link">
     FT_List_Iterator
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_list_finalize" title="FT_List_Finalize" class="md-nav__link">
+  <a href="#ft_list_finalize" class="md-nav__link">
     FT_List_Finalize
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_list_destructor" title="FT_List_Destructor" class="md-nav__link">
+  <a href="#ft_list_destructor" class="md-nav__link">
     FT_List_Destructor
   </a>
   
@@ -1253,38 +1255,29 @@
 <p>This section contains various definitions related to list processing using doubly-linked nodes.</p>
 <h2 id="ft_list">FT_List<a class="headerlink" href="#ft_list" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_TYPES_H (freetype/fttypes.h).</p>
-<div class = "codehilite">
-<pre>
-  <span class="keyword">typedef</span> <span class="keyword">struct</span> FT_ListRec_*  <b>FT_List</b>;
-</pre>
-</div>
+<div class = "codehilite"><pre><code>  <span class="keyword">typedef</span> <span class="keyword">struct</span> FT_ListRec_*  <b>FT_List</b>;
+</code></pre></div>
 
 <p>A handle to a list record (see <code><a href="ft2-list_processing.html#ft_listrec">FT_ListRec</a></code>).</p>
 <hr>
 
 <h2 id="ft_listnode">FT_ListNode<a class="headerlink" href="#ft_listnode" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_TYPES_H (freetype/fttypes.h).</p>
-<div class = "codehilite">
-<pre>
-  <span class="keyword">typedef</span> <span class="keyword">struct</span> FT_ListNodeRec_*  <b>FT_ListNode</b>;
-</pre>
-</div>
+<div class = "codehilite"><pre><code>  <span class="keyword">typedef</span> <span class="keyword">struct</span> FT_ListNodeRec_*  <b>FT_ListNode</b>;
+</code></pre></div>
 
 <p>Many elements and objects in FreeType are listed through an <code><a href="ft2-list_processing.html#ft_list">FT_List</a></code> record (see <code><a href="ft2-list_processing.html#ft_listrec">FT_ListRec</a></code>). As its name suggests, an FT_ListNode is a handle to a single list element.</p>
 <hr>
 
 <h2 id="ft_listrec">FT_ListRec<a class="headerlink" href="#ft_listrec" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_TYPES_H (freetype/fttypes.h).</p>
-<div class = "codehilite">
-<pre>
-  <span class="keyword">typedef</span> <span class="keyword">struct</span>  FT_ListRec_
+<div class = "codehilite"><pre><code>  <span class="keyword">typedef</span> <span class="keyword">struct</span>  FT_ListRec_
   {
     <a href="ft2-list_processing.html#ft_listnode">FT_ListNode</a>  head;
     <a href="ft2-list_processing.html#ft_listnode">FT_ListNode</a>  tail;
 
   } <b>FT_ListRec</b>;
-</pre>
-</div>
+</code></pre></div>
 
 <p>A structure used to hold a simple doubly-linked list. These are used in many parts of FreeType.</p>
 <h4>fields</h4>
@@ -1302,17 +1295,14 @@
 
 <h2 id="ft_listnoderec">FT_ListNodeRec<a class="headerlink" href="#ft_listnoderec" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_TYPES_H (freetype/fttypes.h).</p>
-<div class = "codehilite">
-<pre>
-  <span class="keyword">typedef</span> <span class="keyword">struct</span>  FT_ListNodeRec_
+<div class = "codehilite"><pre><code>  <span class="keyword">typedef</span> <span class="keyword">struct</span>  FT_ListNodeRec_
   {
     <a href="ft2-list_processing.html#ft_listnode">FT_ListNode</a>  prev;
     <a href="ft2-list_processing.html#ft_listnode">FT_ListNode</a>  next;
     <span class="keyword">void</span>*        data;
 
   } <b>FT_ListNodeRec</b>;
-</pre>
-</div>
+</code></pre></div>
 
 <p>A structure used to hold a single list element.</p>
 <h4>fields</h4>
@@ -1333,13 +1323,10 @@
 
 <h2 id="ft_list_add">FT_List_Add<a class="headerlink" href="#ft_list_add" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_LIST_H (freetype/ftlist.h).</p>
-<div class = "codehilite">
-<pre>
-  FT_EXPORT( <span class="keyword">void</span> )
+<div class = "codehilite"><pre><code>  FT_EXPORT( <span class="keyword">void</span> )
   <b>FT_List_Add</b>( <a href="ft2-list_processing.html#ft_list">FT_List</a>      list,
                <a href="ft2-list_processing.html#ft_listnode">FT_ListNode</a>  node );
-</pre>
-</div>
+</code></pre></div>
 
 <p>Append an element to the end of a list.</p>
 <h4>inout</h4>
@@ -1357,13 +1344,10 @@
 
 <h2 id="ft_list_insert">FT_List_Insert<a class="headerlink" href="#ft_list_insert" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_LIST_H (freetype/ftlist.h).</p>
-<div class = "codehilite">
-<pre>
-  FT_EXPORT( <span class="keyword">void</span> )
+<div class = "codehilite"><pre><code>  FT_EXPORT( <span class="keyword">void</span> )
   <b>FT_List_Insert</b>( <a href="ft2-list_processing.html#ft_list">FT_List</a>      list,
                   <a href="ft2-list_processing.html#ft_listnode">FT_ListNode</a>  node );
-</pre>
-</div>
+</code></pre></div>
 
 <p>Insert an element at the head of a list.</p>
 <h4>inout</h4>
@@ -1381,13 +1365,10 @@
 
 <h2 id="ft_list_find">FT_List_Find<a class="headerlink" href="#ft_list_find" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_LIST_H (freetype/ftlist.h).</p>
-<div class = "codehilite">
-<pre>
-  FT_EXPORT( <a href="ft2-list_processing.html#ft_listnode">FT_ListNode</a> )
+<div class = "codehilite"><pre><code>  FT_EXPORT( <a href="ft2-list_processing.html#ft_listnode">FT_ListNode</a> )
   <b>FT_List_Find</b>( <a href="ft2-list_processing.html#ft_list">FT_List</a>  list,
                 <span class="keyword">void</span>*    data );
-</pre>
-</div>
+</code></pre></div>
 
 <p>Find the list node for a given listed object.</p>
 <h4>input</h4>
@@ -1408,13 +1389,10 @@
 
 <h2 id="ft_list_remove">FT_List_Remove<a class="headerlink" href="#ft_list_remove" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_LIST_H (freetype/ftlist.h).</p>
-<div class = "codehilite">
-<pre>
-  FT_EXPORT( <span class="keyword">void</span> )
+<div class = "codehilite"><pre><code>  FT_EXPORT( <span class="keyword">void</span> )
   <b>FT_List_Remove</b>( <a href="ft2-list_processing.html#ft_list">FT_List</a>      list,
                   <a href="ft2-list_processing.html#ft_listnode">FT_ListNode</a>  node );
-</pre>
-</div>
+</code></pre></div>
 
 <p>Remove a node from a list. This function doesn't check whether the node is in the list!</p>
 <h4>input</h4>
@@ -1437,13 +1415,10 @@
 
 <h2 id="ft_list_up">FT_List_Up<a class="headerlink" href="#ft_list_up" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_LIST_H (freetype/ftlist.h).</p>
-<div class = "codehilite">
-<pre>
-  FT_EXPORT( <span class="keyword">void</span> )
+<div class = "codehilite"><pre><code>  FT_EXPORT( <span class="keyword">void</span> )
   <b>FT_List_Up</b>( <a href="ft2-list_processing.html#ft_list">FT_List</a>      list,
               <a href="ft2-list_processing.html#ft_listnode">FT_ListNode</a>  node );
-</pre>
-</div>
+</code></pre></div>
 
 <p>Move a node to the head/top of a list. Used to maintain LRU lists.</p>
 <h4>inout</h4>
@@ -1461,14 +1436,11 @@
 
 <h2 id="ft_list_iterate">FT_List_Iterate<a class="headerlink" href="#ft_list_iterate" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_LIST_H (freetype/ftlist.h).</p>
-<div class = "codehilite">
-<pre>
-  FT_EXPORT( <a href="ft2-basic_types.html#ft_error">FT_Error</a> )
+<div class = "codehilite"><pre><code>  FT_EXPORT( <a href="ft2-basic_types.html#ft_error">FT_Error</a> )
   <b>FT_List_Iterate</b>( <a href="ft2-list_processing.html#ft_list">FT_List</a>           list,
                    <a href="ft2-list_processing.html#ft_list_iterator">FT_List_Iterator</a>  iterator,
                    <span class="keyword">void</span>*             user );
-</pre>
-</div>
+</code></pre></div>
 
 <p>Parse a list and calls a given iterator function on each element. Note that parsing is stopped as soon as one of the iterator calls returns a non-zero value.</p>
 <h4>input</h4>
@@ -1492,13 +1464,10 @@
 
 <h2 id="ft_list_iterator">FT_List_Iterator<a class="headerlink" href="#ft_list_iterator" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_LIST_H (freetype/ftlist.h).</p>
-<div class = "codehilite">
-<pre>
-  <span class="keyword">typedef</span> <a href="ft2-basic_types.html#ft_error">FT_Error</a>
+<div class = "codehilite"><pre><code>  <span class="keyword">typedef</span> <a href="ft2-basic_types.html#ft_error">FT_Error</a>
   (*<b>FT_List_Iterator</b>)( <a href="ft2-list_processing.html#ft_listnode">FT_ListNode</a>  node,
                        <span class="keyword">void</span>*        user );
-</pre>
-</div>
+</code></pre></div>
 
 <p>An FT_List iterator function that is called during a list parse by <code><a href="ft2-list_processing.html#ft_list_iterate">FT_List_Iterate</a></code>.</p>
 <h4>input</h4>
@@ -1516,15 +1485,12 @@
 
 <h2 id="ft_list_finalize">FT_List_Finalize<a class="headerlink" href="#ft_list_finalize" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_LIST_H (freetype/ftlist.h).</p>
-<div class = "codehilite">
-<pre>
-  FT_EXPORT( <span class="keyword">void</span> )
+<div class = "codehilite"><pre><code>  FT_EXPORT( <span class="keyword">void</span> )
   <b>FT_List_Finalize</b>( <a href="ft2-list_processing.html#ft_list">FT_List</a>             list,
                     <a href="ft2-list_processing.html#ft_list_destructor">FT_List_Destructor</a>  destroy,
                     <a href="ft2-system_interface.html#ft_memory">FT_Memory</a>           memory,
                     <span class="keyword">void</span>*               user );
-</pre>
-</div>
+</code></pre></div>
 
 <p>Destroy all elements in the list as well as the list itself.</p>
 <h4>input</h4>
@@ -1551,14 +1517,11 @@
 
 <h2 id="ft_list_destructor">FT_List_Destructor<a class="headerlink" href="#ft_list_destructor" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_LIST_H (freetype/ftlist.h).</p>
-<div class = "codehilite">
-<pre>
-  <span class="keyword">typedef</span> <span class="keyword">void</span>
+<div class = "codehilite"><pre><code>  <span class="keyword">typedef</span> <span class="keyword">void</span>
   (*<b>FT_List_Destructor</b>)( <a href="ft2-system_interface.html#ft_memory">FT_Memory</a>  memory,
                          <span class="keyword">void</span>*      data,
                          <span class="keyword">void</span>*      user );
-</pre>
-</div>
+</code></pre></div>
 
 <p>An <code><a href="ft2-list_processing.html#ft_list">FT_List</a></code> iterator function that is called during a list finalization by <code><a href="ft2-list_processing.html#ft_list_finalize">FT_List_Finalize</a></code> to destroy all elements in a given list.</p>
 <h4>input</h4>
@@ -1578,6 +1541,7 @@
 <hr>
                 
                   
+                
                 
               
               
@@ -1633,13 +1597,13 @@
       <div class="md-footer-copyright">
         
           <div class="md-footer-copyright__highlight">
-            Copyright 2019 <a href = "https://www.freetype.org/license.html">The FreeType Project</a>.
+            Copyright 2020 <a href = "https://www.freetype.org/license.html">The FreeType Project</a>.
           </div>
         
         powered by
-        <a href="https://www.mkdocs.org">MkDocs</a>
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
         and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
           Material for MkDocs</a>
       </div>
       
@@ -1649,9 +1613,9 @@
       
     </div>
     
-      <script src="assets/javascripts/application.d9aa80ab.js"></script>
+      <script src="assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:"."}})</script>
+      <script>app.initialize({version:"1.1",url:{base:"."}})</script>
       
         <script src="javascripts/extra.js"></script>
       
