@@ -289,6 +289,72 @@
             </dd>
           </dl>
 
+          <dl>
+            <dt>Add a &lsquo;capability database&rsquo; to FreeType's
+              auto-hinter</dt>
+            <dd>
+              <p>At smaller sizes, usually in the range 12ppem to
+                20ppem, it can happen that separate outlines of glyphs
+                touch each other (mainly caused by rounding issues),
+                making glyphs illegible.  A typical example is glyph
+                &lsquo;i&rsquo;, where the vertical space between the
+                i-dot and the body must have a certain size to let the
+                reader's eye separate the two parts.  [Note that the
+                auto-hinter's capability to hint glyphs smaller than
+                12ppem is very limited in general and thus not part of
+                this project description.]</p>
+
+              <p>Another example is the tilde accent, &lsquo;~&rsquo;,
+                used in languages like Spanish: Even at smaller sizes
+                the wiggle of the accent shape must be prevented,
+                otherwise it can happen that a character like
+                &lsquo;ã&rsquo; looks like &lsquo;ā&rsquo;.</p>
+
+              <p>There are numerous other cases where some knowledge
+                of the shape of a given glyph might help the
+                auto-hinter improve the hinting, irrespective of the
+                font shape or family – the i-dot and its body must be
+                separate for virtually all available fonts.</p>
+
+              <p>The project consists of the following parts.</p>
+
+              <ul>
+                <li>Identify hinting problems of the auto-hinter
+                  related to shape distortion and accent positioning.
+                  A good starting point is
+                  the <a href="https://savannah.nongnu.org/bugs/?group=freetype">FreeType
+                  bug database.</a></li>
+
+                <li>Collect necessary adjustments.  For the above two
+                  examples, it would be necessary (a) to tell the
+                  auto-hinter that there must be a certain vertical
+                  distance between the body and its accent, and (b) to
+                  distort some glyph shapes intentionally so that
+                  rasterization at small ppem values gives decent
+                  results.</li>
+
+                <li>Invent a database format (to be compiled into the
+                  library) that describes the necessary actions.
+                  Basically, this would be a key-value table, where
+                  the key is the Unicode character code of the
+                  affected glyph, and the value is a list of necessary
+                  actions.</li>
+
+                <li>Add a mechanism to the auto-hinter to read the
+                  database, and to apply the action (shift, distort,
+                  whatever) to the affected glyph outlines if
+                  necessary.  This last feature is the non-trivial
+                  part of this project.</li>
+              </ul>
+
+              <p><em>Difficulty:</em> medium to
+                high.  <em>Requirements:</em> C, and ideally some
+                basic font hinting and rasterization
+                knowledge.  <em>Potential mentors:</em> Werner
+                Lemberg, Alexei Podtelezhnikov (FreeType).</p>
+            </dd>
+          </dl>
+
           <p>Do you have more ideas?  Please write to
               our <a href="mailto:freetype-devel@nongnu.org">mailing
               list</a> so that we can discuss your suggestions,
@@ -298,7 +364,7 @@
         <!-- ************************************************** -->
 
         <div class="updated">
-          <p>Last update: 18-Mar-2020</p>
+          <p>Last update: 16-May-2020</p>
         </div>
       </div>
     </div>
