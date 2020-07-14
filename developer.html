@@ -123,11 +123,11 @@
               </div>
 
               <p>When asked for a password, simply press Enter
-                  for <tt>cvs login</tt>.  The module names
-                  are <tt>freetype</tt> (Freetype version&nbsp;1.x,
-                  C&nbsp;code), <tt>freetype1-contrib</tt>
-                  (contributed programs), and <tt>ftpascal</tt>
-                  (Freetype version&nbsp;1.x, Pascal code).</p>
+                for <tt>cvs login</tt>.  The module names
+                are <tt>freetype</tt> (Freetype version&nbsp;1.x,
+                C&nbsp;code), <tt>freetype1-contrib</tt> (contributed
+                programs), and <tt>ftpascal</tt> (Freetype
+                version&nbsp;1.x, Pascal code).</p>
 
               <p>The <tt>freetype2</tt> and <tt>ft2demos</tt> modules
                 have been transformed to git (see above) and shouldn't
@@ -152,6 +152,41 @@
             submit a bug report.  It might be useful to use the git
             version (see above) of FreeType for testing since we don't
             release FreeType very often.</p>
+        </div>
+
+
+        <!-- ************************************************** -->
+
+        <div id="patches">
+          <h2>Submitting Patches</h2>
+
+          <p>Please submit patches to
+            the <a href="mailto:freetype-devel@nongnu.org">freetype-devel@nongnu.org</a>
+            mailing list &ndash; and thank you in advance for your
+            work on improving FreeType!<p>
+
+          <p>Here are some tips on making your contribution easy to
+            integrate into the FreeType git repositories.</p>
+
+          <ul>
+            <li>
+              In the preamble of your patch, add a description of your
+              changes similar to the entries in the <tt>ChangeLog</tt>
+              file.  With &lsquo;similar&rsquo; it is meant that the
+              format and style of <tt>ChangeLog</tt> entries should be
+              imitated as much as possible.  However, don't modify
+              the <tt>ChangeLog</tt> file by yourself.
+            </li>
+            <li>
+              Try to follow the formatting of the source code as much
+              as possible.
+            </li>
+            <li>
+              If you plan to contribute larger changes, split them
+              into smaller, logical units.  Reviewing code changes in
+              small, incremental steps is much easier to perform.
+            </li>
+          </ul>
         </div>
 
 
@@ -338,7 +373,7 @@
         <!-- ************************************************** -->
 
         <div class="updated">
-          <p>Last update: 18-Jan-2019</p>
+          <p>Last update: 14-Jul-2020</p>
         </div>
       </div>
     </div>
@@ -406,6 +441,9 @@
     </li>
     <li class="secondary">
       <a href="#bug-report">Bug Reports</a>
+    </li>
+    <li class="secondary">
+      <a href="#patches">Submitting Patches</a>
     </li>
     <li class="secondary">
       <a href="#language-bindings">Language Bindings</a>
