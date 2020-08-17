@@ -90,11 +90,13 @@
 
         <!-- ************************************************** -->
 
-        <div id="other-patents">
-          <h2>ClearType Color Filtering Patent Issues</h2>
+        <div id="cleartype-patents">
+          <h2>The ClearType Color Filtering Patents Have Expired!</h2>
 
-          <p>A survey from June 2007 shows no less than ten patents
-            from Microsoft that cover ClearType.</p>
+          <p>Since August 2019, all patents related to ClearType color
+            filtering have expired worldwide.</p>
+
+          <p>The affected patents were</p>
 
           <div class="quote">
             <p><a href="https://patents.google.com/patent/US6219025">
@@ -150,7 +152,7 @@
                 pixel sub-components of a display device</em></a></p>
           </div>
 
-          <p>Essentially, these patents cover several different
+          <p>Essentially, these patents covered several different
             things, which can be grossly sub-divided into</p>
 
           <ul>
@@ -174,120 +176,11 @@
               Hitchcock's whitepaper</a>.</p>
         </div>
 
-        <h3>Patent Claims, Prior Art, and Validity</h3>
-
-        <p>Steve Gibson claims that
-          the <a href="https://www.grc.com/ctwho.htm">technique used by
-          ClearType is a reinvention of a 20-years old thing used on
-            the Apple II</a>.  His exact words are</p>
-
-        <div class="quote">
-          <p>Thus, Microsoft's &lsquo;ClearType&rsquo; application of
-            sub-pixel text rendering does not represent the dramatic
-            breakthrough that they claim and <em>it can not be the
-              valid subject for intellectual property
-              acquisition</em>.</p>
-        </div>
-
-        <p>(emphasis added).</p>
-
-        <p>Unfortunately, we believe that Mr.&nbsp;Gibson doesn't
-          understand patent law well.  Under the current US regime,
-          any minor improvement to a previous technique can be
-          considered an &lsquo;invention&rsquo; and
-          &lsquo;protected&rsquo; by a patent under the right
-          circumstances (e.g., if it is not totally trivial).  If we
-          look at
-          the <a href="https://www.google.com/patents/US6219025">first
-            ClearType related patent mentioned above</a>, we see that
-          the <a href="https://www.google.com/patents/US4136359">Apple&nbsp;II
-            Wozniak patent</a> covering this machine's display technique
-          is listed <em>first</em> in the patents' citations.  This
-          shows that both Microsoft and the patent examiner who
-          granted the patents were aware of this &lsquo;prior
-          art&rsquo;.</p>
-
-        <p>We are not trying to defend Microsoft here, just wanting to
-          avoid feeding false hopes to people who would like to see
-          the patent revoked.</p>
-
-        <p>Another popular view is
-          that <a href="https://answers.google.com/answers/threadview?id=723683">these
-          patents are too general to be enforceable</a>.  Well, to be
-          fair, some of the claims in these patents do indeed use
-          rather vague descriptive terms (even for a patent lawyer or
-          an &lsquo;expert in the field&rsquo;).  This is
-          absolutely <em>not</em> surprising, it is a direct
-          consequence of how the patent game works.</p>
-
-        <p>We won't cover this in greater detail since there
-          are <a href="https://www.iusmentis.com/patents/claims/">many</a>
-          <a href="https://www.tms.org/pubs/journals/JOM/matters/matters-9007.html">interesting</a>
-          <a href="https://en.wikipedia.org/wiki/Claim_(patent)#Basic_types_and_categories">pages</a>
-          on the subject.  However, in case you invalidate a single
-          patent claim (e.g., with prior art), that doesn't mean the
-          whole patent is busted.  Any other independent <em>and</em>
-          dependent claim can still be enforced.</p>
-
-        <p>Some of these patents have up to 40 claims. Invalidating
-        them is going to need <em>serious</em> prior-art, even if
-        there are also strong chances to invalidate the most general
-        claims in there.  For example, many of the cheap LCD screens
-        on digital cameras have used a screen where each pixel is
-        either red, green, or blue, with colour images directly mapped
-        to them; they have been doing it for years, even when
-        displaying text or menus, and this corresponds exactly to what
-        the most general claims cover.  If we can find a proof that
-        the technique was deployed before the patent's filing date, we
-        could have valid prior art to bust these.</p>
-
-        <h3>Possible Work-Arounds</h3>
-
-        <p>People have proposed alternatives to the ClearType color
-          filtering method.  A very good example is
-          the <a href="http://www.oyhus.no/SubLCD.html">SubLCD</a>
-          technique, which employs a different way to use sub-pixels
-          compared to Microsoft's ClearType implementation.  Its
-          author even says it doesn't infringe the ClearType
-          patents.</p>
-
-        <p>Unfortunately, the FreeType team doesn't share this
-          enthusiasm.  The reason is precisely the very vague patent
-          claims described previously.  There is a non-negligible
-          (even if small) chance that these claims also cover the
-          SubLCD technique.  The situation would probably be different
-          if we could invalidate the broader patent claims, but this
-          is not the case currently.</p>
-
-        <h3>Does FreeType Implement Any of the Patented Techniques?</h3>
-
-        <p>Technically, no.  The patents cover the whole process of
-          generating and displaying sub-pixel images.  Since the font
-          engine doesn't do the display part, it cannot infringe.
-          Apart from that, FreeType has provided the capability of
-          converting vector shapes into un-filtered sub-pixel images
-          for a long time.</p>
-
-        <p>By default, FreeType's scan-line converter returns
-          &lsquo;gray&rsquo; sub-pixel images, where for each pixel
-          the color components are equal (this is, R=G=B).  The result
-          is visually identical to gray anti-aliasing and cannot
-          infringe any of the ClearType patents.</p>
-
-        <p>Similarly, the LCD-specific filtering API is disabled by
-          default, which means that it returns an error and doesn't
-          alter sub-pixel images.</p>
-
-        <p>You can override these limitations by activating option
-          <code>FT_CONFIG_OPTION_SUBPIXEL_RENDERING</code> in
-          FreeType's <code>ftoption.h</code> configuration file, but
-          you should do that at your own risk.</p>
-
 
         <!-- ************************************************** -->
 
         <div class="updated">
-          <p>Last update: 13-Feb-2018</p>
+          <p>Last update: 17-Aug-2020</p>
         </div>
       </div>
     </div>
@@ -354,7 +247,7 @@
       <a href="#bytecode-patents">Bytecode Patents</a>
     </li>
     <li class="secondary">
-      <a href="#other-patents">Other Patents</a>
+      <a href="#cleartype-patents">ClearType Patents</a>
     </li>
   </ul>
 </div>
