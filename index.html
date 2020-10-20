@@ -120,6 +120,12 @@
             the <a href="https://sourceforge.net/projects/freetype/files/freetype2/2.10.3/">list
             of changes</a> for more details.</p>
 
+          <p>A warning for distribution maintainers: Version 2.10.3
+            and later may break the build of ghostscript, due to
+            ghostscript's <a href="https://bugs.ghostscript.com/show_bug.cgi?id=702985">use
+            of a withdrawn macro</a> that wasn't intended for external
+            usage.  A fix is
+            available <a href="https://git.ghostscript.com/?p=ghostpdl.git;a=commitdiff;h=41ef9a0bc36b">here</a>.</p>
 
           <h4>FreeType 2.10.2</h4>
           <div class="date">2020-05-09</div>
