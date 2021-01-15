@@ -91,6 +91,15 @@
                 problematic, since rendering regressions can be very
                 easily missed due to subtle differences.</p>
 
+              <p>However,
+                a <a href="https://github.com/fundies/freetype2/tree/greg-gsoc">GSoC
+                2020 project</a> now provides a good framework that
+                can act as a starting point for better integration.
+                In addition, we are moving to the gitlab instance
+                of <a href="https://gitlab.freedesktop.org/freetype/freetype">freedesktop.org</a>;
+                this implies that access to its CI abilities should be
+                straightforward.</p>
+
               <p>The idea is to select a representative set of
                 reference fonts from font corpora (which already exist
                 mainly for fuzzing).  The fonts are used to produce
@@ -107,9 +116,9 @@
                 some yet to be defined measure.</p>
 
               <p><em>Difficulty:</em> medium.  <em>Requirements:</em>
-                C, Unix build tools.  <em>Potential mentors:</em>
-                Werner Lemberg, Alexei Podtelezhnikov, Toshiya Suzuki
-                (FreeType).</p>
+                C, HTML, Unix build tools.  <em>Potential
+                mentors:</em> Werner Lemberg, Alexei Podtelezhnikov,
+                Toshiya Suzuki (FreeType).</p>
             </dd>
           </dl>
 
@@ -124,7 +133,7 @@
                 integrating <a href="https://www.gnu.org/software/autoconf/"><code>autoconf</code></a>
                 support.  Alternatives are generic build files
                 for <a href="https://cmake.org/"><code>cmake</code></a>
-                and <a href="https://www.freetype.org/jam/"><code>ftjam</code></a>,
+                and <a href="https://mesonbuild.com/"><code>meson</code></a>,
                 together with special support files
                 for <a href="https://visualstudio.microsoft.com">MS
                 Visual
@@ -140,7 +149,8 @@
                   approaching the project with a conservative point of
                   view.  This needs intensive contact with the mailing
                   list(s) to identify the needs of users and the
-                  preferences of developers.</li>
+                  preferences of developers.  Right now, we tend to
+                  move to <code>meson</code>.</li>
 
                 <li>Check software distributions for different
                   platforms and analyze how FreeType's build systems
@@ -161,8 +171,9 @@
 
               <p><em>Difficulty:</em> medium.  <em>Requirements:</em>
                 Various Unix and Windows build tools, in
-                particular <code>GNU make</code>
-                and <code>cmake</code>.  <em>Potential mentors:</em>
+                particular <code>GNU make</code>,
+                <code>cmake</code>,
+                and <code>meson</code>.  <em>Potential mentors:</em>
                 Werner Lemberg, Alexei Podtelezhnikov, Toshiya Suzuki
                 (FreeType).</p>
             </dd>
@@ -235,58 +246,6 @@
               <p><em>Difficulty:</em> medium.  <em>Requirements:</em>
                 C, C++, Qt, Unix build tools.  <em>Potential
                 mentor:</em> Werner Lemberg (FreeType).</p>
-            </dd>
-          </dl>
-
-          <dl>
-            <dt>Replace FreeType's tracing and debugging facilities
-              with an external logging library</dt>
-            <dd>
-              <p>FreeType extensively uses a home-brewed tracing
-                solution that mainly relies on the C&nbsp;preprocessor
-                and the <code>fprintf</code> function printing to
-                <code>stderr</code> (see
-                file <a href="https://git.savannah.gnu.org/cgit/freetype/freetype2.git/tree/docs/DEBUG"><code>docs/DEBUG</code></a>
-                for documentation).  However, this simplistic approach
-                is not adequate for all platforms,
-                where <code>stderr</code> is not always easily
-                accessible.</p>
-
-              <p>Many freely available tracing and logging libraries
-                exist.  It would be necessary to test and check which
-                one meets FreeType's requirements.  A few requirements
-                have already been
-                <a href="http://lists.nongnu.org/archive/html/freetype-devel/2019-01/msg00023.html">discussed
-                  in the mailing list</a>.  Note that this discussion
-                is by no means exhaustive.</p>
-
-              <p>As a rough guideline, the project could be structured
-                as follows.</p>
-
-              <ul>
-                <li>Get accustomed to FreeType's current
-                  tracer/logger, all its current features, and how it
-                  is currently being used.  Extract a few
-                  representative samples from FreeType to help with
-                  the next step.</li>
-
-                <li>Evaluate, compare, and discuss freely available
-                  tracing and logging libraries in respect to
-                  FreeType's current tracer/logger.</li>
-
-                <li>Replace the old tracer/logger with the new one
-                  within FreeType.</li>
-
-                <li>Write a brief but precise &lsquo;how-to&rsquo;
-                  article for FreeType's website about using the new
-                  tracer/logger which is aimed at FreeType's
-                  developers.</li>
-              </ul>
-
-              <p><em>Difficulty:</em> medium.  <em>Requirements:</em>
-                C, C++, Unix and Windows build tools.  <em>Potential
-                  mentors:</em> Werner Lemberg, Alexei Podtelezhnikov,
-                Toshiya Suzuki (FreeType), Armin Hasitzka.</p>
             </dd>
           </dl>
 
@@ -365,7 +324,7 @@
         <!-- ************************************************** -->
 
         <div class="updated">
-          <p>Last update: 6-Sept-2020</p>
+          <p>Last update: 15-Jan-2021</p>
         </div>
       </div>
     </div>
