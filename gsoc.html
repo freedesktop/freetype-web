@@ -315,16 +315,68 @@
             </dd>
           </dl>
 
+          <dl>
+            <dt>Integrate VFlib's TeX font support into FreeType</dt>
+            <dd>
+              <p>A <a href="https://gitlab.freedesktop.org/freetype/freetype/-/tree/GSoC-2018-parth">GSoC
+                  2018 project</a> was a first try to integrate
+                <a href="http://www-masu.ist.osaka-u.ac.jp/~kakugawa/VFlib/">VFLib</a>
+                into FreeType.  This library contains mature support
+                for TeX's bitmap formats (in
+                particular <code>GF</code> and <code>PK</code> fonts,
+                together with <code>TFM</code> metric files
+                and <code>VF</code> virtual fonts).</p>
+
+              <p>The project would be as follows.</p>
+
+              <ul>
+                <li>Evaluate the existing code to find out whether it
+                  can be used as a starting point to complete the
+                  begun task, this is, to merge VFlib's source code
+                  into FreeType, thus providing new modules to handle
+                  TeX bitmap fonts.</li>
+
+                <li>Evaluate different routes if necessary.  For
+                  example, it might be easier to provide simple and
+                  small wrapper modules that call VFlib functions.  In
+                  other words, this wouldn't integrate the code of
+                  VFlib but have it as an external dependency.</li>
+
+                <li>Create modules.</li>
+              </ul>
+
+              <p>The canonic reference of
+                the <code>PK</code>, <code>GF</code>, <code>TFM</code>,
+                and <code>VF</code> font formats is the source code of
+                the TeX
+                tools <a href="https://www.tug.org/svn/texlive/trunk/Master/texmf-dist/doc/generic/knuth/mfware/gftopk.pdf?view=co">gftopk</a>
+                (for
+                <code>PK</code>), <a href="https://www.tug.org/svn/texlive/trunk/Master/texmf-dist/doc/generic/knuth/mfware/gftype.pdf?view=co">gftype</a>
+                (for
+                <code>GF</code>), <a href="https://www.tug.org/svn/texlive/trunk/Master/texmf-dist/doc/generic/knuth/texware/tftopl.pdf?view=co">tftopl</a>
+                (for <code>TFM</code>),
+                and <a href="https://www.tug.org/svn/texlive/trunk/Master/texmf-dist/doc/generic/knuth/etc/vftovp.pdf?view=co">vftovp</a>
+                (for <code>VF</code>).</p>
+
+              <p><em>Difficulty:</em> medium (hard for VF
+                support).  <em>Requirements:</em> C, Unix build tools,
+                knowledge of TeX infrastructure
+                (using <a href="https://www.tug.org/texlive/">TeXLive</a>
+                is recommended).  <em>Potential mentor:</em> Werner
+                Lemberg (FreeType).</p>
+            </dd>
+          </dl>
+
           <p>Do you have more ideas?  Please write to
-              our <a href="mailto:freetype-devel@nongnu.org">mailing
+            our <a href="mailto:freetype-devel@nongnu.org">mailing
               list</a> so that we can discuss your suggestions,
-              eventually adding them to the list!</p>
+            eventually adding them to the list!</p>
         </div>
 
         <!-- ************************************************** -->
 
         <div class="updated">
-          <p>Last update: 16-Jan-2021</p>
+          <p>Last update: 17-Jan-2021</p>
         </div>
       </div>
     </div>
