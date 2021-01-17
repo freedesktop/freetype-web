@@ -67,52 +67,29 @@
               <p><a href="download.html">Download a source
                   archive</a></p>
 
-              <p>Use this to browse, compile, and use the source
-                locally.</p>
-            </li>
-            <li class="emph">
-              <p><a href="https://git.savannah.gnu.org/cgit/freetype/">Use
-                  the cgit page</a></p>
-
-              <p>It will let you view our source code and the changes
-                that occurred lately.</p>
+              <p>This is for browsing, compiling, and using the source
+                code locally.</p>
             </li>
             <li class="emph">
               <p>Use git access</p>
 
-              <p>The complete FreeType repositories can be downloaded
-                using git.  Enter these commands for anonymous
-                read-only access of the repositories:</p>
+              <p>FreeType's git repositories are available
+                from <a href="https://gitlab.freedesktop.org/freetype">freedesktop.org's
+                gitlab instance</a>.</p>
 
               <div class="quote">
-                <tt>git clone git://git.sv.nongnu.org/freetype/freetype2.git<br>
-                  git clone git://git.sv.nongnu.org/freetype/freetype2-demos.git</tt>
+                <tt>git clone https://gitlab.freedesktop.org/freetype/freetype.git<br>
+                  git clone https://gitlab.freedesktop.org/freetype/freetype-demos.git</tt>
               </div>
-
-              <p>If you are behind a Firewall which disables port
-                9418, you might try the HTTP protocol:</p>
-
-              <div class="quote">
-                <tt>git clone https://git.sv.nongnu.org/r/freetype/freetype2.git<br>
-                  git clone https://git.sv.nongnu.org/r/freetype/freetype2-demos.git</tt>
-              </div>
-
-              <p>Please read</p>
-        
-              <div class="quote">
-                <a href="https://sv.nongnu.org/maintenance/UsingGit">https://sv.nongnu.org/maintenance/UsingGit</a>
-              </div>
-
-              <p>for more details on the git setup of Savannah (for
-                example, how to check out the git repositories with a
-                CVS client, if necessary).</p>
             </li>
             <li class="emph">
               <p>Use anonymous CVS access</p>
 
               <p>Other, no longer maintained FreeType repositories
-                which exist for historical interest only can be
-                downloaded through CVS and
+                (which exist for historical interest only) can be
+                downloaded
+                from <a href="https://savannah.nongnu.org/">Savannah</a>
+                through CVS and
                 viewed <a href="https://cvs.savannah.gnu.org/viewvc/?root=freetype">here</a>.
                 Use the following value for the <tt>CVSROOT</tt>
                 environment variable (or the equivalent <tt>-d</tt>
@@ -142,16 +119,16 @@
         <div id="bug-report">
           <h2>Reporting a Bug</h2>
 
-          <p>In case you find a bug which you think is related to
+          <p>In case you find a bug, which you think is related to
             FreeType, please check the problematic font with one of
             our demo programs, for example <b>ftview</b>
-            or <b>ftstring</b>.  In case the problem persists, go to
-            the <a href="https://savannah.nongnu.org/bugs/?group=freetype">Savannah
-            bug database for FreeType</a> and check whether the
-            problem has been reported already.  Otherwise, please
-            submit a bug report.  It might be useful to use the git
-            version (see above) of FreeType for testing since we don't
-            release FreeType very often.</p>
+            or <b>ftstring</b>.  In case the problem persists, consult
+            <a href="https://gitlab.freedesktop.org/groups/freetype/-/issues">FreeType's
+            issue list</a> to find out whether the problem has been
+            reported already.  Otherwise, please submit a new issue.
+            It is helpful to use the git version (see above) of
+            FreeType and its demo programs for testing if possible
+            since we don't release FreeType very often.</p>
         </div>
 
 
@@ -160,7 +137,9 @@
         <div id="patches">
           <h2>Submitting Patches</h2>
 
-          <p>Please submit patches to
+          <p>For larger changes please
+            provide <a href="https://gitlab.freedesktop.org/groups/freetype/-/merge_requests">merge
+            requests</a>.  Alternatively, you can submit patches to
             the <a href="mailto:freetype-devel@nongnu.org">freetype-devel@nongnu.org</a>
             mailing list &ndash; and thank you in advance for your
             work on improving FreeType!<p>
@@ -231,9 +210,9 @@
 
           <p>Bindings are
             available <a href="https://github.com/rougier/freetype-py/">here</a>.
-            The Python Imaging Library
-            (<a href="https://www.pythonware.com/products/pil/">PIL</a>)
-            can be built to use FreeType for font rendering, giving
+            <a href="https://pypi.org/project/Pillow/">Pillow</a>, the
+            successor of the Python Imaging Library (PIL), can be
+            built to use FreeType for font rendering, giving
             high-level access to fonts.</p>
 
           <p>A more extensive set of Python bindings, designed to work
@@ -285,7 +264,7 @@
           <p>One of the simplest way to compile FreeType is from the
             command line using one of the following tools.</p>
 
-        
+
           <h3>GNU Make</h3>
 
           <p>FreeType comes with a sophisticated build system that is
@@ -329,51 +308,29 @@
             binaries of GNU Make for Windows.</p>
 
 
-          <h3>FT&nbsp;Jam</h3>
+          <h3>Meson</h3>
 
-          <p>Unfortunately, the GNU Make-based build system described
-            above is rather complex due to various technical reasons,
-            one of them being the <em>really</em> weird syntax used in
-            Makefiles.  Since release 2.0.2, the FreeType library can
-            also be created with an alternative build tool
-            named <b>Jam</b>.</p>
+          <p>Right now, support for
+            <a href="https://mesonbuild.com/">Meson</a> is
+            experimental and available for the library only, without
+            the demo programs.  It is planned to fix this eventually,
+            making Meson a first-class build system.</p>
 
-          <p>Briefly, Jam is a small, efficient, portable and
-            open-source replacement for <tt>make</tt> that is both a
-            lot easier to use and more powerful.</p>
 
-          <ul>
-            <li>
-              <p>Jam control files (named <em>Jamfiles</em>) are
-              portable among platforms and compilers and thus do not
-              need to be edited for each specific build (unlike the
-              ugly <tt>Makefile.in</tt> trick used commonly on
-              Unix).</p>
-            </li>
-            <li>
-              <p>The syntax of Jamfiles is simple, expressive and
-              allows you to define your own functions.</p>
-            </li>
-            <li>
-              <p>Jam performs lots of nifty things for you, like
-              automatic header dependencies computations.</p>
-            </li>
-            <li>
-              <p>Jam only does project builds, it is not a
-              configuration tool and is trivially compatible with
-              Autoconf on Unix.</p>
-            </li>
-          </ul>
+          <h3>CMake</h3>
 
-          <p>Find more information on <a href="jam/index.html">the
-              FT&nbsp;Jam page</a>.</p>
+          <p>FreeType can also be built with
+            <a href="https://cmake.org/">CMake</a>.  Note, however,
+            that this is contributed code not officially
+            supported.</p>
+
         </div>
 
 
         <!-- ************************************************** -->
 
         <div class="updated">
-          <p>Last update: 14-Jul-2020</p>
+          <p>Last update: 16-Jan-2021</p>
         </div>
       </div>
     </div>
