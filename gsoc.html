@@ -97,23 +97,26 @@
                 can act as a starting point for better integration.
                 In addition, we are moving to the gitlab instance
                 of <a href="https://gitlab.freedesktop.org/freetype">freedesktop.org</a>;
-                this implies that access to its CI abilities should be
-                straightforward.</p>
+                this implies that access to
+                its <a href="https://docs.gitlab.com/ee/ci/">CI
+                abilities</a> should be straightforward.</p>
 
               <p>The idea is to select a representative set of
                 reference fonts from font corpora (which already exist
-                mainly for fuzzing).  The fonts are used to produce
-                glyph images for various sizes and rendering modes
-                (anti-aliased, B/W, native hinting, auto-hinting,
-                etc.).  FreeType can already produce MD5 checksums of
-                glyph images as part of its debugging output; these
-                values should be compared against a baseline version
-                of rendering results.  If there are differences, HTML
-                pages should be generated that contain comparison
-                images of the baseline's and the current development
-                version's rendering result, ideally indicating how
-                large the differences between the images are by using
-                some yet to be defined measure.</p>
+                mainly
+                for <a href="https://github.com/freetype/freetype2-testing/tree/master/fuzzing">fuzzing</a>).
+                The fonts are used to produce glyph images for various
+                sizes and rendering modes (anti-aliased, B/W, native
+                hinting, auto-hinting, etc.).  FreeType can already
+                produce MD5 checksums of glyph images as part of its
+                debugging output; these values should be compared
+                against a baseline version of rendering results.  If
+                there are differences, HTML pages should be generated
+                that contain comparison images of the baseline's and
+                the current development version's rendering result,
+                ideally indicating how large the differences between
+                the images are by using some yet to be defined
+                measure.</p>
 
               <p><em>Difficulty:</em> medium.  <em>Requirements:</em>
                 C, HTML, Unix build tools.  <em>Potential
@@ -180,17 +183,18 @@
           </dl>
 
           <dl>
-            <dt>Integrate FreeType with alternative rendering engines</dt>
+            <dt>Integrate FreeType with alternative rendering
+              engines</dt>
 
             <dd>
               <p>Raph Levien has
                 developed <a href="https://github.com/raphlinus/font-rs"><code>font-rs</code></a>,
                 an experimental font renderer written in
                 the <a href="https://www.rust-lang.org/">Rust
-                programming language</a>.
+                  programming language</a>.
                 A <a href="https://medium.com/@raphlinus/inside-the-fastest-font-renderer-in-the-world-75ae5270c445">blogpost</a>
-                describes some of its features in more detail. It claims
-                to be much faster than FreeType's anti-aliasing
+                describes some of its features in more detail.  It
+                claims to be much faster than FreeType's anti-aliasing
                 rendering module due to SIMD optimizations.</p>
 
               <p>Note that
@@ -203,17 +207,19 @@
                 <a href="https://github.com/servo/pathfinder"><code>Pathfinder</code></a>,
                 which takes advantages of GPU rendering.</p>
 
-              <p>The project is about implementing an alternative FT_Renderer
-                module in&nbsp;C that can take priority over the native
-                FreeType rasterizer. It will either wrap the calls
-                to a linked precompiled object or port the Rust code to C.
-                It might require in depth feasibility analysis for either
-                approach and understanding of FreeType architecture.</p>
+              <p>The project is about implementing an
+                alternative <a href="https://www.freetype.org/freetype2/docs/reference/ft2-module_management.html#ft_renderer"><code>FT_Renderer</code></a>
+                module in&nbsp;C that can take priority over the
+                native FreeType rasterizer.  It should either wrap the
+                calls to a linked precompiled object or port the Rust
+                code to&nbsp;C.  It requires in-depth feasibility
+                analysis of either approach and a good understanding
+                of FreeType's architectural details.</p>
 
-              <p><em>Difficulty:</em> high.  <em>Requirements:</em> Rust, C, Unix
-                build tools.  <em>Potential mentors:</em> Werner
-                Lemberg, Alexei Podtelezhnikov, Toshiya Suzuki
-                (FreeType), Raph Levien (Google).</p>
+              <p><em>Difficulty:</em> high.  <em>Requirements:</em>
+                Rust, C, Unix build tools.  <em>Potential
+                mentors:</em> Werner Lemberg, Alexei Podtelezhnikov,
+                Toshiya Suzuki (FreeType), Raph Levien (Google).</p>
             </dd>
           </dl>
 
@@ -221,31 +227,43 @@
             <dt>Improve FreeType demo programs</dt>
             <dd>
               <p>Right now, FreeType comes with a suite of small
-                graphic tools to test and showcase the library,
-                most notably &lsquo;ftview&rsquo; and &lsquo;ftgrid&rsquo;.
-                They natively work on X11 and Windows GDI without any
-                additional requirements.  One opportunity is to port them to
-                Wayland and Cocoa/macOS. This would involve implementing a
-                small, low level driver to manage a basic window and
+                graphic tools to test and showcase the library, most
+                notably <a href="https://gitlab.freedesktop.org/freetype/freetype-demos/-/blob/master/src/ftview.c"><code>ftview</code></a>
+                and <a href="https://gitlab.freedesktop.org/freetype/freetype-demos/-/blob/master/src/ftgrid.c"><code>ftgrid</code></a>.
+                They natively work
+                on <a href="https://www.x.org/wiki/">X11</a> and
+                <a href="https://docs.microsoft.com/en-us/windows/win32/gdi/windows-gdi">Windows
+                GDI</a> without any additional requirements.  One
+                opportunity is to port them
+                to <a href="https://wayland.freedesktop.org/">Wayland</a>
+                and <a href="https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/OSX_Technology_Overview/CocoaApplicationLayer/CocoaApplicationLayer.html">Cocoa/macOS</a>.
+                This would involve implementing a small, low-level
+                driver to manage a basic window, together with
                 associated keyboard and resizing events.</p>
 
-              <p>Another opportunity is to work on a modern GUI tool to
-                showcase and test FreeType capabilities. A new demo
-                program called &lsquo;ftinspect&rsquo; was started as a GSoC
-                2019 project and is based on the Qt GUI toolkit.
-                However, the development is currently stalled.</p>
+              <p>Another opportunity is to work on a modern GUI tool
+                to showcase and test FreeType capabilities.  A first
+                try to improve the demo program
+                called <a href="https://gitlab.freedesktop.org/freetype/freetype-demos/-/tree/master/src/ftinspect"><code>ftinspect</code></a>,
+                which is based on the <a href="https://www.qt.io/">Qt
+                GUI</a> toolkit, was started as
+                a <a href="https://gitlab.freedesktop.org/freetype/freetype-demos/-/tree/gsoc-2019-veeki">GSoC
+                2019 project</a>.  However, the development is
+                currently stalled.</p>
 
-              <p>The idea is to finish ftinspect,
+              <p>The idea is to finish <code>ftinspect</code>,
                 handling <em>all</em> aspects of the other demo
                 programs.  Currently, it only provides the
-                functionality of &lsquo;ftgrid&rsquo;.</p>
+                functionality of <code>ftgrid</code>.</p>
 
               <p>If the student prefers, the Qt toolkit could be
-                replaced with GTK.<p>
+                replaced
+                with <a href="https://www.gtk.org/">GTK</a>.<p>
 
               <p><em>Difficulty:</em> medium.  <em>Requirements:</em>
                 C, C++, Qt, Unix build tools.  <em>Potential
-                mentor:</em> Werner Lemberg (FreeType).</p>
+                mentor:</em> Werner Lemberg, Alexei Podtelezhnikov
+                (FreeType).</p>
             </dd>
           </dl>
 
@@ -272,9 +290,10 @@
 
               <p>There are numerous other cases where some knowledge
                 of the shape of a given glyph might help the
-                auto-hinter improve the hinting, irrespective of the
-                font shape or family – the i-dot and its body must be
-                separate for virtually all available fonts.</p>
+                <a href="https://www.freetype.org/autohinting/hinter.html">auto-hinter</a>
+                improve the hinting, irrespective of the font shape or
+                family – the i-dot and its body must be separate for
+                virtually all available fonts.</p>
 
               <p>The project consists of the following parts.</p>
 
@@ -320,7 +339,7 @@
             <dd>
               <p>A <a href="https://gitlab.freedesktop.org/freetype/freetype/-/tree/GSoC-2018-parth">GSoC
                   2018 project</a> was a first try to integrate
-                <a href="http://www-masu.ist.osaka-u.ac.jp/~kakugawa/VFlib/">VFLib</a>
+                <a href="http://www-masu.ist.osaka-u.ac.jp/~kakugawa/VFlib/">VFlib</a>
                 into FreeType.  This library contains mature support
                 for TeX's bitmap formats (in
                 particular <code>GF</code> and <code>PK</code> fonts,
@@ -376,7 +395,7 @@
         <!-- ************************************************** -->
 
         <div class="updated">
-          <p>Last update: 17-Jan-2021</p>
+          <p>Last update: 18-Jan-2021</p>
         </div>
       </div>
     </div>
