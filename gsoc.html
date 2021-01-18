@@ -180,8 +180,7 @@
           </dl>
 
           <dl>
-            <dt>Port the <code>font-rs</code>/<code>fontdue</code>
-              rendering engine to FreeType</dt>
+            <dt>Integrate FreeType with alternative rendering engines</dt>
 
             <dd>
               <p>Raph Levien has
@@ -190,29 +189,28 @@
                 the <a href="https://www.rust-lang.org/">Rust
                 programming language</a>.
                 A <a href="https://medium.com/@raphlinus/inside-the-fastest-font-renderer-in-the-world-75ae5270c445">blogpost</a>
-                describes some of its features in more detail; of
-                particular interest is that it is much faster than
-                FreeType's anti-aliasing rendering module.</p>
+                describes some of its features in more detail. It claims
+                to be much faster than FreeType's anti-aliasing
+                rendering module due to SIMD optimizations.</p>
 
               <p>Note that
-                the <a href="https://crates.io/crates/fontdue"><code>fontdue</code></a>
-                Rust package is another rendering engine based
-                on <code>font-rs</code>, and it claims to be even
-                faster.  You can find some additional
+                the <a href="https://github.com/mooman219/fontdue"><code>fontdue</code></a>
+                Rust package is another rendering engine based on
+                <code>font-rs</code>, and it claims to be even faster
+                and is actively developed.  You can find some additional
                 discussion <a href="https://www.reddit.com/r/rust/comments/ilnd41/fontdue_the_fastest_font_renderer_in_the_world">here</a>.
+                Another project inspired by <code>font-rs</code> is
+                <a href="https://github.com/servo/pathfinder"><code>Pathfinder</code></a>,
+                which takes advantages of GPU rendering.</p>
 
-              <p>The gist of this project would be to port the Rust
-                code to&nbsp;C and to integrate it into FreeType,
-                providing it as an alternative rendering engine that
-                eventually might replace the old one.  It would be
-                necessary to investigate how this can be done, and
-                whether it is feasible at all.  In case a port doesn't
-                make sense (for whatever reasons) it should be
-                investigated whether the ideas of the code can be used
-                to re-implement the rasterizer in&nbsp;C.</p>
+              <p>The project is about implementing an alternative FT_Renderer
+                module in&nbsp;C that can take priority over the native
+                FreeType rasterizer. It will either wrap the calls
+                to a linked precompiled object or port the Rust code to C.
+                It might require in depth feasibility analysis for either
+                approach and understanding of FreeType architecture.</p>
 
-              <p><em>Difficulty:</em> medium (if porting) to high (if
-                reimplementing).  <em>Requirements:</em> Rust, C, Unix
+              <p><em>Difficulty:</em> high.  <em>Requirements:</em> Rust, C, Unix
                 build tools.  <em>Potential mentors:</em> Werner
                 Lemberg, Alexei Podtelezhnikov, Toshiya Suzuki
                 (FreeType), Raph Levien (Google).</p>
@@ -220,20 +218,22 @@
           </dl>
 
           <dl>
-            <dt>Improve the &lsquo;ftinspect&rsquo; demo program
-            (started as a GSoC 2019 project, unfinished)</dt>
+            <dt>Improve FreeType demo programs</dt>
             <dd>
               <p>Right now, FreeType comes with a suite of small
-                graphic tools to test the library, most notably
-                &lsquo;ftview&rsquo; and &lsquo;ftgrid&rsquo;.  The
-                used graphics library, while working more or less, is
-                very archaic, not having any comfort that modern GUIs
-                are providing.</p>
+                graphic tools to test and showcase the library,
+                most notably &lsquo;ftview&rsquo; and &lsquo;ftgrid&rsquo;.
+                They natively work on X11 and Windows GDI without any
+                additional requirements.  One opportunity is to port them to
+                Wayland and Cocoa/macOS. This would involve implementing a
+                small, low level driver to manage a basic window and
+                associated keyboard and resizing events.</p>
 
-              <p>To improve this, a new demo program called
-                &lsquo;ftinspect&rsquo; was started, based on the Qt
-                GUI toolkit.  However, the development is currently
-                stalled, mainly for lack of time.</p>
+              <p>Another opportunity is to work on a modern GUI tool to
+                showcase and test FreeType capabilities. A new demo
+                program called &lsquo;ftinspect&rsquo; was started as a GSoC
+                2019 project and is based on the Qt GUI toolkit.
+                However, the development is currently stalled.</p>
 
               <p>The idea is to finish ftinspect,
                 handling <em>all</em> aspects of the other demo
