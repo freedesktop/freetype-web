@@ -76,6 +76,10 @@
               <a href="#general-edit">Can I use FreeType to edit fonts
                 or create new ones?</a>
             </li>
+            <li>
+              <a href="#general-typesetting">How do I render a line of
+                text in FreeType?</a>
+            </li>
           </ul>
 
           <h3><a href="#builds">Compilation &amp;
@@ -134,6 +138,10 @@
             <li>
               <a href="#other-opentype">When will FreeType support
                 OpenType?</a>
+            </li>
+            <li>
+              <a href="#other-vertical">How to implement Asian
+                vertical writing text with FreeType?</a>
             </li>
           </ul>
         </div>
@@ -297,6 +305,37 @@
 
           <p>A good, freely available font editor
             is <a href="https://fontforge.github.io">FontForge</a>.</p>
+
+          <a name="general-typesetting"></a>
+          <h3>How do I render a line of text in FreeType?</h3>
+
+          <p>FreeType is a very low-level rendering engine.  All it
+            knows how to do is render individual glyphs and return
+            metrics for them.</p>
+
+          <p>Arranging glyphs into words and lines is best left to a
+            2D graphics rendering library
+            like <a href="https://www.cairographics.org">Cairo</a>.
+            Cairo is able to do some primitive typesetting, including
+            very basic translation of Unicode character codes to
+            glyphs; for a more general solution, it
+            uses <a href="https://pango.gnome.org">Pango</a> for text
+            layout, which in turn relies
+            on <a href="https://harfbuzz.github.io/">HarfBuzz</a> to
+            implement the full OpenType rules for glyph substitution
+            and placement (Cairo still handles the actual text
+            drawing).  To deal with right-to-left (Arabic, Hebrew)
+            text layout, you will also need
+            <a href="https://github.com/fribidi/fribidi">FriBidi</a>,
+            which handles the details of the Unicode bidirectional
+            layout algorithm.</p>
+
+          <p>And finally, to cope with additional niceties like
+            dealing with writing-system-specific rules for word breaks
+            and line breaks, you might like to look at
+            <a href="http://www.icu-project.org">ICU</a>, which
+            includes a whole range of internationalization and
+            localization facilities.</p>
 
 
           <a name="builds"></a>
@@ -522,13 +561,38 @@
             perfectly.  What it doesn't do is handling &lsquo;OpenType
             Layout&rsquo; tables.</p>
 
-          <p>The predecessor of the FreeType, the now defunct
+          <p>The predecessor of FreeType&nbsp;2, the now defunct
             FreeType&nbsp;1 series, came with a set of extensions that
             were used to load and manage OpenType Layout tables.  It
             even had a demonstration program
             named <code>ftstrtto</code> to show its capabilities.
             However, this code is no longer maintained, and we
             strongly advise to not use it.</p>
+
+          <p>See <a href="#general-typesetting">this answer</a> for
+            more.</p>
+
+          <a name="other-vertical"></a>
+          <h3>How to implement Asian vertical writing text with
+            FreeType?</h3>
+
+          <p>FreeType&nbsp;2 no longer supports it.  Before the
+            general adoption
+            of <a href="https://docs.microsoft.com/en-us/typography/opentype/spec/">OpenType</a>
+            in the font industry, text renderers implemented many
+            hacks to handle vertical typesetting, like detection of
+            the vertical writing mode by relying on modified font
+            names, renderer-side rotation to obtain vertical glyph
+            representation forms, or putting pre-rotated glyphs at
+            non-standard <a href="http://www.unicode.org/faq/private_use.html">Unicode
+            PUA codepoints</a> in the font.  Modern operating systems
+            and font developers switched to TrueType GX and later to
+            OpenType many years ago, and fonts designed for such
+            legacy technologies are no longer widely distributed.</p>
+
+          <p>See <a href="#general-typesetting">this answer</a> for
+            more.</p>
+
         </div>
 
         <!-- ************************************************** -->
